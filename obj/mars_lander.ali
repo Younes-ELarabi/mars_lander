@@ -18,7 +18,7 @@ RV NO_ELABORATION_CODE
 RV SPARK_05
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U mars_lander%b		mars_lander.adb		b6e1c7ed NE OO PK
+U mars_lander%b		mars_lander.adb		b94eab7f NE OO PK
 Z ada.tags%s		a-tags.adb		a-tags.ali
 Z system%s		system.ads		system.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
@@ -63,7 +63,7 @@ D i-cexten.ads		20190518041256 38d7e116 interfaces.c.extensions%s
 D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
 D mars_lander.ads	20200211132134 d7120e1c mars_lander%s
-D mars_lander.adb	20200211135950 61f3c9f1 mars_lander%b
+D mars_lander.adb	20200211172404 6e5ca563 mars_lander%b
 D perlin.ads		20200205212254 65fe9455 perlin%s
 D sdl_blendmode_h.ads	20200124114612 e308a3b6 sdl_blendmode_h%s
 D sdl_pixels_h.ads	20200124114610 89492fa8 sdl_pixels_h%s
@@ -189,8 +189,8 @@ X 22 mars_lander.ads
 10K9*Mars_Lander 82l5 82e16 23|1b14 191l5 191t16
 12N4*width
 13N4*height
-15N4*ship_width 23|27r21
-16N4*ship_height 23|28r21
+15N4*ship_width 23|27r21 35r44 36r44 37r44 38r44
+16N4*ship_height 23|28r21 35r72 36r72 37r72 38r72
 18F9*angle_value<long_float> 49r46 51r45 53r18 23|112r46 115r43 120r45 123r43
 20R9*mars_rectangle 22e14 43r54 61r15 23|33r54
 21r7*A{14|40R9} 23|35m25 71r38 88r38
@@ -222,8 +222,8 @@ X 22 mars_lander.ads
 51U17 turnLeft 51=26 23|120b17 126l11 126t19 146s13
 51f26 direction{18F9} 23|120b26 123r14 124m13 124r26
 53f7 direction{18F9} 23|29r28 98r17 98r39 142r23 146r22 149r50
-54r7 position{62|3R9} 23|22r22 23r22 35r31 35r49 36r31 36r49 37r31 37r49
-. 38r31 38r49 152r10 152r22
+54r7 position{62|3R9} 23|22r22 23r22 35r31 35r59 36r31 36r59 37r31 37r59
+. 38r31 38r59 152r10 152r22
 54r17 velocity{62|3R9} 23|97r24 97r35 97r48 97r59 149r10 149r22 152r33
 55f7 thrust{float} 23|44r13 104r10 138r13 150r12
 57f7 rayon{float}
@@ -273,7 +273,7 @@ X 62 vector.ads
 1K9*vector 22|5w6 5r25 62|11e11
 3R9*Vector_Type 22|54r27 23|130r20 62|5e14
 4f7*x{float} 23|22r31 35r40 36r40 37r40 38r40 97r57 97r68
-4f10*y{float} 23|23r31 35r58 36r58 37r58 38r58 97r33 97r44
+4f10*y{float} 23|23r31 35r68 36r68 37r68 38r68 97r33 97r44
 7V14*"+"{3R9} 23|149s31 150s19 152s31
 8V14*"*"{3R9} 23|149s62
 9V13*From_Angle{3R9} 23|149s33

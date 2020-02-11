@@ -32,10 +32,10 @@ package body Mars_Lander is
       
       procedure updateBounds(previousBounds : in out mars_rectangle) is
       begin
-         previousBounds.A := (position.x - 12.5,position.y +12.5,0.0);
-         previousBounds.B := (position.x + 12.5,position.y +12.5,0.0);
-         previousBounds.C := (position.x + 12.5,position.y -12.5,0.0);
-         previousBounds.D := (position.x - 12.5,position.y -12.5,0.0);
+         previousBounds.A := (position.x - ship_width/2.0,position.y + ship_height/2.0,0.0);
+         previousBounds.B := (position.x + ship_width/2.0,position.y + ship_height/2.0,0.0);
+         previousBounds.C := (position.x + ship_width/2.0,position.y - ship_height/2.0,0.0);
+         previousBounds.D := (position.x - ship_width/2.0,position.y - ship_height/2.0,0.0);
       end updateBounds;
           
       

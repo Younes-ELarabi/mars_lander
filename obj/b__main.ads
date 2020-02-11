@@ -439,7 +439,7 @@ package ada_main is
    pragma Export (C, u00200, "inputsB");
    u00201 : constant Version_32 := 16#bf387807#;
    pragma Export (C, u00201, "inputsS");
-   u00202 : constant Version_32 := 16#b6e1c7ed#;
+   u00202 : constant Version_32 := 16#b94eab7f#;
    pragma Export (C, u00202, "mars_landerB");
    u00203 : constant Version_32 := 16#766bed79#;
    pragma Export (C, u00203, "mars_landerS");
