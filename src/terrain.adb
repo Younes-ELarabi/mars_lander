@@ -17,7 +17,7 @@ package body terrain is
             for I in 1..size loop
                terrain(I) := (map_value(Float(I),1.0,Float(size),-400.0,400.0),
                               map_value(Noise(k),0.0,1.0,-400.0,0.0));
-               k := k + 0.005;
+               k := k + 0.01;
             end loop;
             sort(terrain,1,size);
             -- create surface for Landing

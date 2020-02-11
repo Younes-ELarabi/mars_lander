@@ -93,7 +93,7 @@ package body Mars_Lander is
                pointB := (surface(I+1).X,surface(I+1).Y,0.0);
             end if;
          end loop;
-         return ( hasCollided and (pointA.Y = pointB.Y)  -- (pointA.Y = pointB.Y) 
+         return ( hasCollided and (pointA.Y = pointB.Y) 
                   and (velocity.y*velocity.y + velocity.x*velocity.x) < 4.0)
            and (direction > -10.0 and direction < 10.0);                  
       end isLanded;

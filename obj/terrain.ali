@@ -19,7 +19,7 @@ RV NO_ELABORATION_CODE
 RV SPARK_05
 RV MAX_PROTECTED_ENTRIES=1
 
-U terrain%b		terrain.adb		d2c34782 NE OO PK IL
+U terrain%b		terrain.adb		9f8cb979 NE OO PK IL
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W system%s		system.ads		system.ali
@@ -103,7 +103,7 @@ D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
 D s-valuns.ads		20190518041258 35067db9 system.val_uns%s
 D s-win32.ads		20190518041256 90ecf4e6 system.win32%s
 D terrain.ads		20200211124638 09b51f61 terrain%s
-D terrain.adb		20200211125406 db7658e3 terrain%b
+D terrain.adb		20200211171930 9639a618 terrain%b
 G a e
 G c Z s b [map_value terrain 21 13 none]
 G c Z s b [generate terrain__terrain_object 25 17 none]

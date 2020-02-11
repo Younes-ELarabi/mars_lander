@@ -483,7 +483,7 @@ package ada_main is
    pragma Export (C, u00222, "collisionB");
    u00223 : constant Version_32 := 16#65ff8504#;
    pragma Export (C, u00223, "collisionS");
-   u00224 : constant Version_32 := 16#d2c34782#;
+   u00224 : constant Version_32 := 16#9f8cb979#;
    pragma Export (C, u00224, "terrainB");
    u00225 : constant Version_32 := 16#43b20ff7#;
    pragma Export (C, u00225, "terrainS");
