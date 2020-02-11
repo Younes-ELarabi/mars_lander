@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Clipboard>
+  <clipboard last="true" >randVal</clipboard>
+  <clipboard>rand_custom.Reset(Seed);
+         num := Random(Seed);</clipboard>
+  <clipboard>-- like a time value, keep it low to get smooth surface</clipboard>
+  <clipboard>type custom is new Integer range 0 .. size - length;
+         package rand_custom is new Ada.Numerics.Discrete_Random(custom);
+         use rand_custom;
+         Seed : Generator;
+         num  : custom;</clipboard>
+  <clipboard>type custom is new Integer range 0 .. size - length;</clipboard>
+  <clipboard>with Ada.Numerics.Discrete_Random;</clipboard>
+  <clipboard> rand_custom.Reset(Seed);
+         num := Random(Seed);</clipboard>
+  <clipboard>package rand_custom is new Ada.Numerics.Discrete_Random(custom);
+         use rand_custom;
+         Seed : Generator;
+         num  : custom;</clipboard>
+  <clipboard>function generateRandomValue return Integer;</clipboard>
+  <clipboard>To_Duration(Next)</clipboard>
+</Clipboard>

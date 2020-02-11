@@ -1,0 +1,7 @@
+randomvalue.adb:4:63: "custom" is undefined (more references follow)
+randomvalue.adb:4:63: instantiation abandoned
+randomvalue.adb:5:11: "rand_custom" is undefined (more references follow)
+randomvalue.adb:6:14: "Generator" is not visible
+randomvalue.adb:6:14: non-visible declaration at a-nudira.ads:50
+randomvalue.adb:10:14: "Random" is not visible
+randomvalue.adb:10:14: non-visible declaration at a-nudira.ads:52

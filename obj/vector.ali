@@ -1,0 +1,56 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U vector%b		vector.adb		167d810f NE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.elementary_functions%s  a-nuelfu.ads  a-nuelfu.ali
+
+U vector%s		vector.ads		c670e60e EE NE OO PK IL
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-numeri.ads		20190518041256 bb51c45a ada.numerics%s
+D a-nuelfu.ads		20190518041256 03e83d1c ada.numerics.elementary_functions%s
+D a-ngelfu.ads		20190518041258 55716239 ada.numerics.generic_elementary_functions%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D system.ads		20190518041258 32a08138 system%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D vector.ads		20200129154356 c670e60e vector%s
+D vector.adb		20200129154350 d3e55a1d vector%b
+G a e
+G c Z s b [Oadd vector 7 13 none]
+G c Z s b [Omultiply vector 8 13 none]
+G c Z s b [from_angle vector 9 13 none]
+G c Z s s [vector_typeIP vector 3 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 10|1r6 1r45
+X 2 a-numeri.ads
+16K13*Numerics 32e17 10|1r10 1r49
+X 3 a-nuelfu.ads
+18K22*Elementary_Functions[4|39] 10|1w19 1r58
+X 4 a-ngelfu.ads
+94V13*Sin{float} 10|16s16[3|18]
+103V13*Cos{float} 10|16s40[3|18]
+X 9 vector.ads
+1K9*vector 11l5 11e11 10|2b14 18l6 18t12
+3R9*Vector_Type 5e14 7r31 7r51 8r24 8r59 9r46 10|4r31 4r51 9r23 9r57 14r44
+4f7*x{float} 10|6r20 6r30 11r20
+4f10*y{float} 10|6r38 6r48 11r36
+7V14*"+"{3R9} 7>17 7>23 10|4b14 7l9 7t11
+7r17 Left{3R9} 10|4b17 6r15 6r33
+7r23 Right{3R9} 10|4b23 6r24 6r42
+8V14*"*"{3R9} 8>17 8>37 10|9b14 12l9 12t11
+8r17 Left{3R9} 10|9b17 11r15 11r31
+8f37 Right{float} 10|9b36 11r24 11r40
+9V13*From_Angle{3R9} 9>24 10|14b13 17l8 17t18
+9f24 Angle{float} 10|14b24 16r20 16r44
+

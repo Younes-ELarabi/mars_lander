@@ -1,0 +1,134 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U perlin%b		perlin.adb		947defa3 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s
+W ada.numerics.elementary_functions%s  a-nuelfu.ads  a-nuelfu.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system%s		system.ads		system.ali
+Z system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
+Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
+
+U perlin%s		perlin.ads		65fe9455 EE NE OO PK
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-except.ads		20190518041256 291912d5 ada.exceptions%s
+D a-ioexce.ads		20190518041256 e4a01f64 ada.io_exceptions%s
+D a-numeri.ads		20190518041256 bb51c45a ada.numerics%s
+D a-nudira.ads		20190518041256 71e55def ada.numerics.discrete_random%s
+D a-nudira.adb		20190518041256 72908cdb ada.numerics.discrete_random%b
+D a-nuelfu.ads		20190518041256 03e83d1c ada.numerics.elementary_functions%s
+D a-ngelfu.ads		20190518041258 55716239 ada.numerics.generic_elementary_functions%s
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041258 491b781d ada.tags%s
+D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20190518041256 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
+D perlin.ads		20200205212254 65fe9455 perlin%s
+D perlin.adb		20200205212254 77cf9c00 perlin%b
+D system.ads		20190518041258 32a08138 system%s
+D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-fatflt.ads		20190518041256 11beb392 system.fat_flt%s
+D s-fatgen.ads		20190518041258 49cbaf86 system.fat_gen%s
+D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
+D s-imguns.ads		20190518041256 9ff43cf7 system.img_uns%s
+D s-parame.ads		20190518041258 48ec542b system.parameters%s
+D s-rannum.ads		20190518041256 99ade2f2 system.random_numbers%s
+D s-rannum.adb		20190518041258 20ba1217 system.random_numbers%b
+D s-ransee.ads		20190518041258 01a57b33 system.random_seed%s
+D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
+D s-valuns.ads		20190518041258 35067db9 system.val_uns%s
+D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [reset perlin 3 14 none]
+G c Z s b [noise perlin 4 13 none]
+G c Z b b [perm_arrayIP perlin 9 9 none]
+G c Z b b [lerp perlin 47 13 none]
+G c Z b b [grad perlin 52 13 none]
+G c Z b b [fade perlin 63 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 16|1r6 1r45 2r6 5r6 5r23 70r9 84r15
+X 4 a-numeri.ads
+16K13*Numerics 32e17 16|1r10 1r49 2r10 70r13 84r19
+X 5 a-nudira.ads
+42E9 Result_Subtype 16|70r39 84r45
+44k22*Discrete_Random 75e33 16|2w19 70r22 84r28
+50R9 Generator<25|63R9> 16|73r11[69] 86r50[83]
+52V13 Random{13|74M9}<25|75p13> 16|89s37[83]
+54U14 Reset<25|106p14> 16|76s7[69] 88s32[83]
+X 6 a-nudira.adb
+53V16 Random[25|83]{13|74M9} 26|392b13[16|83]
+X 7 a-nuelfu.ads
+18K22*Elementary_Functions[8|39] 16|1w19 1r58
+X 11 a-textio.ads
+57K13*Text_IO 727e16 16|5w10 5r27
+X 13 interfac.ads
+38K9*Interfaces 184e15 16|3w6 3r22
+74M9*Unsigned_32 16|9r30 9r55 52r26 53r11 70r57 72r11 74r11 82r36 99r18 103r14
+. 106r14
+77M9*Unsigned_64
+X 15 perlin.ads
+1K9*Perlin 6l5 6e11 16|7b14 116l5 116t11
+3U14*Reset 3>21 16|68b14 96l8 96t13
+3i21 Seed{integer} 16|68b21 76r17 88r56
+4V13*Noise{float} 4>20 16|98b13 115l8 115t13
+4f20 X{float} 16|98b20 103r40 104r14
+X 16 perlin.adb
+9A9 Perm_Array(13|74M9)<13|74M9> 11r26 45r11
+11a4 Const_Perm{9A9} 45r25 78r15
+45a4 Perm{9A9} 78m7 80r24 82r54 92r15 93m10 93r22 94m10 111r19 112r19
+47V13 Lerp{float} 47b13 47>19 47>30 47>33 50l8 50t12 114s23
+47f19 T{float} 49r18
+47f30 A{float} 49r14 49r27
+47f33 B{float} 49r23
+52V13 Grad{float} 52b13 52>19 52>39 61l8 61t12 111s13 112s13
+52m19 Hash{13|74M9} 53r26
+52f39 X{float} 60r21
+53m7 H{13|74M9} 54r36 56r11
+54f7 Grad{float} 57m10 57r19 60r14
+63V13 Fade{float} 63b13 63>19 66l8 66t12 109s12
+63f19 T{float} 65r14 65r18 65r22 65r27 65r32
+69K15 Discrete_Random[5|44] 71r11
+72m7 K{13|74M9} 89m13 93r28 94r16
+73r7 G{5|50R9[69]} 76r14
+74m7 T{13|74M9} 92m10 94r22
+80m11 I{13|74M9} 82r68 92r21 93r16
+82M21 Int_First_I{13|74M9} 84r63
+83K21 Int_First_I_Random[5|44] 86r31 88r13 89r18
+86r13 Int_First_I_Gen{5|50R9[83]} 88r39 89r45
+99m7 Ix0{13|74M9} 103m7 104r25 106r27 107m7 107r14 111r25
+99m12 Ix1{13|74M9} 106m7 112r25
+100f7 Fx0{float} 104m7 105r14 109r18 111r31
+100f12 Fx1{float} 105m7 112r31
+101f7 S{float} 109m7 114r29
+101f10 N0{float} 111m7 114r32
+101f14 N1{float} 112m7 114r36
+X 25 s-rannum.ads
+75V13*Random{13|74M9} 26|221i21
+76V13*Random{13|77M9} 26|221i21
+
