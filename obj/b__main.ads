@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#44cb7508#;
+   u00001 : constant Version_32 := 16#8482cf20#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#050ff2f0#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -441,7 +441,7 @@ package ada_main is
    pragma Export (C, u00201, "inputsS");
    u00202 : constant Version_32 := 16#b94eab7f#;
    pragma Export (C, u00202, "mars_landerB");
-   u00203 : constant Version_32 := 16#766bed79#;
+   u00203 : constant Version_32 := 16#87eb8fe3#;
    pragma Export (C, u00203, "mars_landerS");
    u00204 : constant Version_32 := 16#0eed7110#;
    pragma Export (C, u00204, "system__tasking__protected_objects__operationsB");
@@ -483,9 +483,9 @@ package ada_main is
    pragma Export (C, u00222, "collisionB");
    u00223 : constant Version_32 := 16#65ff8504#;
    pragma Export (C, u00223, "collisionS");
-   u00224 : constant Version_32 := 16#9f8cb979#;
+   u00224 : constant Version_32 := 16#754d4956#;
    pragma Export (C, u00224, "terrainB");
-   u00225 : constant Version_32 := 16#43b20ff7#;
+   u00225 : constant Version_32 := 16#b2326d6d#;
    pragma Export (C, u00225, "terrainS");
    u00226 : constant Version_32 := 16#ec9cfed1#;
    pragma Export (C, u00226, "system__random_numbersB");

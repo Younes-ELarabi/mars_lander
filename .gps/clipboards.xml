@@ -1,30 +1,26 @@
 <?xml version="1.0"?>
 <Clipboard>
-  <clipboard last="true" >Terrain_Object.getE1H</clipboard>
-  <clipboard>Line_Rectangle(
-                              bounds.A,bounds.B,
-                              bounds.C,bounds.D,
-                              (Terrain_Object.getE1H),
-                              (Terrain_Object.getE2H)) </clipboard>
-  <clipboard>Terrain_Object.getE1H</clipboard>
-  <clipboard>Line_Rectangle(
-                              bounds.A,bounds.B,
-                              bounds.C,bounds.D,
-                              ( (surface(I).X,surface(I).Y,0.0)),
-                              (surface(I+1).X,surface(I+1).Y,0.0)) </clipboard>
-  <clipboard>Terrain_Object.E1H.Y</clipboard>
-  <clipboard>(pointA.Y = pointB.Y) </clipboard>
-  <clipboard>(surface(I).X,surface(I).Y,0.0)</clipboard>
-  <clipboard>updateCollisionData</clipboard>
-  <clipboard>procedure updateCollisionData(p1 : in out Point_3d,p2 : in out Point_3d);</clipboard>
-  <clipboard>for I in 1..terrain.size-1 loop
-            if Line_Rectangle(
-                              bounds.A,bounds.B,
-                              bounds.C,bounds.D,
-                              ( (surface(I).X,surface(I).Y,0.0)),
-                              (surface(I+1).X,surface(I+1).Y,0.0)) then                             
-               pointA := (surface(I).X,surface(I).Y,0.0);
-               pointB := (surface(I+1).X,surface(I+1).Y,0.0);              
-            end if;
-         end loop;</clipboard>
+  <clipboard last="true" >if thrust = 0.0 then
+            return 0;
+         elsif not activeReactor then
+            return 1;
+         else
+            return 2;
+         end if;</clipboard>
+  <clipboard>Draw_Line(Canvas,
+                   pointa,
+                   pointb,
+                   Red
+                  );</clipboard>
+  <clipboard>pointA</clipboard>
+  <clipboard>Terrain_Object.getStartH</clipboard>
+  <clipboard>setHorizentalData</clipboard>
+  <clipboard>procedure setHorizentalData(start,finish :Float);
+      function getStartH return Float;
+      function getendH return float;</clipboard>
+  <clipboard>Float(terrain(num).X)</clipboard>
+  <clipboard>terrain(Integer(J)).X</clipboard>
+  <clipboard>Draw_Line(Canvas,Terrain_Object.getE1H,Terrain_Object.getE1H,Magenta);</clipboard>
+  <clipboard>Put_Line(Float&apos;Image(Terrain_Object.getE1H.X));
+   Put_Line(Float&apos;Image(Terrain_Object.getE1H.Y));</clipboard>
 </Clipboard>

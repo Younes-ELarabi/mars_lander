@@ -26,7 +26,7 @@ Z system.tasking%s	s-taskin.adb		s-taskin.ali
 Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 Z system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 
-U mars_lander%s		mars_lander.ads		766bed79 EE OO PF PK
+U mars_lander%s		mars_lander.ads		87eb8fe3 EE OO PF PK
 W ada%s			ada.ads			ada.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -101,7 +101,7 @@ D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
 D s-win32.ads		20190518041256 90ecf4e6 system.win32%s
-D terrain.ads		20200211124638 09b51f61 terrain%s
+D terrain.ads		20200211230808 f8357dfb terrain%s
 D vector.ads		20200129154356 c670e60e vector%s
 G a e
 G c Z s b [draw mars_lander__lander 30 17 none]
@@ -262,7 +262,7 @@ X 47 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 X 61 terrain.ads
-7K9*terrain 22|8w6 8r25 23|69r22 86r22 61|42e12
+7K9*terrain 22|8w6 8r25 23|69r22 86r22 61|40e12
 9N4*size 23|69r30 86r30
 12f7*X{float} 23|73r45 74r45 90r45 91r45 92r38 93r40
 13f7*Y{float} 23|73r58 74r60 90r58 91r60 92r51 93r55
