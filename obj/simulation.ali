@@ -6,6 +6,8 @@ P ZX
 
 RN
 RV NO_DELAY
+RV NO_FLOATING_POINT
+RV NO_IO
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_TASKING
 RV NO_DEFAULT_INITIALIZATION
@@ -15,19 +17,24 @@ RV SPARK_05
 RV MAX_TASKS=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U simulation%b		simulation.adb		92a3e8a0 OO PK IL
+U simulation%b		simulation.adb		959415d7 OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W flag%s		flag.adb		flag.ali  AD
+Z iacontroll%s		iacontroll.adb		iacontroll.ali  AD
 W mars_lander%s		mars_lander.adb		mars_lander.ali  AD
+Z system.img_real%s	s-imgrea.adb		s-imgrea.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U simulation%s		simulation.ads		38dd6157 EE OO PK IL
+U simulation%s		simulation.ads		a5517ed4 EE OO PK IL
+W ada%s			ada.ads			ada.ali
 Z ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W iacontroll%s		iacontroll.adb		iacontroll.ali
 W mars_lander%s		mars_lander.adb		mars_lander.ali
 Z system%s		system.ads		system.ali
 Z system.parameters%s	s-parame.adb		s-parame.ali
@@ -53,12 +60,13 @@ D display.ads		20200124114604 3a88167c display%s
 D display-basic.ads	20200124114604 66d43323 display.basic%s
 D display-image.ads	20200124114604 86429f23 display.image%s
 D flag.ads		20200211092922 197dc33c flag%s
+D iacontroll.ads	20200221180504 1c7f8a4a iacontroll%s
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-c.ads		20190518041256 5421119b interfaces.c%s
 D i-cexten.ads		20190518041256 38d7e116 interfaces.c.extensions%s
 D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D mars_lander.ads	20200211132134 d7120e1c mars_lander%s
+D mars_lander.ads	20200221180322 d7120e1c mars_lander%s
 D perlin.ads		20200205212254 65fe9455 perlin%s
 D sdl_blendmode_h.ads	20200124114612 e308a3b6 sdl_blendmode_h%s
 D sdl_pixels_h.ads	20200124114610 89492fa8 sdl_pixels_h%s
@@ -66,8 +74,8 @@ D sdl_rect_h.ads	20200124114612 5db03fa9 sdl_rect_h%s
 D sdl_rwops_h.ads	20200124114610 d60b2061 sdl_rwops_h%s
 D sdl_stdinc_h.ads	20200124114612 76b5d89f sdl_stdinc_h%s
 D sdl_surface_h.ads	20200124114612 da149c96 sdl_surface_h%s
-D simulation.ads	20200211095850 efcf6f4b simulation%s
-D simulation.adb	20200211120934 b143b6b8 simulation%b
+D simulation.ads	20200221184428 c0c82fef simulation%s
+D simulation.adb	20200221184410 99730b6b simulation%b
 D stdarg_h.ads		20200124114612 db698406 stdarg_h%s
 D stddef_h.ads		20200124114612 f49cc756 stddef_h%s
 D stdint_h.ads		20200124114610 376ae00b stdint_h%s
@@ -77,6 +85,7 @@ D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
 D s-exctab.ads		20190518041256 54135002 system.exception_table%s
 D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
 D s-finroo.ads		20190518041258 4ff27390 system.finalization_root%s
+D s-imgrea.ads		20190518041256 c7a851e2 system.img_real%s
 D s-multip.ads		20190518041256 38ac9f73 system.multiprocessors%s
 D s-osinte.ads		20190518041258 97504df8 system.os_interface%s
 D s-parame.ads		20190518041258 48ec542b system.parameters%s
@@ -102,36 +111,49 @@ D terrain.ads		20200211230808 f8357dfb terrain%s
 D vector.ads		20200129154356 c670e60e vector%s
 G a e
 G c b b b [b simulation 5 1 none]
-G c Z s b [updateTK simulation 5 9 none]
-G c Z s s [updateTKVIP simulation 5 4 none]
+G c Z s b [updateTK simulation 7 9 none]
+G c Z s s [updateTKVIP simulation 7 4 none]
+G r p none [b simulation 5 1 none] [init iacontroll__pid_controller 5 17 none]
 G r p none [b simulation 5 1 none] [getflag flag__stepflag 5 16 none]
 G r p none [b simulation 5 1 none] [step mars_lander__lander 33 17 none]
-G r p none [updateTK simulation 5 9 none] [getflag flag__stepflag 5 16 none]
-G r p none [updateTK simulation 5 9 none] [step mars_lander__lander 33 17 none]
+G r p none [b simulation 5 1 none] [update iacontroll__pid_controller 7 17 none]
+G r p none [updateTK simulation 7 9 none] [init iacontroll__pid_controller 5 17 none]
+G r p none [updateTK simulation 7 9 none] [getflag flag__stepflag 5 16 none]
+G r p none [updateTK simulation 7 9 none] [step mars_lander__lander 33 17 none]
+G r p none [updateTK simulation 7 9 none] [update iacontroll__pid_controller 7 17 none]
 X 1 ada.ads
-16K9*Ada 20e8 32|3r6 3r25
+16K9*Ada 20e8 32|3r6 3r23 33|3r6 3r25
 X 7 a-reatim.ads
-39K13*Real_Time 185e18 32|3w10 3r29
-49O9*Time<duration> 32|8r11
-54O9*Time_Span<duration> 32|11r22
-61V13*Clock{49O9} 32|13s15
-65V14*"+"{49O9} 32|13s21 18s23
-119V13*Milliseconds{54O9} 32|11s35
+39K13*Real_Time 185e18 33|3w10 3r29
+49O9*Time<duration> 33|8r14
+54O9*Time_Span<duration> 33|11r25
+61V13*Clock{49O9} 33|17s15
+65V14*"+"{49O9} 33|17s21 26s23
+119V13*Milliseconds{54O9} 33|11s38
+X 11 a-textio.ads
+57K13*Text_IO 727e16 32|3w10 3r27
+508U14*Put_Line 33|21s10
 X 17 flag.ads
-1K9*flag 11e9 32|2w6 2r16
-3w14*StepFlag 32|14r13
-5V16 getFlag{boolean} 32|14s22
-X 23 mars_lander.ads
-10K9*Mars_Lander 82e16 31|1w6 1r23 32|1w6 1r23 15r10
-28w14*Lander 32|15r22
-33U17 Step 32|15s29
-X 31 simulation.ads
-3K9*simulation 7l5 7e15 32|5b14 22l5 22t15
-5t9*update 32|7b14 20l8 20t14
-X 32 simulation.adb
-8o4 Next{7|49O9} 13m7 17r22 18m10 18r18
-11o4 Period{7|54O9} 13r23 18r25
-X 49 s-stausa.ads
+1K9*flag 11e9 33|2w6 2r16
+3w14*StepFlag 33|18r13
+5V16 getFlag{boolean} 33|18s22
+X 18 iacontroll.ads
+1K9*IAcontroll 27e15 32|2w6 2r23
+3w14*pid_controller 33|16r7 22r10
+5U17 init 33|16s22
+7U17 update 33|22s25
+X 24 mars_lander.ads
+10K9*Mars_Lander 82e16 32|1w6 1r23 33|1w6 1r23 19r10
+28w14*Lander 33|19r22
+33U17 Step 33|19s29
+X 32 simulation.ads
+5K9*simulation 9l5 9e15 33|5b14 30l5 30t15
+7t9*update 33|7b14 28l8 28t14
+X 33 simulation.adb
+8o7 Next{7|49O9} 17m7 25r22 26m10 26r18
+11o7 Period{7|54O9} 17r23 26r25
+12f7 error{float} 21r31 22m32 22r32
+X 51 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 

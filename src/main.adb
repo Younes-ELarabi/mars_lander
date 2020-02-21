@@ -85,7 +85,6 @@ begin
       delay until Next;
       --  update the Next time adding the period for the next step
       Next := Next + Period;
-      -- Put_Line(Boolean'Image(Lander.isLanded));
       StepFlag.setFlag(not Lander.hasCollided and not Lander.isLanded);
    end loop;
 

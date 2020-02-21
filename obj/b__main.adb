@@ -42,6 +42,7 @@ package body ada_main is
    E217 : Short_Integer; pragma Import (Ada, E217, "system__tasking__queuing_E");
    E239 : Short_Integer; pragma Import (Ada, E239, "system__tasking__stages_E");
    E193 : Short_Integer; pragma Import (Ada, E193, "flag_E");
+   E243 : Short_Integer; pragma Import (Ada, E243, "iacontroll_E");
    E235 : Short_Integer; pragma Import (Ada, E235, "perlin_E");
    E159 : Short_Integer; pragma Import (Ada, E159, "display_E");
    E191 : Short_Integer; pragma Import (Ada, E191, "display__image_E");
@@ -79,33 +80,40 @@ package body ada_main is
       begin
          F2;
       end;
-      E193 := E193 - 1;
+      E243 := E243 - 1;
       declare
          procedure F3;
-         pragma Import (Ada, F3, "flag__finalize_spec");
+         pragma Import (Ada, F3, "iacontroll__finalize_spec");
       begin
          F3;
       end;
-      E215 := E215 - 1;
+      E193 := E193 - 1;
       declare
          procedure F4;
-         pragma Import (Ada, F4, "system__tasking__protected_objects__entries__finalize_spec");
+         pragma Import (Ada, F4, "flag__finalize_spec");
       begin
          F4;
       end;
-      E148 := E148 - 1;
+      E215 := E215 - 1;
       declare
          procedure F5;
-         pragma Import (Ada, F5, "ada__text_io__finalize_spec");
+         pragma Import (Ada, F5, "system__tasking__protected_objects__entries__finalize_spec");
       begin
          F5;
       end;
+      E148 := E148 - 1;
       declare
          procedure F6;
-         pragma Import (Ada, F6, "system__file_io__finalize_body");
+         pragma Import (Ada, F6, "ada__text_io__finalize_spec");
+      begin
+         F6;
+      end;
+      declare
+         procedure F7;
+         pragma Import (Ada, F7, "system__file_io__finalize_body");
       begin
          E154 := E154 - 1;
-         F6;
+         F7;
       end;
       declare
          procedure Reraise_Library_Exception_If_Any;
@@ -310,6 +318,8 @@ package body ada_main is
       E239 := E239 + 1;
       flag'elab_spec;
       E193 := E193 + 1;
+      iacontroll'elab_spec;
+      E243 := E243 + 1;
       E235 := E235 + 1;
       Display'Elab_Spec;
       E159 := E159 + 1;
@@ -373,6 +383,7 @@ package body ada_main is
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\flag.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\gnat_sdl\obj\gl_gl_h.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\gnat_sdl\obj\gl_glu_h.o
+   --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\iacontroll.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\perlin.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\gnat_sdl\obj\sdl_blendmode_h.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\gnat_sdl\obj\sdl_error_h.o

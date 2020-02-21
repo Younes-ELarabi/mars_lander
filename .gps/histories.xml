@@ -84,16 +84,16 @@
     <Length> 1</Length>
   </key>
   <key type="strings" name="reopen_files" >
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\vector.adb</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\vector.ads</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\terrain.adb</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\game_support\src\display.ads</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\game_support\src\display-basic.ads</value>
     <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\main.adb</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.adb</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\terrain.adb</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\terrain.ads</value>
     <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.ads</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\collision.adb</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\collision.ads</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.adb</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\iacontroll.ads</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\iacontroll.adb</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\inputs.ads</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\inputs.adb</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\flag.adb</value>
   </key>
   <key type="booleans" name="search-displays-relative-paths" >
     <value>FALSE</value>
@@ -139,6 +139,7 @@
   </key>
   <key type="strings" name="project_files" >
     <value>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\empty.gpr</value>
     <value>C:\Users\desca\dev\mars_lander_lab\mars_lander.gpr</value>
   </key>
   <key type="booleans" name="project_view-filter-negate" >

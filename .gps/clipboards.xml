@@ -1,26 +1,16 @@
 <?xml version="1.0"?>
 <Clipboard>
-  <clipboard last="true" >if thrust = 0.0 then
-            return 0;
-         elsif not activeReactor then
-            return 1;
-         else
-            return 2;
-         end if;</clipboard>
-  <clipboard>Draw_Line(Canvas,
-                   pointa,
-                   pointb,
-                   Red
-                  );</clipboard>
-  <clipboard>pointA</clipboard>
-  <clipboard>Terrain_Object.getStartH</clipboard>
-  <clipboard>setHorizentalData</clipboard>
-  <clipboard>procedure setHorizentalData(start,finish :Float);
-      function getStartH return Float;
-      function getendH return float;</clipboard>
-  <clipboard>Float(terrain(num).X)</clipboard>
-  <clipboard>terrain(Integer(J)).X</clipboard>
-  <clipboard>Draw_Line(Canvas,Terrain_Object.getE1H,Terrain_Object.getE1H,Magenta);</clipboard>
-  <clipboard>Put_Line(Float&apos;Image(Terrain_Object.getE1H.X));
-   Put_Line(Float&apos;Image(Terrain_Object.getE1H.Y));</clipboard>
+  <clipboard last="true" >Put_Line(Float&apos;Image(error));</clipboard>
+  <clipboard>Put_Line(Boolean&apos;Image(Lander.isLanded));</clipboard>
+  <clipboard> error :Float := 2.0;</clipboard>
+  <clipboard>error</clipboard>
+  <clipboard>--
+with IAcontroll;    use IAcontroll;</clipboard>
+  <clipboard>in out </clipboard>
+  <clipboard>currentValue</clipboard>
+  <clipboard>procedure setIntegral(integral : in out Float;error :Float);
+      
+      procedure setError(lastErr :  in out Float;currentErr :Float);</clipboard>
+  <clipboard>lastError</clipboard>
+  <clipboard> in out </clipboard>
 </Clipboard>

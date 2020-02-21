@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#8482cf20#;
+   u00001 : constant Version_32 := 16#ab858f84#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#050ff2f0#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -515,18 +515,32 @@ package ada_main is
    pragma Export (C, u00238, "system__tasking__stagesB");
    u00239 : constant Version_32 := 16#5fc08d5c#;
    pragma Export (C, u00239, "system__tasking__stagesS");
-   u00240 : constant Version_32 := 16#92a3e8a0#;
+   u00240 : constant Version_32 := 16#959415d7#;
    pragma Export (C, u00240, "simulationB");
-   u00241 : constant Version_32 := 16#38dd6157#;
+   u00241 : constant Version_32 := 16#a5517ed4#;
    pragma Export (C, u00241, "simulationS");
-   u00242 : constant Version_32 := 16#7268f812#;
-   pragma Export (C, u00242, "system__img_boolB");
-   u00243 : constant Version_32 := 16#c779f0d3#;
-   pragma Export (C, u00243, "system__img_boolS");
-   u00244 : constant Version_32 := 16#e31b7c4e#;
-   pragma Export (C, u00244, "system__memoryB");
-   u00245 : constant Version_32 := 16#6bdde70c#;
-   pragma Export (C, u00245, "system__memoryS");
+   u00242 : constant Version_32 := 16#558f439e#;
+   pragma Export (C, u00242, "iacontrollB");
+   u00243 : constant Version_32 := 16#1c7f8a4a#;
+   pragma Export (C, u00243, "iacontrollS");
+   u00244 : constant Version_32 := 16#8aa4f090#;
+   pragma Export (C, u00244, "system__img_realB");
+   u00245 : constant Version_32 := 16#f508d0da#;
+   pragma Export (C, u00245, "system__img_realS");
+   u00246 : constant Version_32 := 16#3e932977#;
+   pragma Export (C, u00246, "system__img_lluB");
+   u00247 : constant Version_32 := 16#4feffd78#;
+   pragma Export (C, u00247, "system__img_lluS");
+   u00248 : constant Version_32 := 16#62d0e74f#;
+   pragma Export (C, u00248, "system__powten_tableS");
+   u00249 : constant Version_32 := 16#7268f812#;
+   pragma Export (C, u00249, "system__img_boolB");
+   u00250 : constant Version_32 := 16#c779f0d3#;
+   pragma Export (C, u00250, "system__img_boolS");
+   u00251 : constant Version_32 := 16#e31b7c4e#;
+   pragma Export (C, u00251, "system__memoryB");
+   u00252 : constant Version_32 := 16#6bdde70c#;
+   pragma Export (C, u00252, "system__memoryS");
 
    --  BEGIN ELABORATION ORDER
    --  ada%s
@@ -552,6 +566,7 @@ package ada_main is
    --  system.crtl%s
    --  interfaces.c_streams%s
    --  interfaces.c_streams%b
+   --  system.powten_table%s
    --  system.restrictions%s
    --  system.restrictions%b
    --  system.storage_elements%s
@@ -569,6 +584,8 @@ package ada_main is
    --  system.traceback_entries%s
    --  system.traceback_entries%b
    --  system.unsigned_types%s
+   --  system.img_llu%s
+   --  system.img_llu%b
    --  system.img_uns%s
    --  system.img_uns%b
    --  system.wch_con%s
@@ -670,6 +687,8 @@ package ada_main is
    --  ada.finalization%s
    --  system.file_io%s
    --  system.file_io%b
+   --  system.img_real%s
+   --  system.img_real%b
    --  system.multiprocessors%s
    --  system.multiprocessors%b
    --  system.os_interface%s
@@ -729,6 +748,8 @@ package ada_main is
    --  flag%b
    --  gl_gl_h%s
    --  gl_glu_h%s
+   --  iacontroll%s
+   --  iacontroll%b
    --  perlin%s
    --  perlin%b
    --  sdl_blendmode_h%s
