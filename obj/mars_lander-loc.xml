@@ -93,11 +93,47 @@
       <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
       <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\simulation.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 10" line=" 24" >
+    <file_marker column=" 10" line=" 26" >
       <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
       <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\inputs.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 6" line=" 5" >
+    <file_marker column=" 6" line=" 5" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\inputs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 23" line=" 160" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 159" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 68" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 29" line=" 19" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\inputs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 36" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\inputs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 39" line=" 3" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\inputs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\pidcontroller.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 10" line=" 35" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\pidcontroller.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 32" line=" 26" >
       <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
       <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\inputs.adb</vfs_file>
     </file_marker>

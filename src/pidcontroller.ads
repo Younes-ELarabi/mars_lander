@@ -8,9 +8,9 @@ package PIDController is
       
       procedure reset(set :Float);
       
-      procedure setIntegral(integral : in out Float;error :Float);
+      procedure setIntegral(error :Float);
       
-      procedure setError(lastErr :  in out Float;currentErr :Float);
+      procedure setError(currentErr :Float);
       
    private 
       

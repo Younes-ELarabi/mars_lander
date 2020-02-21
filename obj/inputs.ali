@@ -17,7 +17,7 @@ RV SPARK_05
 RV MAX_TASKS=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U inputs%b		inputs.adb		3211000b OO PK IL
+U inputs%b		inputs.adb		ce26f37d OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
@@ -60,15 +60,15 @@ D display-basic.ads	20200124114604 66d43323 display.basic%s
 D display-image.ads	20200124114604 86429f23 display.image%s
 D flag.ads		20200211092922 197dc33c flag%s
 D inputs.ads		20200205182204 bf387807 inputs%s
-D inputs.adb		20200221185816 4908f239 inputs%b
+D inputs.adb		20200221231744 cae61195 inputs%b
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-c.ads		20190518041256 5421119b interfaces.c%s
 D i-cexten.ads		20190518041256 38d7e116 interfaces.c.extensions%s
 D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D mars_lander.ads	20200221180322 d7120e1c mars_lander%s
+D mars_lander.ads	20200221190120 94107311 mars_lander%s
 D perlin.ads		20200205212254 65fe9455 perlin%s
-D pidcontroller.ads	20200221185116 c02e5d28 pidcontroller%s
+D pidcontroller.ads	20200221215550 fcf530ff pidcontroller%s
 D sdl_blendmode_h.ads	20200124114612 e308a3b6 sdl_blendmode_h%s
 D sdl_pixels_h.ads	20200124114610 89492fa8 sdl_pixels_h%s
 D sdl_rect_h.ads	20200124114612 5db03fa9 sdl_rect_h%s
@@ -115,60 +115,66 @@ G c Z s s [updateTKVIP inputs 3 4 none]
 G r p none [b inputs 8 1 none] [init pidcontroller__pid_controller 5 17 none]
 G r p none [b inputs 8 1 none] [getflag flag__stepflag 5 16 none]
 G r c none [b inputs 8 1 none] [get_key_status display__basic 345 13 none]
-G r p none [b inputs 8 1 none] [setup mars_lander__inputflags 68 17 none]
-G r p none [b inputs 8 1 none] [setleft mars_lander__inputflags 71 17 none]
-G r p none [b inputs 8 1 none] [setright mars_lander__inputflags 74 17 none]
+G r p none [b inputs 8 1 none] [setleft mars_lander__inputflags 73 17 none]
+G r p none [b inputs 8 1 none] [setright mars_lander__inputflags 76 17 none]
+G r p none [b inputs 8 1 none] [getposition mars_lander__lander 45 16 none]
 G r p none [b inputs 8 1 none] [update pidcontroller__pid_controller 7 17 none]
+G r p none [b inputs 8 1 none] [setup mars_lander__inputflags 70 17 none]
 G r p none [updateTK inputs 3 9 none] [init pidcontroller__pid_controller 5 17 none]
 G r p none [updateTK inputs 3 9 none] [getflag flag__stepflag 5 16 none]
 G r c none [updateTK inputs 3 9 none] [get_key_status display__basic 345 13 none]
-G r p none [updateTK inputs 3 9 none] [setup mars_lander__inputflags 68 17 none]
-G r p none [updateTK inputs 3 9 none] [setleft mars_lander__inputflags 71 17 none]
-G r p none [updateTK inputs 3 9 none] [setright mars_lander__inputflags 74 17 none]
+G r p none [updateTK inputs 3 9 none] [setleft mars_lander__inputflags 73 17 none]
+G r p none [updateTK inputs 3 9 none] [setright mars_lander__inputflags 76 17 none]
+G r p none [updateTK inputs 3 9 none] [getposition mars_lander__lander 45 16 none]
 G r p none [updateTK inputs 3 9 none] [update pidcontroller__pid_controller 7 17 none]
+G r p none [updateTK inputs 3 9 none] [setup mars_lander__inputflags 70 17 none]
 X 1 ada.ads
 16K9*Ada 20e8 19|2r6 2r25 6r6 6r23
 X 7 a-reatim.ads
 39K13*Real_Time 185e18 19|2w10 2r29
 49O9*Time<duration> 19|11r14
 54O9*Time_Span<duration> 19|14r25
-61V13*Clock{49O9} 19|18s15
-65V14*"+"{49O9} 19|18s21 29s23
+61V13*Clock{49O9} 19|19s15
+65V14*"+"{49O9} 19|19s21 39s23
 119V13*Milliseconds{54O9} 19|14s38
 X 11 a-textio.ads
 57K13*Text_IO 727e16 19|6w10 6r27
-508U14*Put_Line 19|26s10
+508U14*Put_Line 19|29s10
 X 14 display.ads
 23K9*Display 59e12 19|3r6 3r25
 X 15 display-basic.ads
 20K17*Basic 363e18 19|3w14 3r33
-132n7*SDLK_RIGHT{55E9} 19|23r57
-133n7*SDLK_LEFT{55E9} 19|22r56
-135n7*SDLK_UP{55E9} 19|21r54
-345V13*Get_Key_Status{boolean} 19|21s39 22s41 23s42
+132n7*SDLK_RIGHT{55E9} 19|24r57
+133n7*SDLK_LEFT{55E9} 19|23r56
+345V13*Get_Key_Status{boolean} 19|23s41 24s42
 X 17 flag.ads
 1K9*flag 11e9 19|1w6 1r16
-3w14*StepFlag 19|20r13
-5V16 getFlag{boolean} 19|20s22
+3w14*StepFlag 19|21r13
+5V16 getFlag{boolean} 19|21s22
 X 18 inputs.ads
-1K9*inputs 5l5 5e11 19|8b14 33l5 33t11
-3t9*update 19|10b14 31l8 31t14
+1K9*inputs 5l5 5e11 19|8b14 43l5 43t11
+3t9*update 19|10b14 41l8 41t14
 X 19 inputs.adb
-11o7 Next{7|49O9} 18m7 28r22 29m10 29r18
-14o7 Period{7|54O9} 18r23 29r25
-16f7 error{float} 25m32 25r32 26r31
+11o7 Next{7|49O9} 19m7 38r22 39m10 39r18
+14o7 Period{7|54O9} 19r23 39r25
+16f7 currentPositionY{float} 26m10 27r20 29r31
+17f7 output{float} 27m10 30m32 30r32 31r13 34r16
 X 25 mars_lander.ads
-10K9*Mars_Lander 19|4w6 4r25 21r10 22r10 23r10 25|82e16
-65w14*inputFlags 19|21r22 22r22 23r22
-68U17 setUp 19|21s33
-71U17 setLeft 19|22s33
-74U17 setRight 19|23s33
+10K9*Mars_Lander 19|4w6 4r25 23r10 24r10 26r30 32r13 33r13 35r13 25|84e16
+28w14*Lander 19|26r42
+45V16 getPosition{66|3R9} 19|26s49
+67w14*inputFlags 19|23r22 24r22 32r25 33r25 35r25
+70U17 setUp 19|32s36 35s36
+73U17 setLeft 19|23s33 33s36
+76U17 setRight 19|24s33
 X 27 pidcontroller.ads
 1K9*PIDController 19|5w6 5r26 27|27e18
-3w14*pid_controller 19|19r7 25r10
-5U17 init 19|19s22
-7U17 update 19|25s25
+3w14*pid_controller 19|20r7 30r10
+5U17 init 19|20s22
+7U17 update 19|30s25
 X 51 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 66 vector.ads
+4f10*y{float} 19|26r61
 

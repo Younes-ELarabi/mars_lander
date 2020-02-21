@@ -152,7 +152,12 @@ package body Mars_Lander is
          position := position + velocity;
          -- update bounds
          updateBounds(bounds);
-      end Step;    
+      end Step;
+      
+      function getPosition return Vector_Type is
+      begin
+         return position;
+      end getPosition;
    end Lander;
    
    protected body inputFlags is

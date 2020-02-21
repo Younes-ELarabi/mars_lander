@@ -4,35 +4,34 @@ package body PIDController is
       
       procedure init(target,kp,ki,kd :Float) is 
       begin
-         --targetPoint := target;
          reset(target);
          pGain := kp;
          iGain := ki;
          dGain := kd;
       end init;
       
-      procedure setIntegral(integral : in out Float;error :Float) is
+      procedure setIntegral(error :Float) is
       begin
          integral := integral + error;
       end setIntegral;
       
-      procedure setError(lastErr :  in out Float;currentErr :Float) is
+      procedure setError(currentErr :Float) is
       begin
-         lastErr := currentErr;
+         lastError := currentErr;
       end setError;
           
-      procedure update(currentValue :in out Float) is
+      procedure update(currentValue : in out Float) is
          error :Float;
          deriv :Float;
       begin
          -- calculate the error
          error := targetPoint - currentValue;
          -- calculate thr integral
-         setIntegral(integral,error);
+         setIntegral(error);
          -- calculate the derivative
          deriv := (error - lastError);
          -- save the error
-         setError(lastError,error);
+         setError(error);
          -- update the currentValue
          currentValue := (pGain * error) + (iGain * integral) + (dGain * deriv);
          
@@ -40,8 +39,8 @@ package body PIDController is
             currentValue := 800.0;
          elsif currentValue < -800.0 then
             currentValue := -800.0;
-        
          end if;
+       
       end update;
       
       procedure reset(set :Float) is 
