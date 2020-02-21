@@ -1,16 +1,21 @@
 <?xml version="1.0"?>
 <Clipboard>
-  <clipboard last="true" >Put_Line(Float&apos;Image(error));</clipboard>
-  <clipboard>Put_Line(Boolean&apos;Image(Lander.isLanded));</clipboard>
-  <clipboard> error :Float := 2.0;</clipboard>
-  <clipboard>error</clipboard>
-  <clipboard>--
-with IAcontroll;    use IAcontroll;</clipboard>
-  <clipboard>in out </clipboard>
-  <clipboard>currentValue</clipboard>
-  <clipboard>procedure setIntegral(integral : in out Float;error :Float);
-      
-      procedure setError(lastErr :  in out Float;currentErr :Float);</clipboard>
-  <clipboard>lastError</clipboard>
-  <clipboard> in out </clipboard>
+  <clipboard last="true" >-- test pid
+         Put_Line(Float&apos;Image(error));
+         pid_controller.update(error);
+         --</clipboard>
+  <clipboard>pid_controller.init(20.0,1.01,0.3,0.0);</clipboard>
+  <clipboard>error :Float := 2.0;</clipboard>
+  <clipboard>with PIDController;  use PIDController;
+with Ada.Text_IO; use Ada.Text_IO;</clipboard>
+  <clipboard>with Ada.Text_IO; use Ada.Text_IO;</clipboard>
+  <clipboard> pid_controller.init(20.0,1.01,0.3,0.0);</clipboard>
+  <clipboard>iacopid_controller.init(20.0,1.01,0.3,0.0);</clipboard>
+  <clipboard>--for test
+   pid_controller.init(20.0,1.01,0.3,0.0);</clipboard>
+  <clipboard> -- test pid
+      Put_Line(Float&apos;Image(error));
+      pid_controller.update(error);
+      --</clipboard>
+  <clipboard>with IAcontroll;    use IAcontroll;</clipboard>
 </Clipboard>

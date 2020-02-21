@@ -16,7 +16,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U main%b		main.adb		ab858f84 NE OO SU
+U main%b		main.adb		8482cf20 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.elementary_functions%s  a-nuelfu.ads  a-nuelfu.ali
@@ -59,7 +59,6 @@ D display.ads		20200124114604 3a88167c display%s
 D display-basic.ads	20200124114604 66d43323 display.basic%s
 D display-image.ads	20200124114604 86429f23 display.image%s
 D flag.ads		20200211092922 197dc33c flag%s
-D iacontroll.ads	20200221180504 1c7f8a4a iacontroll%s
 D inputs.ads		20200205182204 bf387807 inputs%s
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-c.ads		20190518041256 5421119b interfaces.c%s
@@ -75,7 +74,7 @@ D sdl_rect_h.ads	20200124114612 5db03fa9 sdl_rect_h%s
 D sdl_rwops_h.ads	20200124114610 d60b2061 sdl_rwops_h%s
 D sdl_stdinc_h.ads	20200124114612 76b5d89f sdl_stdinc_h%s
 D sdl_surface_h.ads	20200124114612 da149c96 sdl_surface_h%s
-D simulation.ads	20200221184428 c0c82fef simulation%s
+D simulation.ads	20200221185550 efcf6f4b simulation%s
 D stdarg_h.ads		20200124114612 db698406 stdarg_h%s
 D stddef_h.ads		20200124114612 f49cc756 stddef_h%s
 D stdint_h.ads		20200124114610 376ae00b stdint_h%s
@@ -128,59 +127,59 @@ G r p none [main standard 15 11 none] [setflag flag__stepflag 6 17 none]
 G r c none [main standard 15 11 none] [get_key_status display__basic 345 13 none]
 G r c none [main standard 15 11 none] [draw_text display__basic 309 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 27|1r6 1r25 2r6 2r45 3r6 3r23
+16K9*Ada 20e8 26|1r6 1r25 2r6 2r45 3r6 3r23
 X 5 a-numeri.ads
-16K13*Numerics 32e17 27|2r10 2r49
+16K13*Numerics 32e17 26|2r10 2r49
 X 7 a-nuelfu.ads
-18K22*Elementary_Functions[8|39] 27|2w19 2r58
+18K22*Elementary_Functions[8|39] 26|2w19 2r58
 X 9 a-reatim.ads
-39K13*Real_Time 185e18 27|1w10 1r29
-49O9*Time<duration> 27|40r11
-54O9*Time_Span<duration> 27|44r22
-61V13*Clock{49O9} 27|75s12
-65V14*"+"{49O9} 27|75s18 87s20 103s20
-119V13*Milliseconds{54O9} 27|44s35
+39K13*Real_Time 185e18 26|1w10 1r29
+49O9*Time<duration> 26|40r11
+54O9*Time_Span<duration> 26|44r22
+61V13*Clock{49O9} 26|75s12
+65V14*"+"{49O9} 26|75s18 87s20 103s20
+119V13*Milliseconds{54O9} 26|44s35
 X 13 a-textio.ads
-57K13*Text_IO 727e16 27|3w10 3r27
-508U14*Put_Line 27|91s4 92s4
+57K13*Text_IO 727e16 26|3w10 3r27
+508U14*Put_Line 26|91s4 92s4
 X 16 display.ads
-23K9*Display 59e12 27|5w6 5r25 6r6 6r25 7r6 7r25
-36r4*White{27R9} 27|34r20
-38r4*Green{27R9} 27|28r20 98r51
-39r4*Red{27R9} 27|100r50
+23K9*Display 59e12 26|5w6 5r25 6r6 6r25 7r6 7r25
+36r4*White{27R9} 26|34r20
+38r4*Green{27R9} 26|28r20 98r51
+39r4*Red{27R9} 26|100r50
 45A9*RGBA_Array(27R9)<integer><integer>
-46P9*Image_T(45A9) 27|61r10 62r16
+46P9*Image_T(45A9) 26|61r10 62r16
 X 17 display-basic.ads
-20K17*Basic 363e18 27|6w14 6r33
-23I9*Window_ID<356I9> 27|47r13
-25V13*Create_Window{23I9} 27|69s6
-31I9*Canvas_ID<359I9> 27|17r35 50r13
-33V13*Get_Canvas{31I9} 27|72s14
-40R9*Point_3d 44e14 27|18r16 19r16
-42f7*Y{float} 27|24r20 24r31
-46R9*Screen_Point 48e14 27|60r14
-97n7*SDLK_SPACE{55E9} 27|94r29
-306U14*Draw_Line 27|25s13 31s13
-309U14*Draw_Text 27|98s10 100s10
-337U14*Swap_Buffers 27|81s7 95s7
-345V13*Get_Key_Status{boolean} 27|94s14
+20K17*Basic 363e18 26|6w14 6r33
+23I9*Window_ID<356I9> 26|47r13
+25V13*Create_Window{23I9} 26|69s6
+31I9*Canvas_ID<359I9> 26|17r35 50r13
+33V13*Get_Canvas{31I9} 26|72s14
+40R9*Point_3d 44e14 26|18r16 19r16
+42f7*Y{float} 26|24r20 24r31
+46R9*Screen_Point 48e14 26|60r14
+97n7*SDLK_SPACE{55E9} 26|94r29
+306U14*Draw_Line 26|25s13 31s13
+309U14*Draw_Text 26|98s10 100s10
+337U14*Swap_Buffers 26|81s7 95s7
+345V13*Get_Key_Status{boolean} 26|94s14
 356I9 Window_ID_Range<short_short_integer>
 359I9 Canvas_ID_Range<short_integer>
 X 18 display-image.ads
-1K17*Image 7e18 27|7w14 7r33
-3V13*Load_BMP{16|46P9} 27|61s21 62s27
+1K17*Image 7e18 26|7w14 7r33
+3V13*Load_BMP{16|46P9} 26|61s21 62s27
 X 19 flag.ads
-1K9*flag 11e9 27|12w6 12r16
-3w14*StepFlag 27|80r10 88r7
-5V16 getFlag{boolean} 27|80s19
-6U17 setFlag 27|88s16
-X 21 inputs.ads
-1K9*inputs 5e11 27|11w6
-X 27 main.adb
+1K9*flag 11e9 26|12w6 12r16
+3w14*StepFlag 26|80r10 88r7
+5V16 getFlag{boolean} 26|80s19
+6U17 setFlag 26|88s16
+X 20 inputs.ads
+1K9*inputs 5e11 26|11w6
+X 26 main.adb
 15U11*Main 15b11 106l5 106t9
 17U14 drawTerrain 17b14 17>26 17>45 38l8 38t19 83s7
 17i26 Canvas{17|31I9} 25r23 31r23
-17a45 t{70|16A9} 22r21 22r28 23r21 23r30
+17a45 t{69|16A9} 22r21 22r28 23r21 23r30
 18r7 pointA{17|40R9} 22m10 24r13 26r20 32r20
 19r7 pointB{17|40R9} 23m10 24r24 27r20 33r20
 21i11 I{integer} 22r23 22r30 23r23 23r32
@@ -195,27 +194,27 @@ X 27 main.adb
 60r4 gameOver{17|46R9} 98r28 100r28
 61p4 sky{16|46P9} 82r61
 62p4 spaceship{16|46P9} 82r65
-64a4 t{70|16A9} 78m31 83r26
-X 28 mars_lander.ads
-10K9*Mars_Lander 27|9w6 9r25 82r7 28|82e16
-28w14*Lander 27|82r19 88r28 88r55 91r51 92r51 97r10
-30U17 Draw 27|82s26
-35V16 hasCollided{boolean} 27|88s35 92s58
-37V16 isLanded{boolean} 27|88s62 91s58 97s17
-X 36 simulation.ads
-5K9*simulation 27|10w6 36|9e15
-X 55 s-stausa.ads
+64a4 t{69|16A9} 78m31 83r26
+X 27 mars_lander.ads
+10K9*Mars_Lander 26|9w6 9r25 82r7 27|82e16
+28w14*Lander 26|82r19 88r28 88r55 91r51 92r51 97r10
+30U17 Draw 26|82s26
+35V16 hasCollided{boolean} 26|88s35 92s58
+37V16 isLanded{boolean} 26|88s62 91s58 97s17
+X 35 simulation.ads
+3K9*simulation 26|10w6 35|7e15
+X 54 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
-X 70 terrain.ads
-7K9*terrain 27|13w6 13r19 70|40e12
-9N4*size 27|21r19
-12f7*X{float} 27|22r26 23r28
-13f7*Y{float} 27|22r33 23r37
-16A9*Terrain_Type(11R9)<integer> 27|17r48 64r7
-23w14*Terrain_Object 27|77r4 78r4
-25U17 generate 27|77s19
-27Y13 get_terrain 27|78s19
-X 71 vector.ads
-1K9*vector 27|8w6 8r25 71|11e11
+X 69 terrain.ads
+7K9*terrain 26|13w6 13r19 69|40e12
+9N4*size 26|21r19
+12f7*X{float} 26|22r26 23r28
+13f7*Y{float} 26|22r33 23r37
+16A9*Terrain_Type(11R9)<integer> 26|17r48 64r7
+23w14*Terrain_Object 26|77r4 78r4
+25U17 generate 26|77s19
+27Y13 get_terrain 26|78s19
+X 70 vector.ads
+1K9*vector 26|8w6 8r25 70|11e11
 

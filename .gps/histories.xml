@@ -84,16 +84,16 @@
     <Length> 1</Length>
   </key>
   <key type="strings" name="reopen_files" >
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\inputs.ads</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\inputs.adb</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\simulation.ads</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\simulation.adb</value>
     <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\main.adb</value>
     <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\terrain.adb</value>
     <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\terrain.ads</value>
     <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.ads</value>
     <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.adb</value>
     <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\iacontroll.ads</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\iacontroll.adb</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\inputs.ads</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\inputs.adb</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\flag.adb</value>
   </key>
   <key type="booleans" name="search-displays-relative-paths" >
     <value>FALSE</value>

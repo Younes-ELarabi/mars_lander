@@ -3,9 +3,9 @@
   <perspectives state=" 4" mdi_height=" 782" mdi_width=" 1470" height=" 838" width=" 1007">
     <perspective name="Default">
       <Pane width=" 1.00000E+02%" Orientation="ORIENTATION_HORIZONTAL" >
-        <Pane width=" 1.52531E+01%" Orientation="ORIENTATION_VERTICAL" >
+        <Pane width=" 1.61423E+01%" Orientation="ORIENTATION_VERTICAL" >
           <Notebook height=" 5.82687E+01%" Tabs="POS_LEFT" >
-            <Child Raised="True" Group=" 106" State="NORMAL" >
+            <Child Raised="True" Focus="True" Group=" 106" State="NORMAL" >
               <Project_Explorer_Project />
             </Child>
             <Child Group=" 106" State="NORMAL" >
@@ -24,15 +24,15 @@
             </Child>
           </Notebook>
         </Pane>
-        <Pane width=" 8.50205E+01%" Orientation="ORIENTATION_VERTICAL" >
+        <Pane width=" 8.41313E+01%" Orientation="ORIENTATION_VERTICAL" >
           <central height=" 7.89406E+01%"  />
           <Pane height=" 2.15762E+01%" Orientation="ORIENTATION_HORIZONTAL" >
-            <Notebook width=" 5.02024E+01%" Tabs="POS_TOP" >
+            <Notebook width=" 5.01637E+01%" Tabs="POS_TOP" >
               <Child Raised="True" Group=" 107" State="NORMAL" >
                 <Message_Window />
               </Child>
             </Notebook>
-            <Notebook width=" 5.02024E+01%" Tabs="POS_TOP" >
+            <Notebook width=" 5.01637E+01%" Tabs="POS_TOP" >
               <Child Raised="True" Group=" 107" State="NORMAL" >
                 <Location_View_Record />
               </Child>
@@ -191,24 +191,51 @@
         <learn position=" 7.59322E+01%"  />
       </Learn_View>
       <Pane width=" 1.00000E+02%" Orientation="ORIENTATION_HORIZONTAL" >
-        <Notebook width=" 4.55061E+01%" Tabs="POS_TOP" >
-          <Child Raised="True" Group=" 1" State="NORMAL" >
-            <Source_Editor>
-              <project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</project>
-              <Column_End>24</Column_End>
-              <Column>24</Column>
-              <Line>8</Line>
-              <vfs_File>C:\Users\desca\dev\mars_lander_lab_withTask\src\iacontroll.adb</vfs_File>
-            </Source_Editor>
-          </Child>
-        </Notebook>
-        <Notebook width=" 5.48178E+01%" Tabs="POS_TOP" >
+        <Notebook width=" 5.12275E+01%" Tabs="POS_TOP" >
           <Child Group=" 1" State="NORMAL" >
             <Source_Editor>
               <project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</project>
-              <Column_End>33</Column_End>
-              <Column>33</Column>
-              <Line>8</Line>
+              <Column_End>9</Column_End>
+              <Column>9</Column>
+              <Line>12</Line>
+              <vfs_File>C:\Users\desca\dev\mars_lander_lab_withTask\src\simulation.adb</vfs_File>
+            </Source_Editor>
+          </Child>
+          <Child Group=" 1" State="NORMAL" >
+            <Source_Editor>
+              <project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</project>
+              <Column_End>35</Column_End>
+              <Column>35</Column>
+              <Line>1</Line>
+              <vfs_File>C:\Users\desca\dev\mars_lander_lab_withTask\src\simulation.ads</vfs_File>
+            </Source_Editor>
+          </Child>
+          <Child Group=" 1" State="NORMAL" >
+            <Source_Editor>
+              <project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</project>
+              <Column_End>1</Column_End>
+              <Column>1</Column>
+              <Line>1</Line>
+              <vfs_File>C:\Users\desca\dev\mars_lander_lab_withTask\src\inputs.ads</vfs_File>
+            </Source_Editor>
+          </Child>
+          <Child Raised="True" Group=" 1" State="NORMAL" >
+            <Source_Editor>
+              <project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</project>
+              <Column_End>6</Column_End>
+              <Column>6</Column>
+              <Line>5</Line>
+              <vfs_File>C:\Users\desca\dev\mars_lander_lab_withTask\src\inputs.adb</vfs_File>
+            </Source_Editor>
+          </Child>
+        </Notebook>
+        <Notebook width=" 4.90998E+01%" Tabs="POS_TOP" >
+          <Child Group=" 1" State="NORMAL" >
+            <Source_Editor>
+              <project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</project>
+              <Column_End>12</Column_End>
+              <Column>12</Column>
+              <Line>44</Line>
               <vfs_File>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.ads</vfs_File>
             </Source_Editor>
           </Child>
@@ -221,21 +248,12 @@
               <vfs_File>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.adb</vfs_File>
             </Source_Editor>
           </Child>
-          <Child Group=" 1" State="NORMAL" >
+          <Child Raised="True" Group=" 1" State="NORMAL" >
             <Source_Editor>
               <project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</project>
-              <Column_End>29</Column_End>
-              <Column>29</Column>
-              <Line>5</Line>
-              <vfs_File>C:\Users\desca\dev\mars_lander_lab_withTask\src\iacontroll.ads</vfs_File>
-            </Source_Editor>
-          </Child>
-          <Child Raised="True" Focus="True" Group=" 1" State="NORMAL" >
-            <Source_Editor>
-              <project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</project>
-              <Column_End>9</Column_End>
-              <Column>9</Column>
-              <Line>100</Line>
+              <Column_End>17</Column_End>
+              <Column>17</Column>
+              <Line>10</Line>
               <vfs_File>C:\Users\desca\dev\mars_lander_lab_withTask\src\main.adb</vfs_File>
             </Source_Editor>
           </Child>

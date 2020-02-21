@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#ab858f84#;
+   u00001 : constant Version_32 := 16#8482cf20#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#050ff2f0#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -435,7 +435,7 @@ package ada_main is
    pragma Export (C, u00198, "ada__exceptions__is_null_occurrenceB");
    u00199 : constant Version_32 := 16#e1d7566f#;
    pragma Export (C, u00199, "ada__exceptions__is_null_occurrenceS");
-   u00200 : constant Version_32 := 16#da3b2a04#;
+   u00200 : constant Version_32 := 16#3211000b#;
    pragma Export (C, u00200, "inputsB");
    u00201 : constant Version_32 := 16#bf387807#;
    pragma Export (C, u00201, "inputsS");
@@ -511,28 +511,28 @@ package ada_main is
    pragma Export (C, u00236, "vectorB");
    u00237 : constant Version_32 := 16#c670e60e#;
    pragma Export (C, u00237, "vectorS");
-   u00238 : constant Version_32 := 16#9cbb0d81#;
-   pragma Export (C, u00238, "system__tasking__stagesB");
-   u00239 : constant Version_32 := 16#5fc08d5c#;
-   pragma Export (C, u00239, "system__tasking__stagesS");
-   u00240 : constant Version_32 := 16#959415d7#;
-   pragma Export (C, u00240, "simulationB");
-   u00241 : constant Version_32 := 16#a5517ed4#;
-   pragma Export (C, u00241, "simulationS");
-   u00242 : constant Version_32 := 16#558f439e#;
-   pragma Export (C, u00242, "iacontrollB");
-   u00243 : constant Version_32 := 16#1c7f8a4a#;
-   pragma Export (C, u00243, "iacontrollS");
-   u00244 : constant Version_32 := 16#8aa4f090#;
-   pragma Export (C, u00244, "system__img_realB");
-   u00245 : constant Version_32 := 16#f508d0da#;
-   pragma Export (C, u00245, "system__img_realS");
-   u00246 : constant Version_32 := 16#3e932977#;
-   pragma Export (C, u00246, "system__img_lluB");
-   u00247 : constant Version_32 := 16#4feffd78#;
-   pragma Export (C, u00247, "system__img_lluS");
-   u00248 : constant Version_32 := 16#62d0e74f#;
-   pragma Export (C, u00248, "system__powten_tableS");
+   u00238 : constant Version_32 := 16#60a83cfd#;
+   pragma Export (C, u00238, "pidcontrollerB");
+   u00239 : constant Version_32 := 16#c02e5d28#;
+   pragma Export (C, u00239, "pidcontrollerS");
+   u00240 : constant Version_32 := 16#8aa4f090#;
+   pragma Export (C, u00240, "system__img_realB");
+   u00241 : constant Version_32 := 16#f508d0da#;
+   pragma Export (C, u00241, "system__img_realS");
+   u00242 : constant Version_32 := 16#3e932977#;
+   pragma Export (C, u00242, "system__img_lluB");
+   u00243 : constant Version_32 := 16#4feffd78#;
+   pragma Export (C, u00243, "system__img_lluS");
+   u00244 : constant Version_32 := 16#62d0e74f#;
+   pragma Export (C, u00244, "system__powten_tableS");
+   u00245 : constant Version_32 := 16#9cbb0d81#;
+   pragma Export (C, u00245, "system__tasking__stagesB");
+   u00246 : constant Version_32 := 16#5fc08d5c#;
+   pragma Export (C, u00246, "system__tasking__stagesS");
+   u00247 : constant Version_32 := 16#92a3e8a0#;
+   pragma Export (C, u00247, "simulationB");
+   u00248 : constant Version_32 := 16#38dd6157#;
+   pragma Export (C, u00248, "simulationS");
    u00249 : constant Version_32 := 16#7268f812#;
    pragma Export (C, u00249, "system__img_boolB");
    u00250 : constant Version_32 := 16#c779f0d3#;
@@ -748,10 +748,10 @@ package ada_main is
    --  flag%b
    --  gl_gl_h%s
    --  gl_glu_h%s
-   --  iacontroll%s
-   --  iacontroll%b
    --  perlin%s
    --  perlin%b
+   --  pidcontroller%s
+   --  pidcontroller%b
    --  sdl_blendmode_h%s
    --  sdl_error_h%s
    --  sdl_scancode_h%s

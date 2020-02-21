@@ -40,10 +40,10 @@ package body ada_main is
    E195 : Short_Integer; pragma Import (Ada, E195, "system__tasking__protected_objects_E");
    E215 : Short_Integer; pragma Import (Ada, E215, "system__tasking__protected_objects__entries_E");
    E217 : Short_Integer; pragma Import (Ada, E217, "system__tasking__queuing_E");
-   E239 : Short_Integer; pragma Import (Ada, E239, "system__tasking__stages_E");
+   E246 : Short_Integer; pragma Import (Ada, E246, "system__tasking__stages_E");
    E193 : Short_Integer; pragma Import (Ada, E193, "flag_E");
-   E243 : Short_Integer; pragma Import (Ada, E243, "iacontroll_E");
    E235 : Short_Integer; pragma Import (Ada, E235, "perlin_E");
+   E239 : Short_Integer; pragma Import (Ada, E239, "pidcontroller_E");
    E159 : Short_Integer; pragma Import (Ada, E159, "display_E");
    E191 : Short_Integer; pragma Import (Ada, E191, "display__image_E");
    E171 : Short_Integer; pragma Import (Ada, E171, "display__basic_E");
@@ -55,7 +55,7 @@ package body ada_main is
    E237 : Short_Integer; pragma Import (Ada, E237, "vector_E");
    E203 : Short_Integer; pragma Import (Ada, E203, "mars_lander_E");
    E201 : Short_Integer; pragma Import (Ada, E201, "inputs_E");
-   E241 : Short_Integer; pragma Import (Ada, E241, "simulation_E");
+   E248 : Short_Integer; pragma Import (Ada, E248, "simulation_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -80,10 +80,10 @@ package body ada_main is
       begin
          F2;
       end;
-      E243 := E243 - 1;
+      E239 := E239 - 1;
       declare
          procedure F3;
-         pragma Import (Ada, F3, "iacontroll__finalize_spec");
+         pragma Import (Ada, F3, "pidcontroller__finalize_spec");
       begin
          F3;
       end;
@@ -315,12 +315,12 @@ package body ada_main is
       System.Tasking.Queuing'Elab_Body;
       E217 := E217 + 1;
       System.Tasking.Stages'Elab_Body;
-      E239 := E239 + 1;
+      E246 := E246 + 1;
       flag'elab_spec;
       E193 := E193 + 1;
-      iacontroll'elab_spec;
-      E243 := E243 + 1;
       E235 := E235 + 1;
+      pidcontroller'elab_spec;
+      E239 := E239 + 1;
       Display'Elab_Spec;
       E159 := E159 + 1;
       Display.Image'Elab_Body;
@@ -344,7 +344,7 @@ package body ada_main is
       E201 := E201 + 1;
       simulation'elab_spec;
       simulation'elab_body;
-      E241 := E241 + 1;
+      E248 := E248 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -383,8 +383,8 @@ package body ada_main is
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\flag.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\gnat_sdl\obj\gl_gl_h.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\gnat_sdl\obj\gl_glu_h.o
-   --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\iacontroll.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\perlin.o
+   --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\pidcontroller.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\gnat_sdl\obj\sdl_blendmode_h.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\gnat_sdl\obj\sdl_error_h.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\gnat_sdl\obj\sdl_scancode_h.o
