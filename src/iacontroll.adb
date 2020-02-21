@@ -1,4 +1,4 @@
-package body IAcontroll is
+package body PIDController is
 
    protected body pid_controller is
       
@@ -53,4 +53,4 @@ package body IAcontroll is
       
    end pid_controller;
       
-end IAcontroll;
+end PIDController;

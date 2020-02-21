@@ -1,4 +1,4 @@
-package IAcontroll is
+package PIDController is
    
    protected pid_controller is 
       
@@ -24,4 +24,4 @@ package IAcontroll is
      
    end pid_controller;
 
-end IAcontroll;
+end PIDController;
