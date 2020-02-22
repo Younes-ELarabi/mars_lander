@@ -8,6 +8,8 @@ package PIDController is
       
       procedure reset(set :Float);
       
+      procedure setNewTarget(target :Float);
+      
       procedure setIntegral(error :Float);
       
       procedure setError(currentErr :Float);

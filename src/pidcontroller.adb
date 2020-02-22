@@ -50,6 +50,11 @@ package body PIDController is
          integral  := 0.0;
       end reset;
       
+      procedure setNewTarget(target :Float) is 
+      begin
+         targetPoint := target;
+      end setNewTarget;
+      
    end pid_controller;
       
 end PIDController;

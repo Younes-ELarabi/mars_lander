@@ -435,7 +435,7 @@ package ada_main is
    pragma Export (C, u00198, "ada__exceptions__is_null_occurrenceB");
    u00199 : constant Version_32 := 16#e1d7566f#;
    pragma Export (C, u00199, "ada__exceptions__is_null_occurrenceS");
-   u00200 : constant Version_32 := 16#ce26f37d#;
+   u00200 : constant Version_32 := 16#3f58371f#;
    pragma Export (C, u00200, "inputsB");
    u00201 : constant Version_32 := 16#bf387807#;
    pragma Export (C, u00201, "inputsS");
@@ -511,9 +511,9 @@ package ada_main is
    pragma Export (C, u00236, "vectorB");
    u00237 : constant Version_32 := 16#c670e60e#;
    pragma Export (C, u00237, "vectorS");
-   u00238 : constant Version_32 := 16#5c9d0e34#;
+   u00238 : constant Version_32 := 16#32492e97#;
    pragma Export (C, u00238, "pidcontrollerB");
-   u00239 : constant Version_32 := 16#fcf530ff#;
+   u00239 : constant Version_32 := 16#ad5eb112#;
    pragma Export (C, u00239, "pidcontrollerS");
    u00240 : constant Version_32 := 16#8aa4f090#;
    pragma Export (C, u00240, "system__img_realB");

@@ -1,14 +1,15 @@
 <?xml version="1.0"?>
 <Clipboard>
-  <clipboard last="true" >Put_Line(Float&apos;Image(error));</clipboard>
-  <clipboard>:= Mars_Lander.Lander.getPosition.y;</clipboard>
-  <clipboard>error := Mars_Lander.Lander.getPosition.y;</clipboard>
-  <clipboard>error :Float := Mars_Lander.Lander.getPosition.y;</clipboard>
-  <clipboard>error</clipboard>
-  <clipboard>Mars_Lander.Lander.getPosition.x</clipboard>
-  <clipboard>elsif Mars_Lander.Lander.getPosition.x &lt; 20.0 then
-            Mars_Lander.inputFlags.setUp(true);</clipboard>
-  <clipboard>Mars_Lander.inputFlags.setUp(false);</clipboard>
-  <clipboard>Mars_Lander.Lander.getPosition.x &gt; 20.0</clipboard>
-  <clipboard>Mars_Lander.inputFlags.setUp(Get_Key_Status(SDLK_UP));</clipboard>
+  <clipboard last="true" >elsif output &lt; 0.0 then
+            Mars_Lander.inputFlags.setUp(false);        </clipboard>
+  <clipboard>procedure setNewTarget(target :Float);</clipboard>
+  <clipboard>Mars_Lander.inputFlags.setRight(true);</clipboard>
+  <clipboard>Mars_Lander.inputFlags.setRight(Get_Key_Status(SDLK_RIGHT));</clipboard>
+  <clipboard>Mars_Lander.inputFlags.setLeft(Get_Key_Status(SDLK_LEFT));</clipboard>
+  <clipboard>currentPositionY :Float := Mars_Lander.Lander.getPosition.y;
+      output :Float := currentPositionY;</clipboard>
+  <clipboard>output</clipboard>
+  <clipboard>currentPositionY :Float := Mars_Lander.Lander.getPosition.y;</clipboard>
+  <clipboard>currentValue</clipboard>
+  <clipboard>pid_controller.init(200.0,1.4,0.7,0.35);</clipboard>
 </Clipboard>

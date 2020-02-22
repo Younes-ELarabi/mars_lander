@@ -9,15 +9,15 @@ package body inputs is
 
    task body update is
       Next : Time;
-      --  declare a constant Period of 40 milliseconds of type Time_Span defining
-      --  the loop period
+      -- declare a constant Period of 40 milliseconds of type Time_Span defining
+      -- the loop period
       Period : constant Time_Span := Milliseconds (10);
       --
       currentPositionY :Float;
       output :Float;
    begin 
       Next := Clock + Period;
-      pid_controller.init(1.0,7.0,0.001,0.002);
+      pid_controller.init(100.0,0.1,0.0,0.0);
       while StepFlag.getFlag loop 
          -- Mars_Lander.inputFlags.setUp(Get_Key_Status(SDLK_UP));
          Mars_Lander.inputFlags.setLeft(Get_Key_Status(SDLK_LEFT));
@@ -26,12 +26,14 @@ package body inputs is
          currentPositionY := Mars_Lander.Lander.getPosition.y;
          output := currentPositionY;
          --
-         Put_Line(Float'Image(currentPositionY));
+         Put_Line(Float'Image(output));
          pid_controller.update(output);
          if output > 0.0 then
             Mars_Lander.inputFlags.setUp(true);
          elsif output < 0.0 then
             Mars_Lander.inputFlags.setUp(false);
+         elsif output = 0.0 then
+            Mars_Lander.inputFlags.setUp(true);        
          end if;
          -- wait until Next
          delay until Next;
