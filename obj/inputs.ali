@@ -59,7 +59,7 @@ D display-basic.ads	20200124114604 66d43323 display.basic%s
 D display-image.ads	20200124114604 86429f23 display.image%s
 D flag.ads		20200211092922 197dc33c flag%s
 D inputs.ads		20200205182204 bf387807 inputs%s
-D inputs.adb		20200222124650 e3762b20 inputs%b
+D inputs.adb		20200222124932 e3762b20 inputs%b
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-c.ads		20190518041256 5421119b interfaces.c%s
 D i-cexten.ads		20190518041256 38d7e116 interfaces.c.extensions%s
@@ -128,8 +128,8 @@ X 7 a-reatim.ads
 39K13*Real_Time 185e18 19|2w10 2r29
 49O9*Time<duration> 19|11r14
 54O9*Time_Span<duration> 19|14r25
-61V13*Clock{49O9} 19|19s15
-65V14*"+"{49O9} 19|19s21 40s23
+61V13*Clock{49O9} 19|16s15
+65V14*"+"{49O9} 19|16s21 24s23
 119V13*Milliseconds{54O9} 19|14s38
 X 11 a-textio.ads
 57K13*Text_IO 727e16 19|6w10 6r27
@@ -137,30 +137,30 @@ X 14 display.ads
 23K9*Display 59e12 19|3r6 3r25
 X 15 display-basic.ads
 20K17*Basic 363e18 19|3w14 3r33
-132n7*SDLK_RIGHT{55E9} 19|24r57
-133n7*SDLK_LEFT{55E9} 19|23r56
-135n7*SDLK_UP{55E9} 19|22r54
-345V13*Get_Key_Status{boolean} 19|22s39 23s41 24s42
+132n7*SDLK_RIGHT{55E9} 19|21r57
+133n7*SDLK_LEFT{55E9} 19|20r56
+135n7*SDLK_UP{55E9} 19|19r54
+345V13*Get_Key_Status{boolean} 19|19s39 20s41 21s42
 X 17 flag.ads
 1K9*flag 11e9 19|1w6 1r16
-3w14*StepFlag 19|21r13
-5V16 getFlag{boolean} 19|21s22
+3w14*StepFlag 19|18r13
+5V16 getFlag{boolean} 19|18s22
 X 18 inputs.ads
-1K9*inputs 5l5 5e11 19|8b14 44l5 44t11
-3t9*update 19|10b14 42l8 42t14
+1K9*inputs 5l5 5e11 19|8b14 28l5 28t11
+3t9*update 19|10b14 26l8 26t14
 X 19 inputs.adb
-11o7 Next{7|49O9} 19m7 39r22 40m10 40r18
-14o7 Period{7|54O9} 19r23 40r25
+11o7 Next{7|49O9} 16m7 23r22 24m10 24r18
+14o7 Period{7|54O9} 16r23 24r25
 X 25 mars_lander.ads
-10K9*Mars_Lander 19|4w6 4r25 22r10 23r10 24r10 25|84e16
-67w14*inputFlags 19|22r22 23r22 24r22
-70U17 setUp 19|22s33
-73U17 setLeft 19|23s33
-76U17 setRight 19|24s33
+10K9*Mars_Lander 19|4w6 4r25 19r10 20r10 21r10 25|84e16
+67w14*inputFlags 19|19r22 20r22 21r22
+70U17 setUp 19|19s33
+73U17 setLeft 19|20s33
+76U17 setRight 19|21s33
 X 27 pidcontroller.ads
 1K9*PIDController 19|5w6 5r26 27|29e18
-3w14*pid_controller 19|20r7
-5U17 init 19|20s22
+3w14*pid_controller 19|17r7
+5U17 init 19|17s22
 X 50 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22

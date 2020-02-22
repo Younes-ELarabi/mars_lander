@@ -8,7 +8,7 @@ with Display.Image; use Display.Image;
 with vector;        use vector;
 with Mars_Lander;   use Mars_Lander;
 with simulation;
-with inputs;
+-- with inputs;
 with controller;
 with flag; use flag;
 with terrain; use terrain;

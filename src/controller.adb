@@ -10,7 +10,7 @@ package body controller is
       output :Float;
    begin 
       Next := Clock + Period;
-      pid_controller.init(100.0,0.1,0.0,0.0);
+      pid_controller.init(10.0,1.4,0.0001,0.0);
       while StepFlag.getFlag loop 
          --
          currentPositionY := Mars_Lander.Lander.getPosition.y;
@@ -21,16 +21,12 @@ package body controller is
          if output > 0.0 then
             Mars_Lander.inputFlags.setUp(true);
          elsif output < 0.0 then
-            Mars_Lander.inputFlags.setUp(false);
-         elsif output = 0.0 then
-            Mars_Lander.inputFlags.setUp(true);        
+            Mars_Lander.inputFlags.setUp(false);      
          end if;
          -- wait until Next
          delay until Next;
          Next := Next + Period;
-      end loop;
-   
-   
+      end loop;  
    end AI_Task;
    
 end controller;
