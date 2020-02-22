@@ -16,7 +16,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U main%b		main.adb		fa09077f NE OO SU
+U main%b		main.adb		b97833ef NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.elementary_functions%s  a-nuelfu.ads  a-nuelfu.ali
@@ -29,7 +29,6 @@ W display%s		display.ads		display.ali
 W display.basic%s	display-basic.adb	display-basic.ali
 W display.image%s	display-image.adb	display-image.ali
 W flag%s		flag.adb		flag.ali
-W inputs%s		inputs.adb		inputs.ali
 W mars_lander%s		mars_lander.adb		mars_lander.ali
 W simulation%s		simulation.adb		simulation.ali
 Z system%s		system.ads		system.ali
@@ -56,18 +55,17 @@ D a-tags.ads		20190518041258 491b781d ada.tags%s
 D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D collision.ads		20200205212254 032bb627 collision%s
-D controller.ads	20200222124536 26a7025d controller%s
+D controller.ads	20200222125318 26a7025d controller%s
 D display.ads		20200124114604 3a88167c display%s
 D display-basic.ads	20200124114604 66d43323 display.basic%s
 D display-image.ads	20200124114604 86429f23 display.image%s
 D flag.ads		20200211092922 197dc33c flag%s
-D inputs.ads		20200205182204 bf387807 inputs%s
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-c.ads		20190518041256 5421119b interfaces.c%s
 D i-cexten.ads		20190518041256 38d7e116 interfaces.c.extensions%s
 D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D main.adb		20200222124736 4a3397c8 main%b
+D main.adb		20200222130646 b67adb5f main%b
 D mars_lander.ads	20200221190120 94107311 mars_lander%s
 D perlin.ads		20200205212254 65fe9455 perlin%s
 D pidcontroller.ads	20200221234912 ad5eb112 pidcontroller%s
@@ -130,61 +128,59 @@ G r p none [main standard 16 11 none] [setflag flag__stepflag 6 17 none]
 G r c none [main standard 16 11 none] [get_key_status display__basic 345 13 none]
 G r c none [main standard 16 11 none] [draw_text display__basic 309 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 27|1r6 1r25 2r6 2r45 3r6 3r23
+16K9*Ada 20e8 26|1r6 1r25 2r6 2r45 3r6 3r23
 X 5 a-numeri.ads
-16K13*Numerics 32e17 27|2r10 2r49
+16K13*Numerics 32e17 26|2r10 2r49
 X 7 a-nuelfu.ads
-18K22*Elementary_Functions[8|39] 27|2w19 2r58
+18K22*Elementary_Functions[8|39] 26|2w19 2r58
 X 9 a-reatim.ads
-39K13*Real_Time 185e18 27|1w10 1r29
-49O9*Time<duration> 27|41r11
-54O9*Time_Span<duration> 27|45r22
-61V13*Clock{49O9} 27|76s12
-65V14*"+"{49O9} 27|76s18 88s20 104s20
-119V13*Milliseconds{54O9} 27|45s35
+39K13*Real_Time 185e18 26|1w10 1r29
+49O9*Time<duration> 26|41r11
+54O9*Time_Span<duration> 26|45r22
+61V13*Clock{49O9} 26|76s12
+65V14*"+"{49O9} 26|76s18 88s20 104s20
+119V13*Milliseconds{54O9} 26|45s35
 X 13 a-textio.ads
-57K13*Text_IO 727e16 27|3w10 3r27
-508U14*Put_Line 27|92s4 93s4
+57K13*Text_IO 727e16 26|3w10 3r27
+508U14*Put_Line 26|92s4 93s4
 X 16 controller.ads
-8K9*controller 12e15 27|12w6
+8K9*controller 12e15 26|12w6
 X 17 display.ads
-23K9*Display 59e12 27|5w6 5r25 6r6 6r25 7r6 7r25
-36r4*White{27R9} 27|35r20
-38r4*Green{27R9} 27|29r20 99r51
-39r4*Red{27R9} 27|101r50
+23K9*Display 59e12 26|5w6 5r25 6r6 6r25 7r6 7r25
+36r4*White{27R9} 26|35r20
+38r4*Green{27R9} 26|29r20 99r51
+39r4*Red{27R9} 26|101r50
 45A9*RGBA_Array(27R9)<integer><integer>
-46P9*Image_T(45A9) 27|62r10 63r16
+46P9*Image_T(45A9) 26|62r10 63r16
 X 18 display-basic.ads
-20K17*Basic 363e18 27|6w14 6r33
-23I9*Window_ID<356I9> 27|48r13
-25V13*Create_Window{23I9} 27|70s6
-31I9*Canvas_ID<359I9> 27|18r35 51r13
-33V13*Get_Canvas{31I9} 27|73s14
-40R9*Point_3d 44e14 27|19r16 20r16
-42f7*Y{float} 27|25r20 25r31
-46R9*Screen_Point 48e14 27|61r14
-97n7*SDLK_SPACE{55E9} 27|95r29
-306U14*Draw_Line 27|26s13 32s13
-309U14*Draw_Text 27|99s10 101s10
-337U14*Swap_Buffers 27|82s7 96s7
-345V13*Get_Key_Status{boolean} 27|95s14
+20K17*Basic 363e18 26|6w14 6r33
+23I9*Window_ID<356I9> 26|48r13
+25V13*Create_Window{23I9} 26|70s6
+31I9*Canvas_ID<359I9> 26|18r35 51r13
+33V13*Get_Canvas{31I9} 26|73s14
+40R9*Point_3d 44e14 26|19r16 20r16
+42f7*Y{float} 26|25r20 25r31
+46R9*Screen_Point 48e14 26|61r14
+97n7*SDLK_SPACE{55E9} 26|95r29
+306U14*Draw_Line 26|26s13 32s13
+309U14*Draw_Text 26|99s10 101s10
+337U14*Swap_Buffers 26|82s7 96s7
+345V13*Get_Key_Status{boolean} 26|95s14
 356I9 Window_ID_Range<short_short_integer>
 359I9 Canvas_ID_Range<short_integer>
 X 19 display-image.ads
-1K17*Image 7e18 27|7w14 7r33
-3V13*Load_BMP{17|46P9} 27|62s21 63s27
+1K17*Image 7e18 26|7w14 7r33
+3V13*Load_BMP{17|46P9} 26|62s21 63s27
 X 20 flag.ads
-1K9*flag 11e9 27|13w6 13r16
-3w14*StepFlag 27|81r10 89r7
-5V16 getFlag{boolean} 27|81s19
-6U17 setFlag 27|89s16
-X 21 inputs.ads
-1K9*inputs 5e11 27|11w6
-X 27 main.adb
+1K9*flag 11e9 26|13w6 13r16
+3w14*StepFlag 26|81r10 89r7
+5V16 getFlag{boolean} 26|81s19
+6U17 setFlag 26|89s16
+X 26 main.adb
 16U11*Main 16b11 107l5 107t9
 18U14 drawTerrain 18b14 18>26 18>45 39l8 39t19 84s7
 18i26 Canvas{18|31I9} 26r23 32r23
-18a45 t{71|16A9} 23r21 23r28 24r21 24r30
+18a45 t{70|16A9} 23r21 23r28 24r21 24r30
 19r7 pointA{18|40R9} 23m10 25r13 27r20 33r20
 20r7 pointB{18|40R9} 24m10 25r24 28r20 34r20
 22i11 I{integer} 23r23 23r30 24r23 24r32
@@ -199,27 +195,27 @@ X 27 main.adb
 61r4 gameOver{18|46R9} 99r28 101r28
 62p4 sky{17|46P9} 83r61
 63p4 spaceship{17|46P9} 83r65
-65a4 t{71|16A9} 79m31 84r26
-X 28 mars_lander.ads
-10K9*Mars_Lander 27|9w6 9r25 83r7 28|84e16
-28w14*Lander 27|83r19 89r28 89r55 92r51 93r51 98r10
-30U17 Draw 27|83s26
-35V16 hasCollided{boolean} 27|89s35 93s58
-37V16 isLanded{boolean} 27|89s62 92s58 98s17
-X 37 simulation.ads
-3K9*simulation 27|10w6 37|7e15
-X 56 s-stausa.ads
+65a4 t{70|16A9} 79m31 84r26
+X 27 mars_lander.ads
+10K9*Mars_Lander 26|9w6 9r25 83r7 27|84e16
+28w14*Lander 26|83r19 89r28 89r55 92r51 93r51 98r10
+30U17 Draw 26|83s26
+35V16 hasCollided{boolean} 26|89s35 93s58
+37V16 isLanded{boolean} 26|89s62 92s58 98s17
+X 36 simulation.ads
+3K9*simulation 26|10w6 36|7e15
+X 55 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
-X 71 terrain.ads
-7K9*terrain 27|14w6 14r19 71|40e12
-9N4*size 27|22r19
-12f7*X{float} 27|23r26 24r28
-13f7*Y{float} 27|23r33 24r37
-16A9*Terrain_Type(11R9)<integer> 27|18r48 65r7
-23w14*Terrain_Object 27|78r4 79r4
-25U17 generate 27|78s19
-27Y13 get_terrain 27|79s19
-X 72 vector.ads
-1K9*vector 27|8w6 8r25 72|11e11
+X 70 terrain.ads
+7K9*terrain 26|14w6 14r19 70|40e12
+9N4*size 26|22r19
+12f7*X{float} 26|23r26 24r28
+13f7*Y{float} 26|23r33 24r37
+16A9*Terrain_Type(11R9)<integer> 26|18r48 65r7
+23w14*Terrain_Object 26|78r4 79r4
+25U17 generate 26|78s19
+27Y13 get_terrain 26|79s19
+X 71 vector.ads
+1K9*vector 26|8w6 8r25 71|11e11
 

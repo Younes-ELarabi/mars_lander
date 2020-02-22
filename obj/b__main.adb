@@ -55,8 +55,7 @@ package body ada_main is
    E237 : Short_Integer; pragma Import (Ada, E237, "vector_E");
    E170 : Short_Integer; pragma Import (Ada, E170, "mars_lander_E");
    E160 : Short_Integer; pragma Import (Ada, E160, "controller_E");
-   E248 : Short_Integer; pragma Import (Ada, E248, "inputs_E");
-   E250 : Short_Integer; pragma Import (Ada, E250, "simulation_E");
+   E248 : Short_Integer; pragma Import (Ada, E248, "simulation_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -227,7 +226,7 @@ package body ada_main is
            True, True, False, True, True, True, True, False, 
            False, True, False, False, False, True, False, False, 
            True, False, True, False),
-         Count => (0, 0, 0, 1, 0, 0, 3, 0, 5, 0),
+         Count => (0, 0, 0, 1, 0, 0, 2, 0, 4, 0),
          Unknown => (False, False, False, False, False, False, False, False, True, False));
       Priority_Specific_Dispatching :=
         Local_Priority_Specific_Dispatching'Address;
@@ -343,12 +342,9 @@ package body ada_main is
       controller'elab_spec;
       controller'elab_body;
       E160 := E160 + 1;
-      inputs'elab_spec;
-      inputs'elab_body;
-      E248 := E248 + 1;
       simulation'elab_spec;
       simulation'elab_body;
-      E250 := E250 + 1;
+      E248 := E248 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -419,7 +415,6 @@ package body ada_main is
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\vector.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\mars_lander.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\controller.o
-   --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\inputs.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\simulation.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\main.o
    --   -LC:\Users\desca\dev\mars_lander_lab_withTask\obj\

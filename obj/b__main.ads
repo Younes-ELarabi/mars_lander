@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#fa09077f#;
+   u00001 : constant Version_32 := 16#b97833ef#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#050ff2f0#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -353,7 +353,7 @@ package ada_main is
    pragma Export (C, u00157, "system__finalization_rootS");
    u00158 : constant Version_32 := 16#cf3f1b90#;
    pragma Export (C, u00158, "system__file_control_blockS");
-   u00159 : constant Version_32 := 16#7d1a86d5#;
+   u00159 : constant Version_32 := 16#95d892b5#;
    pragma Export (C, u00159, "controllerB");
    u00160 : constant Version_32 := 16#ccf4195f#;
    pragma Export (C, u00160, "controllerS");
@@ -529,22 +529,18 @@ package ada_main is
    pragma Export (C, u00245, "system__tasking__stagesB");
    u00246 : constant Version_32 := 16#5fc08d5c#;
    pragma Export (C, u00246, "system__tasking__stagesS");
-   u00247 : constant Version_32 := 16#b61d4825#;
-   pragma Export (C, u00247, "inputsB");
-   u00248 : constant Version_32 := 16#bf387807#;
-   pragma Export (C, u00248, "inputsS");
-   u00249 : constant Version_32 := 16#d1a195ad#;
-   pragma Export (C, u00249, "simulationB");
-   u00250 : constant Version_32 := 16#7bdf1c5a#;
-   pragma Export (C, u00250, "simulationS");
-   u00251 : constant Version_32 := 16#7268f812#;
-   pragma Export (C, u00251, "system__img_boolB");
-   u00252 : constant Version_32 := 16#c779f0d3#;
-   pragma Export (C, u00252, "system__img_boolS");
-   u00253 : constant Version_32 := 16#e31b7c4e#;
-   pragma Export (C, u00253, "system__memoryB");
-   u00254 : constant Version_32 := 16#6bdde70c#;
-   pragma Export (C, u00254, "system__memoryS");
+   u00247 : constant Version_32 := 16#d1a195ad#;
+   pragma Export (C, u00247, "simulationB");
+   u00248 : constant Version_32 := 16#7bdf1c5a#;
+   pragma Export (C, u00248, "simulationS");
+   u00249 : constant Version_32 := 16#7268f812#;
+   pragma Export (C, u00249, "system__img_boolB");
+   u00250 : constant Version_32 := 16#c779f0d3#;
+   pragma Export (C, u00250, "system__img_boolS");
+   u00251 : constant Version_32 := 16#e31b7c4e#;
+   pragma Export (C, u00251, "system__memoryB");
+   u00252 : constant Version_32 := 16#6bdde70c#;
+   pragma Export (C, u00252, "system__memoryS");
 
    --  BEGIN ELABORATION ORDER
    --  ada%s
@@ -796,8 +792,6 @@ package ada_main is
    --  mars_lander%b
    --  controller%s
    --  controller%b
-   --  inputs%s
-   --  inputs%b
    --  simulation%s
    --  simulation%b
    --  main%b

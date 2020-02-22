@@ -17,7 +17,7 @@ RV SPARK_05
 RV MAX_TASKS=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U controller%b		controller.adb		7d1a86d5 OO PK IL
+U controller%b		controller.adb		95d892b5 OO PK IL
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 Z flag%s		flag.adb		flag.ali  AD
@@ -57,8 +57,8 @@ D a-tags.ads		20190518041258 491b781d ada.tags%s
 D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D collision.ads		20200205212254 032bb627 collision%s
-D controller.ads	20200222124536 26a7025d controller%s
-D controller.adb	20200222124816 5bbd8488 controller%b
+D controller.ads	20200222125318 26a7025d controller%s
+D controller.adb	20200222131708 b37f90e8 controller%b
 D display.ads		20200124114604 3a88167c display%s
 D display-basic.ads	20200124114604 66d43323 display.basic%s
 D display-image.ads	20200124114604 86429f23 display.image%s
@@ -131,19 +131,19 @@ X 7 a-reatim.ads
 49O9*Time<duration> 15|4r14
 54O9*Time_Span<duration> 15|7r25
 61V13*Clock{49O9} 15|12s15
-65V14*"+"{49O9} 15|12s21 30s23
+65V14*"+"{49O9} 15|12s21 28s23
 119V13*Milliseconds{54O9} 15|7s38
 X 11 a-textio.ads
 57K13*Text_IO 727e16 14|6w10 6r27
 508U14*Put_Line 15|19s10
 X 14 controller.ads
-8K9*controller 12l5 12e15 15|1b14 36l5 36t15
-10t9*AI_Task 15|3b14 34l8 34t15
+8K9*controller 12l5 12e15 15|1b14 32l5 32t15
+10t9*AI_Task 15|3b14 30l8 30t15
 X 15 controller.adb
-4o7 Next{7|49O9} 12m7 29r22 30m10 30r18
-7o7 Period{7|54O9} 12r23 30r25
+4o7 Next{7|49O9} 12m7 27r22 28m10 28r18
+7o7 Period{7|54O9} 12r23 28r25
 9f7 currentPositionY{float} 16m10 17r20
-10f7 output{float} 17m10 19r31 20m32 20r32 21r13 23r16 25r16
+10f7 output{float} 17m10 19r31 20m32 20r32 21r13 23r16
 X 16 display.ads
 23K9*Display 14|3r6 3r25 16|59e12
 X 17 display-basic.ads
@@ -153,11 +153,11 @@ X 19 flag.ads
 3w14*StepFlag 15|14r13
 5V16 getFlag{boolean} 15|14s22
 X 25 mars_lander.ads
-10K9*Mars_Lander 14|4w6 4r25 15|16r30 22r13 24r13 26r13 25|84e16
+10K9*Mars_Lander 14|4w6 4r25 15|16r30 22r13 24r13 25|84e16
 28w14*Lander 15|16r42
 45V16 getPosition{66|3R9} 15|16s49
-67w14*inputFlags 15|22r25 24r25 26r25
-70U17 setUp 15|22s36 24s36 26s36
+67w14*inputFlags 15|22r25 24r25
+70U17 setUp 15|22s36 24s36
 X 27 pidcontroller.ads
 1K9*PIDController 14|5w6 5r26 27|29e18
 3w14*pid_controller 15|13r7 20r10
