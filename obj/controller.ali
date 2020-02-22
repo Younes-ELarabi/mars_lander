@@ -17,7 +17,7 @@ RV SPARK_05
 RV MAX_TASKS=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U controller%b		controller.adb		0f6f5626 OO PK IL
+U controller%b		controller.adb		95d892b5 OO PK IL
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 Z flag%s		flag.adb		flag.ali  AD
@@ -58,7 +58,7 @@ D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D collision.ads		20200205212254 032bb627 collision%s
 D controller.ads	20200222125318 26a7025d controller%s
-D controller.adb	20200222130544 29c8547b controller%b
+D controller.adb	20200222131708 b37f90e8 controller%b
 D display.ads		20200124114604 3a88167c display%s
 D display-basic.ads	20200124114604 66d43323 display.basic%s
 D display-image.ads	20200124114604 86429f23 display.image%s

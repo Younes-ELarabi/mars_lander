@@ -10,7 +10,7 @@ package body controller is
       output :Float;
    begin 
       Next := Clock + Period;
-      pid_controller.init(10.0,1.4,0.0001,0.0);
+      pid_controller.init(175.0,1.4,0.0001,100.0);
       while StepFlag.getFlag loop 
          --
          currentPositionY := Mars_Lander.Lander.getPosition.y;
