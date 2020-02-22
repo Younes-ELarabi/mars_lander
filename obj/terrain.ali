@@ -19,7 +19,7 @@ RV NO_ELABORATION_CODE
 RV SPARK_05
 RV MAX_PROTECTED_ENTRIES=1
 
-U terrain%b		terrain.adb		d2c34782 NE OO PK IL
+U terrain%b		terrain.adb		754d4956 NE OO PK IL
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W system%s		system.ads		system.ali
@@ -29,7 +29,7 @@ Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
 Z system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 
-U terrain%s		terrain.ads		43b20ff7 EE OO PF PK IL
+U terrain%s		terrain.ads		b2326d6d EE OO PF PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
@@ -102,31 +102,25 @@ D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
 D s-valuns.ads		20190518041258 35067db9 system.val_uns%s
 D s-win32.ads		20190518041256 90ecf4e6 system.win32%s
-D terrain.ads		20200211124638 09b51f61 terrain%s
-D terrain.adb		20200211125406 db7658e3 terrain%b
+D terrain.ads		20200211230808 f8357dfb terrain%s
+D terrain.adb		20200214105522 8d7834ad terrain%b
 G a e
 G c Z s b [map_value terrain 21 13 none]
 G c Z s b [generate terrain__terrain_object 25 17 none]
 G c Z s b [generatehorizentalsurface terrain__terrain_object 26 17 none]
 G c Z s b [get_terrain terrain__terrain_object 27 13 none]
-G c Z s b [gete1h terrain__terrain_object 28 16 none]
-G c Z s b [gete2h terrain__terrain_object 29 16 none]
 G c Z s b [terrain_object__generateN terrain 25 7 none]
 G c Z s b [terrain_object__generateP terrain 25 7 none]
 G c Z s b [terrain_object__generatehorizentalsurfaceN terrain 26 7 none]
 G c Z s b [terrain_object__generatehorizentalsurfaceP terrain 26 7 none]
-G c Z s b [terrain_object__gete1hN terrain 28 7 none]
-G c Z s b [terrain_object__gete1hP terrain 28 7 none]
-G c Z s b [terrain_object__gete2hN terrain 29 7 none]
-G c Z s b [terrain_object__gete2hP terrain 29 7 none]
 G c Z s s [cordinatesIP terrain 11 9 none]
 G c Z s s [Tterrain_typeBIP terrain 16 4 none]
 G c Z s s [terrain_objectTVDI terrain 23 4 none]
 G c Z s s [terrain_objectTVDF terrain 23 4 none]
 G c Z s s [terrain_objectTVIP terrain 23 4 none]
 G c Z s s [P4sIP terrain 27 7 none]
-G c Z s b [partition terrain 39 13 none]
-G c Z s b [sort terrain 40 14 none]
+G c Z s b [partition terrain 37 13 none]
+G c Z s b [sort terrain 38 14 none]
 G r c none [generate terrain__terrain_object 25 17 none] [reset perlin 3 14 none]
 G r c none [generate terrain__terrain_object 25 17 none] [noise perlin 4 13 none]
 X 1 ada.ads
@@ -146,7 +140,6 @@ X 11 display.ads
 23K9*Display 59e12 57|1r6 1r25 2w6 2r25
 X 12 display-basic.ads
 20K17*Basic 363e18 57|1w14 1r33
-40R9*Point_3d 44e14 57|28r30 29r30 34r16 58|57r30 62r30
 X 13 interfac.ads
 74M9*Unsigned_32
 77M9*Unsigned_64
@@ -169,42 +162,38 @@ X 42 s-stausa.ads
 X 44 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
 X 57 terrain.ads
-7K9*terrain 39E13 42l5 42e12 58|1b14 104l5 104t12
+7K9*terrain 37E13 40l5 40e12 58|1b14 93l5 93t12
 9N4*size 16r34 58|17r25 18r60 22r28 31r48
-11R9*cordinates 14e14 16r43 58|75r14 77r13
-12f7*X{float} 58|43r57 80r20 80r30
+11R9*cordinates 14e14 16r43 58|64r14 66r13
+12f7*X{float} 58|43r57 69r20 69r30
 13f7*Y{float} 58|41r37
-16A9*Terrain_Type(11R9)<integer> 26r60 27r37 32r16 39r37 40r31 58|30r60 49r37
-. 74r36 94r31
-21V13*map_value{float} 21>23 21>36 21>46 21>56 21>65 58|18s31 19s31 69b13
-. 72l8 72t17
-21f23 value{float} 58|69b23 71r20
-21f36 a1{float} 58|69b36 71r28 71r46
-21f46 a2{float} 58|69b46 71r43
-21f56 b1{float} 58|69b56 71r14 71r38
-21f65 b2{float} 58|69b65 71r33
-23w14*Terrain_Object 58|3b19 67l8 67t22
+16A9*Terrain_Type(11R9)<integer> 26r60 27r37 30r16 37r37 38r31 58|30r60 48r37
+. 63r36 83r31
+21V13*map_value{float} 21>23 21>36 21>46 21>56 21>65 58|18s31 19s31 58b13
+. 61l8 61t17
+21f23 value{float} 58|58b23 60r20
+21f36 a1{float} 58|58b36 60r28 60r46
+21f46 a2{float} 58|58b46 60r43
+21f56 b1{float} 58|58b56 60r14 60r38
+21f65 b2{float} 58|58b65 60r33
+23w14*Terrain_Object 58|3b19 56l8 56t22
 25U17 generate 58|4b17 28l11 28t19
-26U17 generateHorizentalSurface 26=43 26>73 58|24s13 30b17 47l11 47t36
+26U17 generateHorizentalSurface 26=43 26>73 58|24s13 30b17 46l11 46t36
 26a43 terrain{16A9} 58|30b43 41r15 43m13 43r37
-26i73 length{integer} 58|30b73 31r55 42r39 46r35
-27Y13 get_terrain 27<25 58|49b13 55l11 55t22
-27a25 value{16A9} 58|54m10
-28V16 getE1H{12|40R9} 58|57b16 60l11 60t17
-29V16 getE2H{12|40R9} 58|62b16 65l11 65t17
-32a7 terrain{16A9} 58|18r16 22r18 24r39 54r19
-33b7 is_generated{boolean} 58|13r17 26r13 50r14
-34r7 E1H{12|40R9} 58|45r10 59r17
-34r11 E2H{12|40R9} 58|46r10 64r17
-39V13 partition{integer} 39=23 39>50 39>63 58|74b13 92l8 92t17 98s16
-39a23 tab{16A9} 58|74b23 75r28 80r13 82r21 83m13 83r23 84m13 87r15 88m7 88r19
-. 89m7
-39i50 low{integer} 58|74b49 76r22 79r16
-39i63 high{integer} 58|74b62 75r32 79r21 88r23 89r11
-40U14 sort 40=19 40>44 40>57 58|22s13 94b14 99s10 100s10 102l8 102t12
-40a19 tab{16A9} 58|94b19 98m26 98r26 99m15 100m15
-40i44 low{integer} 58|94b44 97r10 98r30 99r19
-40i57 high{integer} 58|94b57 97r16 98r34 100r24
+26i73 length{integer} 58|30b73 31r55 42r39
+27Y13 get_terrain 27<25 58|48b13 54l11 54t22
+27a25 value{16A9} 58|53m10
+30a7 terrain{16A9} 58|18r16 22r18 24r39 53r19
+31b7 is_generated{boolean} 58|13r17 26r13 49r14
+37V13 partition{integer} 37=23 37>50 37>63 58|63b13 81l8 81t17 87s16
+37a23 tab{16A9} 58|63b23 64r28 69r13 71r21 72m13 72r23 73m13 76r15 77m7 77r19
+. 78m7
+37i50 low{integer} 58|63b49 65r22 68r16
+37i63 high{integer} 58|63b62 64r32 68r21 77r23 78r11
+38U14 sort 38=19 38>44 38>57 58|22s13 83b14 88s10 89s10 91l8 91t12
+38a19 tab{16A9} 58|83b19 87m26 87r26 88m15 89m15
+38i44 low{integer} 58|83b44 86r10 87r30 88r19
+38i57 high{integer} 58|83b57 86r16 87r34 89r24
 X 58 terrain.adb
 5I15 custom<integer> 6r66 9r21
 6K18 rand_custom[5|44] 7r14 14r13
@@ -215,13 +204,13 @@ X 58 terrain.adb
 31I15 custom<integer> 32r66 35r17 42r32
 32K18 rand_custom[5|44] 33r14 39r10
 34r10 Seed{5|50R9[32]} 39r28 40r24
-35i10 num{31I15} 40m10 41r31 42r19 42r26 45r24 46r24
-36f10 y{float} 41m10 43r59 45r29 46r43
+35i10 num{31I15} 40m10 41r31 42r19 42r26
+36f10 y{float} 41m10 43r59
 42i14 J<integer> 43r29 43r53
-49a25 value{57|16A9}
-75r7 pivot{57|11R9} 80r24
-76i7 i{integer} 81m13 81r17 82r25 83r17 87r19 88r11 91r14
-77r7 temp{57|11R9} 82m13 84r23 87m7 89r20
-79i11 J{integer} 80r17 83r27 84r17
-95i7 pi{integer} 98m10 99r23 100r19
+48a25 value{57|16A9}
+64r7 pivot{57|11R9} 69r24
+65i7 i{integer} 70m13 70r17 71r25 72r17 76r19 77r11 80r14
+66r7 temp{57|11R9} 71m13 73r23 76m7 78r20
+68i11 J{integer} 69r17 72r27 73r17
+84i7 pi{integer} 87m10 88r23 89r19
 

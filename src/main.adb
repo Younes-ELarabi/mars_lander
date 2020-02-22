@@ -21,11 +21,19 @@ procedure Main is
       for I in 1..size-1 loop
          pointA := (t(I).X,t(I).Y,0.0);
          pointB := (t(I+1).X,t(I+1).Y,0.0);
-         Draw_Line(Canvas,
+         if pointA.Y = pointB.Y then
+            Draw_Line(Canvas,
                    pointa,
                    pointb,
                    Green
+                     );
+         else
+            Draw_Line(Canvas,
+                   pointa,
+                   pointb,
+                   White
                   );
+         end if;
       end loop;
    end drawTerrain;
    --  declare a variable Next of type Time to store the Next step time
@@ -77,13 +85,11 @@ begin
       delay until Next;
       --  update the Next time adding the period for the next step
       Next := Next + Period;
-      -- Put_Line(Boolean'Image(Lander.isLanded));
       StepFlag.setFlag(not Lander.hasCollided and not Lander.isLanded);
    end loop;
 
-   Put_Line("   Land   status = " & Boolean'Image(Lander.isLanded));
+   Put_Line("Landing   status = " & Boolean'Image(Lander.isLanded));
    Put_Line("Collision status = " & Boolean'Image(Lander.hasCollided));
-
    --Game over loop. Need to press space to close the window
    while not Get_Key_Status(SDLK_SPACE) loop
       Swap_Buffers (Window);

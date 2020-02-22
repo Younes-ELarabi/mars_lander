@@ -32,10 +32,10 @@ package body Mars_Lander is
       
       procedure updateBounds(previousBounds : in out mars_rectangle) is
       begin
-         previousBounds.A := (position.x - 12.5,position.y +12.5,0.0);
-         previousBounds.B := (position.x + 12.5,position.y +12.5,0.0);
-         previousBounds.C := (position.x + 12.5,position.y -12.5,0.0);
-         previousBounds.D := (position.x - 12.5,position.y -12.5,0.0);
+         previousBounds.A := (position.x - ship_width/2.0,position.y + ship_height/2.0,0.0);
+         previousBounds.B := (position.x + ship_width/2.0,position.y + ship_height/2.0,0.0);
+         previousBounds.C := (position.x + ship_width/2.0,position.y - ship_height/2.0,0.0);
+         previousBounds.D := (position.x - ship_width/2.0,position.y - ship_height/2.0,0.0);
       end updateBounds;
           
       
@@ -93,7 +93,7 @@ package body Mars_Lander is
                pointB := (surface(I+1).X,surface(I+1).Y,0.0);
             end if;
          end loop;
-         return ( hasCollided and (pointA.Y = pointB.Y)  -- (pointA.Y = pointB.Y) 
+         return ( hasCollided and (pointA.Y = pointB.Y) 
                   and (velocity.y*velocity.y + velocity.x*velocity.x) < 4.0)
            and (direction > -10.0 and direction < 10.0);                  
       end isLanded;
@@ -152,7 +152,12 @@ package body Mars_Lander is
          position := position + velocity;
          -- update bounds
          updateBounds(bounds);
-      end Step;    
+      end Step;
+      
+      function getPosition return Vector_Type is
+      begin
+         return position;
+      end getPosition;
    end Lander;
    
    protected body inputFlags is

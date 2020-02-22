@@ -16,7 +16,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U main%b		main.adb		44cb7508 NE OO SU
+U main%b		main.adb		c780b22d NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 W ada.numerics.elementary_functions%s  a-nuelfu.ads  a-nuelfu.ali
@@ -65,8 +65,8 @@ D i-c.ads		20190518041256 5421119b interfaces.c%s
 D i-cexten.ads		20190518041256 38d7e116 interfaces.c.extensions%s
 D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D main.adb		20200211113836 60d4f875 main%b
-D mars_lander.ads	20200211132134 d7120e1c mars_lander%s
+D main.adb		20200221184308 511d20c7 main%b
+D mars_lander.ads	20200221190120 94107311 mars_lander%s
 D perlin.ads		20200205212254 65fe9455 perlin%s
 D sdl_blendmode_h.ads	20200124114612 e308a3b6 sdl_blendmode_h%s
 D sdl_pixels_h.ads	20200124114610 89492fa8 sdl_pixels_h%s
@@ -74,7 +74,7 @@ D sdl_rect_h.ads	20200124114612 5db03fa9 sdl_rect_h%s
 D sdl_rwops_h.ads	20200124114610 d60b2061 sdl_rwops_h%s
 D sdl_stdinc_h.ads	20200124114612 76b5d89f sdl_stdinc_h%s
 D sdl_surface_h.ads	20200124114612 da149c96 sdl_surface_h%s
-D simulation.ads	20200211095850 efcf6f4b simulation%s
+D simulation.ads	20200221185550 efcf6f4b simulation%s
 D stdarg_h.ads		20200124114612 db698406 stdarg_h%s
 D stddef_h.ads		20200124114612 f49cc756 stddef_h%s
 D stdint_h.ads		20200124114610 376ae00b stdint_h%s
@@ -108,7 +108,7 @@ D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
 D s-win32.ads		20190518041256 90ecf4e6 system.win32%s
-D terrain.ads		20200211124638 09b51f61 terrain%s
+D terrain.ads		20200211230808 f8357dfb terrain%s
 D vector.ads		20200129154356 c670e60e vector%s
 G a e
 G c Z b b [main standard 15 11 none]
@@ -134,85 +134,87 @@ X 7 a-nuelfu.ads
 18K22*Elementary_Functions[8|39] 26|2w19 2r58
 X 9 a-reatim.ads
 39K13*Real_Time 185e18 26|1w10 1r29
-49O9*Time<duration> 26|32r11
-54O9*Time_Span<duration> 26|36r22
-61V13*Clock{49O9} 26|67s12
-65V14*"+"{49O9} 26|67s18 79s20 97s20
-119V13*Milliseconds{54O9} 26|36s35
+49O9*Time<duration> 26|40r11
+54O9*Time_Span<duration> 26|44r22
+61V13*Clock{49O9} 26|75s12
+65V14*"+"{49O9} 26|75s18 87s20 103s20
+119V13*Milliseconds{54O9} 26|44s35
 X 13 a-textio.ads
 57K13*Text_IO 727e16 26|3w10 3r27
-508U14*Put_Line 26|84s4 85s4
+508U14*Put_Line 26|91s4 92s4
 X 16 display.ads
 23K9*Display 59e12 26|5w6 5r25 6r6 6r25 7r6 7r25
-38r4*Green{27R9} 26|27r20 92r51
-39r4*Red{27R9} 26|94r50
+36r4*White{27R9} 26|34r20
+38r4*Green{27R9} 26|28r20 98r51
+39r4*Red{27R9} 26|100r50
 45A9*RGBA_Array(27R9)<integer><integer>
-46P9*Image_T(45A9) 26|53r10 54r16
+46P9*Image_T(45A9) 26|61r10 62r16
 X 17 display-basic.ads
 20K17*Basic 363e18 26|6w14 6r33
-23I9*Window_ID<356I9> 26|39r13
-25V13*Create_Window{23I9} 26|61s6
-31I9*Canvas_ID<359I9> 26|17r35 42r13
-33V13*Get_Canvas{31I9} 26|64s14
+23I9*Window_ID<356I9> 26|47r13
+25V13*Create_Window{23I9} 26|69s6
+31I9*Canvas_ID<359I9> 26|17r35 50r13
+33V13*Get_Canvas{31I9} 26|72s14
 40R9*Point_3d 44e14 26|18r16 19r16
-46R9*Screen_Point 48e14 26|52r14
-97n7*SDLK_SPACE{55E9} 26|88r29
-306U14*Draw_Line 26|24s10
-309U14*Draw_Text 26|92s10 94s10
-337U14*Swap_Buffers 26|73s7 89s7
-345V13*Get_Key_Status{boolean} 26|88s14
+42f7*Y{float} 26|24r20 24r31
+46R9*Screen_Point 48e14 26|60r14
+97n7*SDLK_SPACE{55E9} 26|94r29
+306U14*Draw_Line 26|25s13 31s13
+309U14*Draw_Text 26|98s10 100s10
+337U14*Swap_Buffers 26|81s7 95s7
+345V13*Get_Key_Status{boolean} 26|94s14
 356I9 Window_ID_Range<short_short_integer>
 359I9 Canvas_ID_Range<short_integer>
 X 18 display-image.ads
 1K17*Image 7e18 26|7w14 7r33
-3V13*Load_BMP{16|46P9} 26|53s21 54s27
+3V13*Load_BMP{16|46P9} 26|61s21 62s27
 X 19 flag.ads
 1K9*flag 11e9 26|12w6 12r16
-3w14*StepFlag 26|72r10 81r7
-5V16 getFlag{boolean} 26|72s19
-6U17 setFlag 26|81s16
+3w14*StepFlag 26|80r10 88r7
+5V16 getFlag{boolean} 26|80s19
+6U17 setFlag 26|88s16
 X 20 inputs.ads
 1K9*inputs 5e11 26|11w6
 X 26 main.adb
-15U11*Main 15b11 100l5 100t9
-17U14 drawTerrain 17b14 17>26 17>45 30l8 30t19 75s7
-17i26 Canvas{17|31I9} 24r20
+15U11*Main 15b11 106l5 106t9
+17U14 drawTerrain 17b14 17>26 17>45 38l8 38t19 83s7
+17i26 Canvas{17|31I9} 25r23 31r23
 17a45 t{69|16A9} 22r21 22r28 23r21 23r30
-18r7 pointA{17|40R9} 22m10 25r20
-19r7 pointB{17|40R9} 23m10 26r20
+18r7 pointA{17|40R9} 22m10 24r13 26r20 32r20
+19r7 pointB{17|40R9} 23m10 24r24 27r20 33r20
 21i11 I{integer} 22r23 22r30 23r23 23r32
-32o4 Next{9|49O9} 67m4 77r19 79m7 79r15 90r19 97m7 97r15
-36o4 Period{9|54O9} 67r20 79r22 97r22
-39i4 Window{17|23I9} 60m4 64r26 73r21 89r21
-42i4 Canvas{17|31I9} 64m4 74r31 75r19 92r20 94r20
-44N4 Width 52r39 61r30
-45N4 Height 52r58 61r46
-48f4 ship_width{float} 74r38
-49f4 ship_height{float} 74r49
-52r4 gameOver{17|46R9} 92r28 94r28
-53p4 sky{16|46P9} 74r61
-54p4 spaceship{16|46P9} 74r65
-56a4 t{69|16A9} 70m31 75r26
+40o4 Next{9|49O9} 75m4 85r19 87m7 87r15 96r19 103m7 103r15
+44o4 Period{9|54O9} 75r20 87r22 103r22
+47i4 Window{17|23I9} 68m4 72r26 81r21 95r21
+50i4 Canvas{17|31I9} 72m4 82r31 83r19 98r20 100r20
+52N4 Width 60r39 69r30
+53N4 Height 60r58 69r46
+56f4 ship_width{float} 82r38
+57f4 ship_height{float} 82r49
+60r4 gameOver{17|46R9} 98r28 100r28
+61p4 sky{16|46P9} 82r61
+62p4 spaceship{16|46P9} 82r65
+64a4 t{69|16A9} 78m31 83r26
 X 27 mars_lander.ads
-10K9*Mars_Lander 26|9w6 9r25 74r7 27|82e16
-28w14*Lander 26|74r19 81r28 81r55 84r51 85r51 91r10
-30U17 Draw 26|74s26
-35V16 hasCollided{boolean} 26|81s35 85s58
-37V16 isLanded{boolean} 26|81s62 84s58 91s17
+10K9*Mars_Lander 26|9w6 9r25 82r7 27|84e16
+28w14*Lander 26|82r19 88r28 88r55 91r51 92r51 97r10
+30U17 Draw 26|82s26
+35V16 hasCollided{boolean} 26|88s35 92s58
+37V16 isLanded{boolean} 26|88s62 91s58 97s17
 X 35 simulation.ads
 3K9*simulation 26|10w6 35|7e15
 X 54 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 X 69 terrain.ads
-7K9*terrain 26|13w6 13r19 69|42e12
+7K9*terrain 26|13w6 13r19 69|40e12
 9N4*size 26|21r19
 12f7*X{float} 26|22r26 23r28
 13f7*Y{float} 26|22r33 23r37
-16A9*Terrain_Type(11R9)<integer> 26|17r48 56r7
-23w14*Terrain_Object 26|69r4 70r4
-25U17 generate 26|69s19
-27Y13 get_terrain 26|70s19
+16A9*Terrain_Type(11R9)<integer> 26|17r48 64r7
+23w14*Terrain_Object 26|77r4 78r4
+25U17 generate 26|77s19
+27Y13 get_terrain 26|78s19
 X 70 vector.ads
 1K9*vector 26|8w6 8r25 70|11e11
 

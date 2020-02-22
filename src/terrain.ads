@@ -25,13 +25,11 @@ package terrain is
       procedure generate;
       procedure generateHorizentalSurface(terrain : in out Terrain_Type;length :Integer);
       entry get_terrain(value : out Terrain_Type);
-      function getE1H return Point_3d;
-      function getE2H return Point_3d;
       
    private
       terrain :Terrain_Type;
       is_generated :Boolean := false;
-      E1H,E2H :Point_3d; -- to store cordinates of the horizental line
+
    end Terrain_Object;
    
 private

@@ -17,7 +17,7 @@ package body terrain is
             for I in 1..size loop
                terrain(I) := (map_value(Float(I),1.0,Float(size),-400.0,400.0),
                               map_value(Noise(k),0.0,1.0,-400.0,0.0));
-               k := k + 0.005;
+               k := k + 0.01;
             end loop;
             sort(terrain,1,size);
             -- create surface for Landing
@@ -42,8 +42,7 @@ package body terrain is
          for J in num .. num + custom(length) loop
             terrain(Integer(J)) := (terrain(Integer(J)).X,y);
          end loop;
-         E1H := (Float(num),y,0.0);
-         E2H := (Float(num)+Float(length),y,0.0);
+         
       end generateHorizentalSurface;
       
       entry get_terrain(value : out Terrain_Type)
@@ -53,16 +52,6 @@ package body terrain is
       begin
          value := terrain;
       end get_terrain;
-      
-      function getE1H return Point_3d is 
-      begin
-         return E1H;
-      end getE1H;
-   
-      function getE2H return Point_3d is 
-      begin
-         return E2H;
-      end getE2H;
       
    end Terrain_Object;
    

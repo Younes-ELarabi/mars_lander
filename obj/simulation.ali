@@ -15,7 +15,7 @@ RV SPARK_05
 RV MAX_TASKS=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U simulation%b		simulation.adb		92a3e8a0 OO PK IL
+U simulation%b		simulation.adb		d1a195ad OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
@@ -25,7 +25,7 @@ W mars_lander%s		mars_lander.adb		mars_lander.ali  AD
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U simulation%s		simulation.ads		38dd6157 EE OO PK IL
+U simulation%s		simulation.ads		7bdf1c5a EE OO PK IL
 Z ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W mars_lander%s		mars_lander.adb		mars_lander.ali
@@ -58,7 +58,7 @@ D i-c.ads		20190518041256 5421119b interfaces.c%s
 D i-cexten.ads		20190518041256 38d7e116 interfaces.c.extensions%s
 D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D mars_lander.ads	20200211132134 d7120e1c mars_lander%s
+D mars_lander.ads	20200221190120 94107311 mars_lander%s
 D perlin.ads		20200205212254 65fe9455 perlin%s
 D sdl_blendmode_h.ads	20200124114612 e308a3b6 sdl_blendmode_h%s
 D sdl_pixels_h.ads	20200124114610 89492fa8 sdl_pixels_h%s
@@ -66,8 +66,8 @@ D sdl_rect_h.ads	20200124114612 5db03fa9 sdl_rect_h%s
 D sdl_rwops_h.ads	20200124114610 d60b2061 sdl_rwops_h%s
 D sdl_stdinc_h.ads	20200124114612 76b5d89f sdl_stdinc_h%s
 D sdl_surface_h.ads	20200124114612 da149c96 sdl_surface_h%s
-D simulation.ads	20200211095850 efcf6f4b simulation%s
-D simulation.adb	20200211120934 b143b6b8 simulation%b
+D simulation.ads	20200221185550 efcf6f4b simulation%s
+D simulation.adb	20200221185556 b143b6b8 simulation%b
 D stdarg_h.ads		20200124114612 db698406 stdarg_h%s
 D stddef_h.ads		20200124114612 f49cc756 stddef_h%s
 D stdint_h.ads		20200124114610 376ae00b stdint_h%s
@@ -98,7 +98,7 @@ D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
 D s-win32.ads		20190518041256 90ecf4e6 system.win32%s
-D terrain.ads		20200211124638 09b51f61 terrain%s
+D terrain.ads		20200211230808 f8357dfb terrain%s
 D vector.ads		20200129154356 c670e60e vector%s
 G a e
 G c b b b [b simulation 5 1 none]
@@ -112,25 +112,25 @@ X 1 ada.ads
 16K9*Ada 20e8 32|3r6 3r25
 X 7 a-reatim.ads
 39K13*Real_Time 185e18 32|3w10 3r29
-49O9*Time<duration> 32|8r11
-54O9*Time_Span<duration> 32|11r22
+49O9*Time<duration> 32|8r14
+54O9*Time_Span<duration> 32|11r25
 61V13*Clock{49O9} 32|13s15
 65V14*"+"{49O9} 32|13s21 18s23
-119V13*Milliseconds{54O9} 32|11s35
+119V13*Milliseconds{54O9} 32|11s38
 X 17 flag.ads
 1K9*flag 11e9 32|2w6 2r16
 3w14*StepFlag 32|14r13
 5V16 getFlag{boolean} 32|14s22
 X 23 mars_lander.ads
-10K9*Mars_Lander 82e16 31|1w6 1r23 32|1w6 1r23 15r10
+10K9*Mars_Lander 84e16 31|1w6 1r23 32|1w6 1r23 15r10
 28w14*Lander 32|15r22
 33U17 Step 32|15s29
 X 31 simulation.ads
 3K9*simulation 7l5 7e15 32|5b14 22l5 22t15
 5t9*update 32|7b14 20l8 20t14
 X 32 simulation.adb
-8o4 Next{7|49O9} 13m7 17r22 18m10 18r18
-11o4 Period{7|54O9} 13r23 18r25
+8o7 Next{7|49O9} 13m7 17r22 18m10 18r18
+11o7 Period{7|54O9} 13r23 18r25
 X 49 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22

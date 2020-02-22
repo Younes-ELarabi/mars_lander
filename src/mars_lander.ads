@@ -41,6 +41,8 @@ package Mars_Lander is
       function getIdImage return Integer;
       
       procedure updateBounds(previousBounds : in out mars_rectangle);
+      
+      function getPosition return Vector_Type;
            
    private
       
