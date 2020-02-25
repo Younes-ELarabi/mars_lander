@@ -6,27 +6,38 @@ package body controller is
       -- the loop period
       Period : constant Time_Span := Milliseconds (10);
       --
-      currentPositionY :Float;
-      output :Float;
+      inputY :Float;
+      YController :pid_controller;
+      setPoint :Float := 40.0;
+      --
+      traj :trajectory_object;      
    begin 
       Next := Clock + Period;
-      pid_controller.init(175.0,1.4,0.0001,100.0);
+      traj.generateTrajectory;
+      YController.init(setPoint,0.7,0.0001,100.0);
       while StepFlag.getFlag loop 
-         --
-         currentPositionY := Mars_Lander.Lander.getPosition.y;
-         output := currentPositionY;
-         --
-         Put_Line(Float'Image(output));
-         pid_controller.update(output);
-         if output > 0.0 then
+         -- Convergence to Y setPoint
+         inputY := Lander.getPosition.y;      
+         YController.update(inputY);
+         if inputY > 0.0 then
             Mars_Lander.inputFlags.setUp(true);
-         elsif output < 0.0 then
-            Mars_Lander.inputFlags.setUp(false);      
+         elsif inputY < 0.0 then
+            Mars_Lander.inputFlags.setUp(false);    
+         end if;
+         if setPoint - Lander.getPosition.y < 1.0 then
+            Put_Line("On target");
+            Put_Line(Float'Image(Lander.getPosition.y));
+            -- For test
+            setPoint := 300.00;
+            YController.reset(setPoint);
+            --
+         else
+            Put_Line(Float'Image(Lander.getPosition.y));
+            Put_Line("Moving to target");
          end if;
          -- wait until Next
          delay until Next;
          Next := Next + Period;
       end loop;  
-   end AI_Task;
-   
+   end AI_Task;   
 end controller;

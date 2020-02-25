@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#b97833ef#;
+   u00001 : constant Version_32 := 16#7410b61e#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#050ff2f0#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -353,9 +353,9 @@ package ada_main is
    pragma Export (C, u00157, "system__finalization_rootS");
    u00158 : constant Version_32 := 16#cf3f1b90#;
    pragma Export (C, u00158, "system__file_control_blockS");
-   u00159 : constant Version_32 := 16#95d892b5#;
+   u00159 : constant Version_32 := 16#fb137266#;
    pragma Export (C, u00159, "controllerB");
-   u00160 : constant Version_32 := 16#ccf4195f#;
+   u00160 : constant Version_32 := 16#1a0d32af#;
    pragma Export (C, u00160, "controllerS");
    u00161 : constant Version_32 := 16#fcedba4d#;
    pragma Export (C, u00161, "flagB");
@@ -373,9 +373,9 @@ package ada_main is
    pragma Export (C, u00167, "ada__exceptions__is_null_occurrenceB");
    u00168 : constant Version_32 := 16#e1d7566f#;
    pragma Export (C, u00168, "ada__exceptions__is_null_occurrenceS");
-   u00169 : constant Version_32 := 16#1d373157#;
+   u00169 : constant Version_32 := 16#0d22f0ef#;
    pragma Export (C, u00169, "mars_landerB");
-   u00170 : constant Version_32 := 16#c4e9f2ee#;
+   u00170 : constant Version_32 := 16#52c8b482#;
    pragma Export (C, u00170, "mars_landerS");
    u00171 : constant Version_32 := 16#0eed7110#;
    pragma Export (C, u00171, "system__tasking__protected_objects__operationsB");
@@ -511,36 +511,40 @@ package ada_main is
    pragma Export (C, u00236, "vectorB");
    u00237 : constant Version_32 := 16#c670e60e#;
    pragma Export (C, u00237, "vectorS");
-   u00238 : constant Version_32 := 16#32492e97#;
-   pragma Export (C, u00238, "pidcontrollerB");
-   u00239 : constant Version_32 := 16#ad5eb112#;
-   pragma Export (C, u00239, "pidcontrollerS");
-   u00240 : constant Version_32 := 16#8aa4f090#;
-   pragma Export (C, u00240, "system__img_realB");
-   u00241 : constant Version_32 := 16#f508d0da#;
-   pragma Export (C, u00241, "system__img_realS");
-   u00242 : constant Version_32 := 16#3e932977#;
-   pragma Export (C, u00242, "system__img_lluB");
-   u00243 : constant Version_32 := 16#4feffd78#;
-   pragma Export (C, u00243, "system__img_lluS");
-   u00244 : constant Version_32 := 16#62d0e74f#;
-   pragma Export (C, u00244, "system__powten_tableS");
-   u00245 : constant Version_32 := 16#9cbb0d81#;
-   pragma Export (C, u00245, "system__tasking__stagesB");
-   u00246 : constant Version_32 := 16#5fc08d5c#;
-   pragma Export (C, u00246, "system__tasking__stagesS");
-   u00247 : constant Version_32 := 16#d1a195ad#;
-   pragma Export (C, u00247, "simulationB");
-   u00248 : constant Version_32 := 16#7bdf1c5a#;
-   pragma Export (C, u00248, "simulationS");
-   u00249 : constant Version_32 := 16#7268f812#;
-   pragma Export (C, u00249, "system__img_boolB");
-   u00250 : constant Version_32 := 16#c779f0d3#;
-   pragma Export (C, u00250, "system__img_boolS");
-   u00251 : constant Version_32 := 16#e31b7c4e#;
-   pragma Export (C, u00251, "system__memoryB");
-   u00252 : constant Version_32 := 16#6bdde70c#;
-   pragma Export (C, u00252, "system__memoryS");
+   u00238 : constant Version_32 := 16#7d04754e#;
+   pragma Export (C, u00238, "pathB");
+   u00239 : constant Version_32 := 16#d97f792a#;
+   pragma Export (C, u00239, "pathS");
+   u00240 : constant Version_32 := 16#665b7ceb#;
+   pragma Export (C, u00240, "pidcontrollerB");
+   u00241 : constant Version_32 := 16#1e98f3c8#;
+   pragma Export (C, u00241, "pidcontrollerS");
+   u00242 : constant Version_32 := 16#8aa4f090#;
+   pragma Export (C, u00242, "system__img_realB");
+   u00243 : constant Version_32 := 16#f508d0da#;
+   pragma Export (C, u00243, "system__img_realS");
+   u00244 : constant Version_32 := 16#3e932977#;
+   pragma Export (C, u00244, "system__img_lluB");
+   u00245 : constant Version_32 := 16#4feffd78#;
+   pragma Export (C, u00245, "system__img_lluS");
+   u00246 : constant Version_32 := 16#62d0e74f#;
+   pragma Export (C, u00246, "system__powten_tableS");
+   u00247 : constant Version_32 := 16#9cbb0d81#;
+   pragma Export (C, u00247, "system__tasking__stagesB");
+   u00248 : constant Version_32 := 16#5fc08d5c#;
+   pragma Export (C, u00248, "system__tasking__stagesS");
+   u00249 : constant Version_32 := 16#4780d3c1#;
+   pragma Export (C, u00249, "simulationB");
+   u00250 : constant Version_32 := 16#edfe5a36#;
+   pragma Export (C, u00250, "simulationS");
+   u00251 : constant Version_32 := 16#7268f812#;
+   pragma Export (C, u00251, "system__img_boolB");
+   u00252 : constant Version_32 := 16#c779f0d3#;
+   pragma Export (C, u00252, "system__img_boolS");
+   u00253 : constant Version_32 := 16#e31b7c4e#;
+   pragma Export (C, u00253, "system__memoryB");
+   u00254 : constant Version_32 := 16#6bdde70c#;
+   pragma Export (C, u00254, "system__memoryS");
 
    --  BEGIN ELABORATION ORDER
    --  ada%s
@@ -786,6 +790,8 @@ package ada_main is
    --  collision%b
    --  terrain%s
    --  terrain%b
+   --  path%s
+   --  path%b
    --  vector%s
    --  vector%b
    --  mars_lander%s

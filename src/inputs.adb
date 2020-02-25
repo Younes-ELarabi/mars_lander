@@ -14,7 +14,6 @@ package body inputs is
       Period : constant Time_Span := Milliseconds (10);
    begin 
       Next := Clock + Period;
-      pid_controller.init(100.0,0.1,0.0,0.0);
       while StepFlag.getFlag loop 
          Mars_Lander.inputFlags.setUp(Get_Key_Status(SDLK_UP));
          Mars_Lander.inputFlags.setLeft(Get_Key_Status(SDLK_LEFT));

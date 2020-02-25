@@ -1,15 +1,28 @@
 <?xml version="1.0"?>
 <Clipboard>
-  <clipboard last="true" >elsif output &lt; 0.0 then
-            Mars_Lander.inputFlags.setUp(false);        </clipboard>
-  <clipboard>procedure setNewTarget(target :Float);</clipboard>
-  <clipboard>Mars_Lander.inputFlags.setRight(true);</clipboard>
-  <clipboard>Mars_Lander.inputFlags.setRight(Get_Key_Status(SDLK_RIGHT));</clipboard>
-  <clipboard>Mars_Lander.inputFlags.setLeft(Get_Key_Status(SDLK_LEFT));</clipboard>
-  <clipboard>currentPositionY :Float := Mars_Lander.Lander.getPosition.y;
-      output :Float := currentPositionY;</clipboard>
-  <clipboard>output</clipboard>
-  <clipboard>currentPositionY :Float := Mars_Lander.Lander.getPosition.y;</clipboard>
-  <clipboard>currentValue</clipboard>
-  <clipboard>pid_controller.init(200.0,1.4,0.7,0.35);</clipboard>
+  <clipboard last="true" >not inputFlags.getLeft</clipboard>
+  <clipboard>directionParam : constant := 0.30;
+      begin
+         if  direction - directionParam &gt; angle_value&apos;First then
+            direction := direction - directionParam;
+         end if;</clipboard>
+  <clipboard>if inputX &gt; 1.25 then 
+            Mars_Lander.inputFlags.setLeft(false);
+            Mars_Lander.inputFlags.setRight(true);     
+         elsif inputX &lt; -1.25 then
+            Mars_Lander.inputFlags.setLeft(true);
+            Mars_Lander.inputFlags.setRight(false);</clipboard>
+  <clipboard>XController.update(inputX);</clipboard>
+  <clipboard>180.0,0.001,0.0016,250.0)</clipboard>
+  <clipboard>(-Sin(Angle*3.1415/180.0),Cos(Angle*3.1415/180.0));</clipboard>
+  <clipboard>Draw_Circle(Canvas,
+                     (180.0,233.0,0.0),
+                     2.0,
+                     Green);</clipboard>
+  <clipboard>Mars_Lander.inputFlags.setLeft(false);
+               Mars_Lander.inputFlags.setRight(true);</clipboard>
+  <clipboard>Mars_Lander.inputFlags.setLeft(true);
+               Mars_Lander.inputFlags.setRight(false);</clipboard>
+  <clipboard>Mars_Lander.inputFlags.setLeft(true);
+            Mars_Lander.inputFlags.setRight(false);</clipboard>
 </Clipboard>

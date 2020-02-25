@@ -32,7 +32,7 @@ procedure Main is
             Draw_Line(Canvas,
                    pointa,
                    pointb,
-                   White
+                   Red
                   );
          end if;
       end loop;

@@ -1,0 +1,22 @@
+[GPS.MAIN.GPS] GPS 19.1 (20190106) hosted on x86_64-pc-mingw32 (17:46:19.146)
+[GPS.MAIN.GPS] Gtk+ static version: 3.14.15 (17:46:19.146)
+[GPS.MAIN.GPS] Gtk+ dynamic version: 3.14.15 (17:46:19.146)
+[GPS.MAIN.GPS.EXCEPTIONS] Unexpected exception: raised ADA.IO_EXCEPTIONS.DEVICE_ERROR : Invalid argument
+_GPS.MAIN.GPS.EXCEPTIONS_ [C:\GNAT\2019\bin\gps.libgnat-19\libgnat-19.dll]
+_GPS.MAIN.GPS.EXCEPTIONS_ 0x699d9b9d system__file_io__fopen_mode at ???
+_GPS.MAIN.GPS.EXCEPTIONS_ 0x69956932 ada__numerics__complex_elementary_functions__elementary_functions__exp_strictXnn.part.4 at ???
+_GPS.MAIN.GPS.EXCEPTIONS_ 0x698ab7a2 ada__numerics__complex_elementary_functions__elementary_functions__exp_strictXnn.part.4 at ???
+_GPS.MAIN.GPS.EXCEPTIONS_ 0x698ab8b4 ada__numerics__complex_elementary_functions__elementary_functions__exp_strictXnn.part.4 at ???
+_GPS.MAIN.GPS.EXCEPTIONS_ [C:\GNAT\2019\bin\gps.exe]
+_GPS.MAIN.GPS.EXCEPTIONS_ 0x41fb35
+_GPS.MAIN.GPS.EXCEPTIONS_ [C:\GNAT\2019\bin\gps.libgio-2.0-0\libgio-2.0-0.dll]
+_GPS.MAIN.GPS.EXCEPTIONS_ g_application_run at gapplication.c:2277
+_GPS.MAIN.GPS.EXCEPTIONS_ [C:\GNAT\2019\bin\gps.exe]
+_GPS.MAIN.GPS.EXCEPTIONS_ 0x425199
+_GPS.MAIN.GPS.EXCEPTIONS_ 0x2150c58
+_GPS.MAIN.GPS.EXCEPTIONS_ 0x4013f6
+_GPS.MAIN.GPS.EXCEPTIONS_ 0x4014e9
+_GPS.MAIN.GPS.EXCEPTIONS_ [C:\WINDOWS\System32\KERNEL32.DLL]
+_GPS.MAIN.GPS.EXCEPTIONS_ 0x7ff919567bd2
+_GPS.MAIN.GPS.EXCEPTIONS_ [C:\WINDOWS\SYSTEM32\ntdll.dll]
+_GPS.MAIN.GPS.EXCEPTIONS_ 0x7ff919d8cecf (17:46:19.158)
