@@ -24,8 +24,8 @@ D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-c.ads		20190518041256 5421119b interfaces.c%s
 D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
-D pidcontroller.ads	20200223155800 1e98f3c8 pidcontroller%s
-D pidcontroller.adb	20200223230448 78c38f23 pidcontroller%b
+D pidcontroller.ads	20200225174648 1e98f3c8 pidcontroller%s
+D pidcontroller.adb	20200225174642 78c38f23 pidcontroller%b
 D system.ads		20190518041258 32a08138 system%s
 D s-atacco.ads		20190518041258 4c36d12f system.address_to_access_conversions%s
 D s-exctab.ads		20190518041256 54135002 system.exception_table%s
@@ -86,7 +86,7 @@ X 7 pidcontroller.ads
 13f29 error{float} 8|13b29 15r33
 15U17 setError 15>26 8|18b17 21l11 21t19 34s10
 15f26 currentErr{float} 8|18b26 20r23
-17V16 GetLastError{float} 8|52b16 55l11 55t23
+17V16 getLastError{float} 8|52b16 55l11 55t23
 21f7 targetPoint{float} 8|28r19 42r10 49r10
 22f7 pGain{float} 8|8r10 36r27
 23f7 iGain{float} 8|9r10 36r45

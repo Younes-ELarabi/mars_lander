@@ -30,7 +30,7 @@ package body Mars_Lander is
                     spaceShip);
          -- target 
          Draw_Circle(Canvas,
-                     (180.0,233.0,0.0),
+                     (200.0,0.0,0.0),
                      2.0,
                      Green);
          -- start point
@@ -120,7 +120,7 @@ package body Mars_Lander is
       end accelerate;
       
       procedure turnRight(direction : in out angle_value) is
-         directionParam : constant := 0.30;
+         directionParam : constant := 0.35;
       begin
          if  direction - directionParam > angle_value'First then
             direction := direction - directionParam;
@@ -128,7 +128,7 @@ package body Mars_Lander is
       end turnRight;
       
       procedure turnLeft(direction : in out angle_value) is
-         directionParam : constant := 0.30;
+         directionParam : constant := 0.35;
       begin
          if  direction + directionParam < angle_value'Last then
             direction := direction + directionParam;

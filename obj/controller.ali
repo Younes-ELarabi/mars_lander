@@ -6,19 +6,21 @@ P ZX
 
 RN
 RV NO_DELAY
+RV NO_ENTRY_CALLS_IN_ELABORATION_CODE
 RV NO_FLOATING_POINT
 RV NO_IO
 RV NO_LOCAL_PROTECTED_OBJECTS
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_TASKING
 RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 RV MAX_TASKS=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U controller%b		controller.adb		fb137266 OO PK IL
+U controller%b		controller.adb		0dde396d OO PK IL
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -26,11 +28,16 @@ Z flag%s		flag.adb		flag.ali  AD
 Z mars_lander%s		mars_lander.adb		mars_lander.ali  AD
 Z path%s		path.adb		path.ali  AD
 Z pidcontroller%s	pidcontroller.adb	pidcontroller.ali  AD
+Z system%s		system.ads		system.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
 Z system.img_real%s	s-imgrea.adb		s-imgrea.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+Z system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U controller%s		controller.ads		1a0d32af EE OO PK IL
+U controller%s		controller.ads		3a3eacf3 EE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -62,7 +69,7 @@ D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D collision.ads		20200205212254 032bb627 collision%s
 D controller.ads	20200225145128 f4f329ca controller%s
-D controller.adb	20200225172006 0fe05bac controller%b
+D controller.adb	20200226004338 f92d10a7 controller%b
 D display.ads		20200124114604 3a88167c display%s
 D display-basic.ads	20200124114604 66d43323 display.basic%s
 D display-image.ads	20200124114604 86429f23 display.image%s
@@ -72,10 +79,10 @@ D i-c.ads		20190518041256 5421119b interfaces.c%s
 D i-cexten.ads		20190518041256 38d7e116 interfaces.c.extensions%s
 D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D mars_lander.ads	20200223180136 0231357d mars_lander%s
-D path.ads		20200225170718 214a04d1 path%s
+D mars_lander.ads	20200225195812 0231357d mars_lander%s
+D path.ads		20200225203304 01799a8d path%s
 D perlin.ads		20200205212254 65fe9455 perlin%s
-D pidcontroller.ads	20200223155800 1e98f3c8 pidcontroller%s
+D pidcontroller.ads	20200225174648 1e98f3c8 pidcontroller%s
 D sdl_blendmode_h.ads	20200124114612 e308a3b6 sdl_blendmode_h%s
 D sdl_pixels_h.ads	20200124114610 89492fa8 sdl_pixels_h%s
 D sdl_rect_h.ads	20200124114612 5db03fa9 sdl_rect_h%s
@@ -87,6 +94,7 @@ D stddef_h.ads		20200124114612 f49cc756 stddef_h%s
 D stdint_h.ads		20200124114610 376ae00b stdint_h%s
 D system.ads		20190518041258 32a08138 system%s
 D s-atacco.ads		20190518041258 4c36d12f system.address_to_access_conversions%s
+D s-conca2.ads		20190518041256 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
 D s-exctab.ads		20190518041256 54135002 system.exception_table%s
 D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
@@ -108,6 +116,7 @@ D s-taprop.ads		20190518041258 1dd2e1b6 system.task_primitives.operations%s
 D s-taskin.ads		20190518041258 b9d612e2 system.tasking%s
 D s-taprob.ads		20190518041258 acd6094d system.tasking.protected_objects%s
 D s-tpoben.ads		20190518041258 60ad3dae system.tasking.protected_objects.entries%s
+D s-tpobop.ads		20190518041258 5f548bb3 system.tasking.protected_objects.operations%s
 D s-tassta.ads		20190518041258 cca55c94 system.tasking.stages%s
 D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
@@ -120,72 +129,94 @@ G c b b b [b controller 1 1 none]
 G c Z s b [ai_taskTK controller 11 9 none]
 G c Z s s [ai_taskTKVIP controller 11 4 none]
 G r s pid_controller [b controller 1 1 none] [pid_controllerVIP pidcontroller 3 4 none]
-G r s trajectory_object [b controller 1 1 none] [trajectory_objectVIP path 9 4 none]
-G r p none [b controller 1 1 none] [generatetrajectory path__trajectory_object 15 17 none]
+G r p none [b controller 1 1 none] [generate path__trajectory_object 12 17 none]
+G r o none [b controller 1 1 none] [get_trajectory path__trajectory_object 14 13 none]
 G r p none [b controller 1 1 none] [init pidcontroller__pid_controller 5 17 none]
 G r p none [b controller 1 1 none] [getflag flag__stepflag 5 16 none]
 G r p none [b controller 1 1 none] [getposition mars_lander__lander 45 16 none]
 G r p none [b controller 1 1 none] [update pidcontroller__pid_controller 7 17 none]
 G r p none [b controller 1 1 none] [setup mars_lander__inputflags 72 17 none]
 G r p none [b controller 1 1 none] [reset pidcontroller__pid_controller 9 17 none]
+G r p none [b controller 1 1 none] [setleft mars_lander__inputflags 75 17 none]
+G r p none [b controller 1 1 none] [setright mars_lander__inputflags 78 17 none]
+G r p none [b controller 1 1 none] [getdirection mars_lander__lander 47 16 none]
 G r s pid_controller [ai_taskTK controller 11 9 none] [pid_controllerVIP pidcontroller 3 4 none]
-G r s trajectory_object [ai_taskTK controller 11 9 none] [trajectory_objectVIP path 9 4 none]
-G r p none [ai_taskTK controller 11 9 none] [generatetrajectory path__trajectory_object 15 17 none]
+G r p none [ai_taskTK controller 11 9 none] [generate path__trajectory_object 12 17 none]
+G r o none [ai_taskTK controller 11 9 none] [get_trajectory path__trajectory_object 14 13 none]
 G r p none [ai_taskTK controller 11 9 none] [init pidcontroller__pid_controller 5 17 none]
 G r p none [ai_taskTK controller 11 9 none] [getflag flag__stepflag 5 16 none]
 G r p none [ai_taskTK controller 11 9 none] [getposition mars_lander__lander 45 16 none]
 G r p none [ai_taskTK controller 11 9 none] [update pidcontroller__pid_controller 7 17 none]
 G r p none [ai_taskTK controller 11 9 none] [setup mars_lander__inputflags 72 17 none]
 G r p none [ai_taskTK controller 11 9 none] [reset pidcontroller__pid_controller 9 17 none]
+G r p none [ai_taskTK controller 11 9 none] [setleft mars_lander__inputflags 75 17 none]
+G r p none [ai_taskTK controller 11 9 none] [setright mars_lander__inputflags 78 17 none]
+G r p none [ai_taskTK controller 11 9 none] [getdirection mars_lander__lander 47 16 none]
 X 1 ada.ads
 16K9*Ada 20e8 14|2r6 2r25 7r6 7r25
 X 7 a-reatim.ads
 39K13*Real_Time 185e18 14|2w10 2r29
 49O9*Time<duration> 15|4r14
 54O9*Time_Span<duration> 15|7r25
-61V13*Clock{49O9} 15|15s15
-65V14*"+"{49O9} 15|15s21 40s23
+61V13*Clock{49O9} 15|19s15
+65V14*"+"{49O9} 15|19s21 82s23
 119V13*Milliseconds{54O9} 15|7s38
 X 11 a-textio.ads
 57K13*Text_IO 727e16 14|7w10 7r29
-508U14*Put_Line 15|28s13 29s13 35s13 36s13
+508U14*Put_Line 15|46s13 75s16
 X 14 controller.ads
-9K9*controller 13l5 13e15 15|1b14 43l5 43t15
-11t9*AI_Task 15|3b14 42l8 42t15
+9K9*controller 13l5 13e15 15|1b14 85l5 85t15
+11t9*AI_Task 15|3b14 84l8 84t15
 X 15 controller.adb
-4o7 Next{7|49O9} 15m7 39r22 40m10 40r18
-7o7 Period{7|54O9} 15r23 40r25
-9f7 inputY{float} 20m10 21m29 21r29 22r13 24r16
-10w7 YController{28|3W19} 17r7 21r10 32r13
-11f7 setPoint{float} 17r24 27r13 31m13 32r31
-13w7 traj{26|9W19} 16r7
+4o7 Next{7|49O9} 19m7 81r22 82m10 82r18
+7o7 Period{7|54O9} 19r23 82r25
+9f7 inputY{float} 29m10 30m29 30r29 31r13 33r16
+10w7 YController{28|3W19} 24r7 30r10 40r16
+12f7 inputX{float} 49m10 50m29 50r29 51r13 54r16
+13w7 XController{28|3W19} 25r7 50r10 74r16
+15a7 t{26|8A9} 22m40 24r24 25r24 36r18 40r34 74r34 75r61
+16i7 indexX{integer} 24r26 25r26 72m13 72r23 73r16 74r36 75r63 77m16
+17i7 indexY{integer} 36r20 38m13 38r23 39r16 40r36 42m16
 X 16 display.ads
 23K9*Display 14|3r6 3r25 16|59e12
 X 17 display-basic.ads
 20K17*Basic 14|3w14 3r33 17|363e18
 X 19 flag.ads
 1K9*flag 14|1w6 1r16 19|11e9
-3w14*StepFlag 15|18r13
-5V16 getFlag{boolean} 15|18s22
+3w14*StepFlag 15|27r13
+5V16 getFlag{boolean} 15|27s22
 X 25 mars_lander.ads
-10K9*Mars_Lander 14|4w6 4r25 15|23r13 25r13 25|86e16
-28w14*Lander 15|20r20 27r24 29r34 35r34
-45V16 getPosition{67|3R9} 15|20s27 27s31 29s41 35s41
-69w14*inputFlags 15|23r25 25r25
-72U17 setUp 15|23s36 25s36
+10K9*Mars_Lander 14|4w6 4r25 15|32r13 34r13 52r13 53r13 55r13 56r13 60r19
+. 62r16 65r19 67r16 69r16 70r16 25|86e16
+18F9*angle_value<long_float>
+28w14*Lander 15|29r20 36r32 49r20 58r16 59r27 63r19 64r27
+45V16 getPosition{69|3R9} 15|29s27 36s39 49s27
+47V16 getDirection{18F9} 15|58s23 59s34 63s26 64s34
+69w14*inputFlags 15|32r25 34r25 52r25 53r25 55r25 56r25 60r31 62r28 65r31
+. 67r28 69r28 70r28
+72U17 setUp 15|32s36 34s36
+75U17 setLeft 15|52s36 55s36 60s42 62s39 69s39
+78U17 setRight 15|53s36 56s36 65s42 67s39 70s39
 X 26 path.ads
-3K9*path 14|6w6 6r25 26|24e9
-9W19*trajectory_object 15|13r13 26|22e25
-15U17 generateTrajectory 15|16s12
+4K9*path 14|6w6 6r25 26|23e9
+6N4*lengthOfTrajectory 15|39r26 42r26 73r26 77r26
+8A9*Path_Type(68|11R9)<integer> 15|15r10
+10w14*trajectory_object 15|21r7 22r7
+12U17 generate 15|21s25
+14Y13 get_trajectory 15|22s25
 X 28 pidcontroller.ads
 1K9*PIDController 14|5w6 5r25 28|31e18
-3W19*pid_controller 15|10r20 28|29e22
-5U17 init 15|17s19
-7U17 update 15|21s22
-9U17 reset 15|32s25
-X 52 s-stausa.ads
+3W19*pid_controller 15|10r20 13r20 28|29e22
+5U17 init 15|24s19 25s19
+7U17 update 15|30s22 50s22
+9U17 reset 15|40s28 74s28
+X 53 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
-X 67 vector.ads
-4f10*y{float} 15|20r39 27r43 29r53 35r53
+X 68 terrain.ads
+12f7*X{float} 15|25m34 74m44
+13f7*Y{float} 15|24m34 36r28 40m44 75r71
+X 69 vector.ads
+4f7*x{float} 15|49r39
+4f10*y{float} 15|29r39 36r51
 

@@ -14,7 +14,7 @@ package PIDController is
       
       procedure setError(currentErr :Float);
       
-      function GetLastError return Float;
+      function getLastError return Float;
       
    private 
       

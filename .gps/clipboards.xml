@@ -1,28 +1,37 @@
 <?xml version="1.0"?>
 <Clipboard>
-  <clipboard last="true" >not inputFlags.getLeft</clipboard>
-  <clipboard>directionParam : constant := 0.30;
-      begin
-         if  direction - directionParam &gt; angle_value&apos;First then
-            direction := direction - directionParam;
-         end if;</clipboard>
-  <clipboard>if inputX &gt; 1.25 then 
+  <clipboard last="true" >Mars_Lander.inputFlags.setLeft(false);
+            Mars_Lander.inputFlags.setRight(false);</clipboard>
+  <clipboard>Mars_Lander.inputFlags.setRight(true);</clipboard>
+  <clipboard>while not Lander.getDirection 0.0 loop
+                  Mars_Lander.inputFlags.setLeft(true);
+               end while;</clipboard>
+  <clipboard>Lander.getDirection &gt; 0</clipboard>
+  <clipboard>if  abs(t(indexX).X - Lander.getPosition.x) = 0.0  then
+            Put_Line(&quot;&lt;-----------On target X------------&gt;&quot;);
             Mars_Lander.inputFlags.setLeft(false);
-            Mars_Lander.inputFlags.setRight(true);     
-         elsif inputX &lt; -1.25 then
-            Mars_Lander.inputFlags.setLeft(true);
-            Mars_Lander.inputFlags.setRight(false);</clipboard>
-  <clipboard>XController.update(inputX);</clipboard>
-  <clipboard>180.0,0.001,0.0016,250.0)</clipboard>
-  <clipboard>(-Sin(Angle*3.1415/180.0),Cos(Angle*3.1415/180.0));</clipboard>
-  <clipboard>Draw_Circle(Canvas,
-                     (180.0,233.0,0.0),
-                     2.0,
-                     Green);</clipboard>
+            Mars_Lander.inputFlags.setRight(false);
+            indexX := indexX + 1;
+            if indexX &lt;= lengthOfTrajectory then              
+               XController.reset(t(indexX).X);
+            else
+               indexX := lengthOfTrajectory;
+            end if;
+         else
+            Put_Line(&quot;Moving to target X &quot; &amp; Float&apos;Image(t(indexX).Y));
+         end if;</clipboard>
+  <clipboard>Put_Line(&quot;Moving to target X &quot; &amp; Float&apos;Image(t(indexX).Y));</clipboard>
   <clipboard>Mars_Lander.inputFlags.setLeft(false);
-               Mars_Lander.inputFlags.setRight(true);</clipboard>
-  <clipboard>Mars_Lander.inputFlags.setLeft(true);
-               Mars_Lander.inputFlags.setRight(false);</clipboard>
+            Mars_Lander.inputFlags.setRight(false);
+            indexX := indexX + 1;
+            if indexX &lt;= lengthOfTrajectory then              
+               XController.reset(t(indexX).X);
+            else
+               indexX := lengthOfTrajectory;
+            end if;</clipboard>
   <clipboard>Mars_Lander.inputFlags.setLeft(true);
             Mars_Lander.inputFlags.setRight(false);</clipboard>
+  <clipboard>indexY</clipboard>
+  <clipboard>inputY := Lander.getPosition.y;      
+         YController.update(inputY);</clipboard>
 </Clipboard>

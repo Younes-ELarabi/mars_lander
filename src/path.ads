@@ -1,4 +1,5 @@
 with terrain; use terrain;
+with Ada.Text_IO;   use Ada.Text_IO;
 
 package path is
    
@@ -6,18 +7,16 @@ package path is
       
    type Path_Type is array(1..lengthOfTrajectory) of cordinates;
 
-   protected type trajectory_object is 
+   protected trajectory_object is  
       
-      function getNextTarget return cordinates;
+      procedure generate;
       
-      function hasNext return boolean;
-      
-      procedure generateTrajectory;
+      entry get_trajectory(value : out Path_Type);
       
    private
       
       trajectory :Path_Type;
-      cpt :Integer := 0;   
+      is_generated :Boolean := false;
                   
    end trajectory_object;
 

@@ -49,7 +49,7 @@ package body PIDController is
          targetPoint := target;
       end setNewTarget;
       
-      function GetLastError return Float is
+      function getLastError return Float is
       begin
          return lastError;
       end GetLastError;

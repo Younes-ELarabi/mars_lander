@@ -1,32 +1,39 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project>
-    <vfs_file />
-    <file_marker column=" 21" line=" 1" >
+  <Project >
+    <file_marker column=" 37" line=" 7" >
       <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
       <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 10" line=" 37" >
+    <file_marker column=" 30" line=" 1" >
       <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
       <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\pidcontroller.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 37" line=" 3" >
+    <file_marker column=" 28" line=" 17" >
       <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
       <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\pidcontroller.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 24" line=" 20" >
+    <file_marker column=" 63" line=" 37" >
       <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
       <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 26" line=" 81" >
+    <file_marker column=" 43" line=" 9" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\path.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 63" line=" 37" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 34" line=" 79" >
       <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
       <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\main.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 34" line=" 16" >
+    <file_marker column=" 4" line=" 11" >
       <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
       <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 38" line=" 158" >
+    <file_marker column=" 24" line=" 78" >
       <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
       <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.adb</vfs_file>
     </file_marker>
@@ -34,17 +41,129 @@
       <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
       <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\inputs.ads</vfs_file>
     </file_marker>
-    <file_marker column=" 34" line=" 20" >
+    <file_marker column=" 16" line=" 24" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\inputs.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 12" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\terrain.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 26" line=" 7" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\terrain.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 79" >
       <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
       <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 12" line=" 34" >
+    <file_marker column=" 7" line=" 12" >
       <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
       <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 4" line=" 3" >
+    <file_marker column=" 7" line=" 16" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 13" line=" 16" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 79" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\path.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 11" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\path.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
       <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
       <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\path.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 26" line=" 12" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\path.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\path.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 29" line=" 13" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 33" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 78" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 41" line=" 123" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 78" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 43" line=" 131" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 24" line=" 78" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 57" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 46" line=" 59" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 47" line=" 64" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 16" line=" 61" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 41" line=" 58" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 46" line=" 64" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 59" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 27" line=" 54" >
+      <vfs_project>C:\Users\desca\dev\mars_lander_lab_withTask\mars_lander.gpr</vfs_project>
+      <vfs_file>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</vfs_file>
     </file_marker>
   </Project>
 </Locations>
