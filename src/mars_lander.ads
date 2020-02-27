@@ -5,7 +5,7 @@ with Ada.Text_IO;   use Ada.Text_IO;
 with vector;        use vector;
 with flag;          use flag;
 with Collision;     use Collision;
-with terrain;       use terrain;
+with terrain_package;       use terrain_package;
 
 package Mars_Lander is
    

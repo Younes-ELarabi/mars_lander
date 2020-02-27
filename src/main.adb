@@ -11,7 +11,8 @@ with simulation;
 --with inputs;
 with controller;
 with flag; use flag;
-with terrain; use terrain;
+with terrain_package; use terrain_package;
+with path;  use path;
 
 procedure Main is
    -- procedure to draw terrain
@@ -24,19 +25,20 @@ procedure Main is
          pointB := (t(I+1).X,t(I+1).Y,0.0);
          if pointA.Y = pointB.Y then
             Draw_Line(Canvas,
-                   pointa,
-                   pointb,
-                   Green
+                      pointa,
+                      pointb,
+                      Green
                      );
          else
             Draw_Line(Canvas,
-                   pointa,
-                   pointb,
-                   Red
-                  );
+                      pointa,
+                      pointb,
+                      Red
+                     );
          end if;
       end loop;
    end drawTerrain;
+
    --  declare a variable Next of type Time to store the Next step time
    Next : Time;
 
@@ -82,6 +84,7 @@ begin
       Swap_Buffers (Window);
       Mars_Lander.Lander.Draw(Canvas,ship_width,ship_height,sky,spaceship);
       drawTerrain(Canvas,t);
+      Trajectory_object.drawTrajectory(Canvas);
       -- wait until Next
       delay until Next;
       --  update the Next time adding the period for the next step

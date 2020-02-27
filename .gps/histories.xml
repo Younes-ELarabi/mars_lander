@@ -26,6 +26,7 @@
     <Length> 5</Length>
   </key>
   <key type="strings" name="project_view-filter-recent" >
+    <value>f+ button</value>
     <Length> 5</Length>
   </key>
   <key type="strings" name="search_mode" >
@@ -84,16 +85,16 @@
     <Length> 1</Length>
   </key>
   <key type="strings" name="reopen_files" >
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\main.adb</value>
     <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.adb</value>
     <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\mars_lander.ads</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\pidcontroller.ads</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\pidcontroller.adb</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.ads</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\main.adb</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\path.ads</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\terrain.ads</value>
     <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.adb</value>
     <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\path.adb</value>
-    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\perlin.ads</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\terrain.adb</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\path.ads</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\src\controller.ads</value>
+    <value>C:\Users\desca\dev\mars_lander_lab_withTask\game_support\stm32f4\src\libm.ads</value>
   </key>
   <key type="booleans" name="search-displays-relative-paths" >
     <value>FALSE</value>

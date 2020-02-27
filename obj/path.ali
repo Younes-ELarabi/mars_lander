@@ -18,7 +18,7 @@ RV NO_ELABORATION_CODE
 RV SPARK_05
 RV MAX_PROTECTED_ENTRIES=1
 
-U path%b		path.adb		be09f6c3 NE OO PK IL
+U path%b		path.adb		523020a4 NE OO PK IL
 Z ada.tags%s		a-tags.adb		a-tags.ali
 Z system%s		system.ads		system.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
@@ -26,18 +26,21 @@ Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
 Z system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 
-U path%s		path.ads		57b8321b EE OO PF PK IL
+U path%s		path.ads		478744ce EE OO PF PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+W display%s		display.ads		display.ali
+W display.basic%s	display-basic.adb	display-basic.ali
+W display.image%s	display-image.adb	display-image.ali
 Z system%s		system.ads		system.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 Z system.tasking%s	s-taskin.adb		s-taskin.ali
 Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
-W terrain%s		terrain.adb		terrain.ali
+W terrain_package%s	terrain_package.adb	terrain_package.ali
 
 D ada.ads		20190518041256 76789da1 ada%s
 D a-except.ads		20190518041256 291912d5 ada.exceptions%s
@@ -52,13 +55,14 @@ D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D display.ads		20200124114604 3a88167c display%s
 D display-basic.ads	20200124114604 66d43323 display.basic%s
+D display-image.ads	20200124114604 86429f23 display.image%s
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-c.ads		20190518041256 5421119b interfaces.c%s
 D i-cexten.ads		20190518041256 38d7e116 interfaces.c.extensions%s
 D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D path.ads		20200225203304 01799a8d path%s
-D path.adb		20200227161354 bf706c4e path%b
+D path.ads		20200227205128 4aca8f13 path%s
+D path.adb		20200227205214 18faafb7 path%b
 D perlin.ads		20200205212254 65fe9455 perlin%s
 D sdl_blendmode_h.ads	20200124114612 e308a3b6 sdl_blendmode_h%s
 D sdl_pixels_h.ads	20200124114610 89492fa8 sdl_pixels_h%s
@@ -98,46 +102,108 @@ D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
 D s-win32.ads		20190518041256 90ecf4e6 system.win32%s
-D terrain.ads		20200211230808 f8357dfb terrain%s
+D terrain_package.ads	20200227202100 79a7a4cc terrain_package%s
 G a e
-G c Z s b [generate path__trajectory_object 12 17 none]
-G c Z s b [get_trajectory path__trajectory_object 14 13 none]
-G c Z s b [trajectory_object__generateN path 12 7 none]
-G c Z s b [trajectory_object__generateP path 12 7 none]
-G c Z s s [Tpath_typeBIP path 8 4 none]
-G c Z s s [trajectory_objectTVDI path 10 4 none]
-G c Z s s [trajectory_objectTVDF path 10 4 none]
-G c Z s s [trajectory_objectTVIP path 10 4 none]
-G c Z s s [P4sIP path 14 7 none]
+G c Z s b [compute path__trajectory_object 17 17 none]
+G c Z s b [subdivide path__trajectory_object 19 17 none]
+G c Z s b [get_curvepoints path__trajectory_object 21 13 none]
+G c Z s b [drawtrajectory path__trajectory_object 23 17 none]
+G c Z s b [setterrain path__trajectory_object 25 17 none]
+G c Z s b [init path__trajectory_object 27 17 none]
+G c Z s b [trajectory_object__computeN path 17 7 none]
+G c Z s b [trajectory_object__computeP path 17 7 none]
+G c Z s b [trajectory_object__subdivideN path 19 7 none]
+G c Z s b [trajectory_object__subdivideP path 19 7 none]
+G c Z s b [trajectory_object__drawtrajectoryN path 23 7 none]
+G c Z s b [trajectory_object__drawtrajectoryP path 23 7 none]
+G c Z s b [trajectory_object__setterrainN path 25 7 none]
+G c Z s b [trajectory_object__setterrainP path 25 7 none]
+G c Z s b [trajectory_object__initN path 27 7 none]
+G c Z s b [trajectory_object__initP path 27 7 none]
+G c Z s s [TcontroltypeBIP path 11 4 none]
+G c Z s s [TcurvetypeBIP path 13 4 none]
+G c Z s s [trajectory_objectTVDI path 15 4 none]
+G c Z s s [trajectory_objectTVDF path 15 4 none]
+G c Z s s [trajectory_objectTVIP path 15 4 none]
+G c Z s s [P6sIP path 21 7 none]
+G r c none [drawtrajectory path__trajectory_object 23 17 none] [draw_line display__basic 306 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 19|2r6 2r25
+16K9*Ada 20e8 20|2r6 2r25
 X 10 a-textio.ads
-57K13*Text_IO 727e16 19|2w10 2r29
-X 19 path.ads
-4K9*path 23l5 23e9 20|1b14 26l5 26t9
-6N4*lengthOfTrajectory 8r31 20|8r25
-8A9*Path_Type(60|11R9)<integer> 14r40 18r19 20|16r40
-10w14*trajectory_object 20|3b19 24l8 24t25
-12U17 generate 20|5b17 14l11 14t19
-14Y13 get_trajectory 14<28 20|16b13 22l11 22t25
-14a28 value{8A9} 20|21m10
-18a7 trajectory{8A9} 20|9r16 21r19
-19b7 is_generated{boolean} 20|7r17 12r13 17r14
-X 20 path.adb
-8i17 I{integer} 9r27
-16a28 value{19|8A9}
-X 31 system.ads
+57K13*Text_IO 727e16 20|2w10 2r29
+X 12 display.ads
+23K9*Display 59e12 20|3w6 3r25 4r6 4r25 5r6 5r25
+42r4*Yellow{27R9} 21|79r23
+X 13 display-basic.ads
+20K17*Basic 363e18 20|4w14 4r33
+31I9*Canvas_ID<359I9> 20|23r41 21|69r41
+40R9*Point_3d 44e14 20|37r20 21|14r17 70r19 71r19
+41f7*X{float} 21|23r21 23r26 24r20 25r21 25r26 27r32 28r32 29r32 30r32
+42f7*Y{float} 21|21r42 21r49 24r26 25r36 27r37 28r37 29r37 30r37
+306U14*Draw_Line 21|76s13
+359I9 Canvas_ID_Range<short_integer>
+X 14 display-image.ads
+1K17*Image 7e18 20|5w14 5r33
+X 20 path.ads
+7K9*path 42l5 42e9 21|1b14 92l5 92t9
+9N4*lengthOfTrajectory 13r31 21|37r22 38r32 73r22
+11A9*controlType(61|11R9)<integer> 34r23 21|34r15
+13A9*curveType(61|11R9)<integer> 21r40 35r22 21|5r41
+15w14*trajectory_object 21|3b19 90l8 90t25
+17U17 compute 21|33b17 52l11 52t18
+19U17 subDivide 19=27 19=30 19>53 21|45s19 54b17 66l11 66t20
+19r27 p1{61|11R9} 21|54b27 56r13 57m13 57r20 57r31 59m13 59r20 59r31 61r14
+. 62m13 62r20 62r31 64m13 64r20 64r31
+19r30 p2{61|11R9} 21|54b30 56r18 57r36 59r36 61r19 62r36 64r36
+19f53 t{float} 21|54b53 57r42 59r42 62r42 64r42
+21Y13 get_curvePoints 21<29 21|5b13 11l11 11t26
+21a29 value{13A9} 21|10m10
+23U17 drawTrajectory 23>32 21|69b17 82l11 82t25
+23i32 Canvas{13|31I9} 21|69b32 76r23
+25U17 setTerrain 25>28 21|84b17 87l11 87t21
+25a28 t{61|16A9} 21|84b28 86r21
+27U17 init 21|13b17 31l11 31t15
+31a7 terrain{61|16A9} 21|19r20 19r33 20r20 20r35 86r10
+32b7 is_ready{boolean} 21|6r14 51r10
+34a7 controlPoints{11A9} 21|27r10 28r10 29r10 30r10 40r25 40r44
+35a7 curvePoints{13A9} 21|10r19 49r13 74r24 74r41 75r24 75r43
+37r7 p1{13|40R9} 21|16r10 27r29 27r34
+37r10 p2{13|40R9} 21|23r10 28r29 28r34
+37r13 p3{13|40R9} 21|24r10 29r29 29r34
+37r16 p4{13|40R9} 21|25r10 30r29 30r34
+X 21 path.adb
+5a29 value{20|13A9}
+14r10 pA{13|40R9} 19m13 21r39 23r23 24r17 24r23 25r23 25r33
+14r13 pB{13|40R9} 20m13 21r46 23r18 25r18
+17l10 find_Horizental 21r18 22l19 22e34
+18i14 I{integer} 19r28 19r41 20r28 20r43
+34a10 tmp{20|11A9} 40m16 45m29 45r29 45m36 45r36 49r32 49r41
+35f10 depth{float} 42m13 43r19 44r36 47m16 47r25
+35f16 t{float} 38m13 45r45
+37i14 I{integer} 38r23 49r25
+39i17 J{integer} 40r20 40r39 40r58
+44i20 k{integer} 45r33 45r40
+70r10 pointA{13|40R9} 74m13 77r23
+71r10 pointB{13|40R9} 75m13 78r23
+73i14 I{integer} 74r36 74r53 75r36 75r55
+X 32 system.ads
 67M9*Address
-X 37 s-memory.ads
-53V13*Alloc{31|67M9} 103i<c,__gnat_malloc>22
+X 38 s-memory.ads
+53V13*Alloc{32|67M9} 103i<c,__gnat_malloc>22
 68U14*Free 104i<c,__gnat_free>22
-76V13*Realloc{31|67M9} 105i<c,__gnat_realloc>22
-X 45 s-stausa.ads
+76V13*Realloc{32|67M9} 105i<c,__gnat_realloc>22
+X 46 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
-X 47 s-stalib.adb
+X 48 s-stalib.adb
 93U14 Break_Start 94i<c,__gnat_break_start>22
-X 60 terrain.ads
-7K9*terrain 19|1w6 1r19 60|40e12
-11R9*cordinates 19|8r54 60|14e14
+X 61 terrain_package.ads
+7K9*terrain_package 20|1w6 1r27 21|18r22 61|40e20
+9N4*size 21|18r38
+11R9*cordinates 20|11r39 13r54 19r41 21|54r41 61|14e14
+12f7*X{float} 21|19r31 20r33 40r42 49r39 56r16 56r21 57m16 57r23 57r34 57r39
+. 59m16 59r23 59r34 59r39 74r39 75r41
+13f7*Y{float} 21|19r44 20r48 40r61 49r48 61r17 61r22 62m16 62r23 62r34 62r39
+. 64m16 64r23 64r34 64r39 74r56 75r60
+16A9*Terrain_Type(11R9)<integer> 20|25r31 31r16 21|84r31
 
