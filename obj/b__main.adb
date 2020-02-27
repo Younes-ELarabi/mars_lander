@@ -52,9 +52,9 @@ package body ada_main is
    E205 : Short_Integer; pragma Import (Ada, E205, "display__basic__fonts_E");
    E190 : Short_Integer; pragma Import (Ada, E190, "collision_E");
    E225 : Short_Integer; pragma Import (Ada, E225, "terrain_package_E");
-   E239 : Short_Integer; pragma Import (Ada, E239, "path_E");
    E237 : Short_Integer; pragma Import (Ada, E237, "vector_E");
    E170 : Short_Integer; pragma Import (Ada, E170, "mars_lander_E");
+   E239 : Short_Integer; pragma Import (Ada, E239, "path_E");
    E160 : Short_Integer; pragma Import (Ada, E160, "controller_E");
    E245 : Short_Integer; pragma Import (Ada, E245, "simulation_E");
 
@@ -67,17 +67,17 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E170 := E170 - 1;
+      E239 := E239 - 1;
       declare
          procedure F1;
-         pragma Import (Ada, F1, "mars_lander__finalize_spec");
+         pragma Import (Ada, F1, "path__finalize_spec");
       begin
          F1;
       end;
-      E239 := E239 - 1;
+      E170 := E170 - 1;
       declare
          procedure F2;
-         pragma Import (Ada, F2, "path__finalize_spec");
+         pragma Import (Ada, F2, "mars_lander__finalize_spec");
       begin
          F2;
       end;
@@ -227,7 +227,7 @@ package body ada_main is
            True, True, False, True, True, True, True, False, 
            False, True, False, False, False, True, False, False, 
            True, False, True, False),
-         Count => (0, 0, 0, 1, 0, 0, 2, 0, 4, 0),
+         Count => (0, 0, 0, 1, 0, 0, 2, 0, 5, 0),
          Unknown => (False, False, False, False, False, False, False, False, True, False));
       Priority_Specific_Dispatching :=
         Local_Priority_Specific_Dispatching'Address;
@@ -336,11 +336,11 @@ package body ada_main is
       E190 := E190 + 1;
       terrain_package'elab_spec;
       E225 := E225 + 1;
-      path'elab_spec;
-      E239 := E239 + 1;
       E237 := E237 + 1;
       Mars_Lander'Elab_Spec;
       E170 := E170 + 1;
+      path'elab_spec;
+      E239 := E239 + 1;
       controller'elab_spec;
       controller'elab_body;
       E160 := E160 + 1;
@@ -414,9 +414,9 @@ package body ada_main is
    --   C:\Users\desca\dev\mars_lander_lab_withTask\game_support\obj\display-basic-glfonts.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\collision.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\terrain_package.o
-   --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\path.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\vector.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\mars_lander.o
+   --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\path.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\controller.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\simulation.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\main.o

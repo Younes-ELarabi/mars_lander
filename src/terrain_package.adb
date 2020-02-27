@@ -42,7 +42,7 @@ package body terrain_package is
          for J in num .. num + custom(length) loop
             terrain(Integer(J)) := (terrain(Integer(J)).X,y);
          end loop;
-         
+         sizeOfSurface := Float(length);
       end generateHorizentalSurface;
       
       entry get_terrain(value : out Terrain_Type)
@@ -52,6 +52,11 @@ package body terrain_package is
       begin
          value := terrain;
       end get_terrain;
+      
+      function getLength return Float is 
+      begin
+         return sizeOfSurface;
+      end getLength;
       
    end Terrain_Object;
    

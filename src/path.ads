@@ -3,6 +3,7 @@ with Ada.Text_IO;   use Ada.Text_IO;
 with Display;       use Display;
 with Display.Basic; use Display.Basic;
 with Display.Image; use Display.Image;
+with Mars_Lander;   use Mars_Lander;
 
 package path is
    
