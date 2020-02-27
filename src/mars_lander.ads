@@ -43,6 +43,8 @@ package Mars_Lander is
       procedure updateBounds(previousBounds : in out mars_rectangle);
       
       function getPosition return Vector_Type;
+      
+      function getDirection return angle_value;
            
    private
       

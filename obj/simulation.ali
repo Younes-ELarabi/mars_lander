@@ -15,7 +15,7 @@ RV SPARK_05
 RV MAX_TASKS=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U simulation%b		simulation.adb		d1a195ad OO PK IL
+U simulation%b		simulation.adb		4780d3c1 OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
@@ -25,7 +25,7 @@ W mars_lander%s		mars_lander.adb		mars_lander.ali  AD
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
 
-U simulation%s		simulation.ads		7bdf1c5a EE OO PK IL
+U simulation%s		simulation.ads		edfe5a36 EE OO PK IL
 Z ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W mars_lander%s		mars_lander.adb		mars_lander.ali
@@ -58,7 +58,7 @@ D i-c.ads		20190518041256 5421119b interfaces.c%s
 D i-cexten.ads		20190518041256 38d7e116 interfaces.c.extensions%s
 D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D mars_lander.ads	20200221190120 94107311 mars_lander%s
+D mars_lander.ads	20200225195812 0231357d mars_lander%s
 D perlin.ads		20200205212254 65fe9455 perlin%s
 D sdl_blendmode_h.ads	20200124114612 e308a3b6 sdl_blendmode_h%s
 D sdl_pixels_h.ads	20200124114610 89492fa8 sdl_pixels_h%s
@@ -122,7 +122,7 @@ X 17 flag.ads
 3w14*StepFlag 32|14r13
 5V16 getFlag{boolean} 32|14s22
 X 23 mars_lander.ads
-10K9*Mars_Lander 84e16 31|1w6 1r23 32|1w6 1r23 15r10
+10K9*Mars_Lander 86e16 31|1w6 1r23 32|1w6 1r23 15r10
 28w14*Lander 32|15r22
 33U17 Step 32|15s29
 X 31 simulation.ads

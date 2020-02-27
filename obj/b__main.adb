@@ -40,10 +40,10 @@ package body ada_main is
    E164 : Short_Integer; pragma Import (Ada, E164, "system__tasking__protected_objects_E");
    E182 : Short_Integer; pragma Import (Ada, E182, "system__tasking__protected_objects__entries_E");
    E184 : Short_Integer; pragma Import (Ada, E184, "system__tasking__queuing_E");
-   E246 : Short_Integer; pragma Import (Ada, E246, "system__tasking__stages_E");
+   E243 : Short_Integer; pragma Import (Ada, E243, "system__tasking__stages_E");
    E162 : Short_Integer; pragma Import (Ada, E162, "flag_E");
    E235 : Short_Integer; pragma Import (Ada, E235, "perlin_E");
-   E239 : Short_Integer; pragma Import (Ada, E239, "pidcontroller_E");
+   E241 : Short_Integer; pragma Import (Ada, E241, "pidcontroller_E");
    E191 : Short_Integer; pragma Import (Ada, E191, "display_E");
    E223 : Short_Integer; pragma Import (Ada, E223, "display__image_E");
    E203 : Short_Integer; pragma Import (Ada, E203, "display__basic_E");
@@ -52,10 +52,11 @@ package body ada_main is
    E205 : Short_Integer; pragma Import (Ada, E205, "display__basic__fonts_E");
    E190 : Short_Integer; pragma Import (Ada, E190, "collision_E");
    E225 : Short_Integer; pragma Import (Ada, E225, "terrain_E");
+   E239 : Short_Integer; pragma Import (Ada, E239, "path_E");
    E237 : Short_Integer; pragma Import (Ada, E237, "vector_E");
    E170 : Short_Integer; pragma Import (Ada, E170, "mars_lander_E");
    E160 : Short_Integer; pragma Import (Ada, E160, "controller_E");
-   E248 : Short_Integer; pragma Import (Ada, E248, "simulation_E");
+   E245 : Short_Integer; pragma Import (Ada, E245, "simulation_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -73,17 +74,17 @@ package body ada_main is
       begin
          F1;
       end;
-      E225 := E225 - 1;
+      E239 := E239 - 1;
       declare
          procedure F2;
-         pragma Import (Ada, F2, "terrain__finalize_spec");
+         pragma Import (Ada, F2, "path__finalize_spec");
       begin
          F2;
       end;
-      E239 := E239 - 1;
+      E225 := E225 - 1;
       declare
          procedure F3;
-         pragma Import (Ada, F3, "pidcontroller__finalize_spec");
+         pragma Import (Ada, F3, "terrain__finalize_spec");
       begin
          F3;
       end;
@@ -216,9 +217,9 @@ package body ada_main is
          Violated =>
           (False, False, False, False, True, True, False, False, 
            True, False, False, True, True, True, True, False, 
-           False, False, False, False, True, True, False, True, 
+           False, False, True, False, True, True, False, True, 
            True, False, True, True, True, True, False, False, 
-           False, False, False, True, False, False, True, False, 
+           False, False, False, True, False, True, True, False, 
            False, False, True, True, False, False, False, True, 
            False, False, False, True, False, False, False, False, 
            False, False, False, True, False, True, True, True, 
@@ -315,12 +316,11 @@ package body ada_main is
       System.Tasking.Queuing'Elab_Body;
       E184 := E184 + 1;
       System.Tasking.Stages'Elab_Body;
-      E246 := E246 + 1;
+      E243 := E243 + 1;
       flag'elab_spec;
       E162 := E162 + 1;
       E235 := E235 + 1;
-      pidcontroller'elab_spec;
-      E239 := E239 + 1;
+      E241 := E241 + 1;
       Display'Elab_Spec;
       E191 := E191 + 1;
       Display.Image'Elab_Body;
@@ -336,6 +336,8 @@ package body ada_main is
       E190 := E190 + 1;
       terrain'elab_spec;
       E225 := E225 + 1;
+      path'elab_spec;
+      E239 := E239 + 1;
       E237 := E237 + 1;
       Mars_Lander'Elab_Spec;
       E170 := E170 + 1;
@@ -344,7 +346,7 @@ package body ada_main is
       E160 := E160 + 1;
       simulation'elab_spec;
       simulation'elab_body;
-      E248 := E248 + 1;
+      E245 := E245 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -412,6 +414,7 @@ package body ada_main is
    --   C:\Users\desca\dev\mars_lander_lab_withTask\game_support\obj\display-basic-glfonts.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\collision.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\terrain.o
+   --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\path.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\vector.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\mars_lander.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\controller.o

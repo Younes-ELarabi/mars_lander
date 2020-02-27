@@ -27,7 +27,12 @@ package body Mars_Lander is
                     ship_width, -- width
                     ship_height, -- height
                     Float (direction), -- direction goes here
-                    spaceShip); 
+                    spaceShip);
+         -- target 
+         Draw_Circle(Canvas,
+                     (100.0,0.0,0.0),
+                     2.0,
+                     Green);
       end Draw;
       
       procedure updateBounds(previousBounds : in out mars_rectangle) is
@@ -110,7 +115,7 @@ package body Mars_Lander is
       end accelerate;
       
       procedure turnRight(direction : in out angle_value) is
-         directionParam : constant := 0.15;
+         directionParam : constant := 0.35;
       begin
          if  direction - directionParam > angle_value'First then
             direction := direction - directionParam;
@@ -118,7 +123,7 @@ package body Mars_Lander is
       end turnRight;
       
       procedure turnLeft(direction : in out angle_value) is
-         directionParam : constant := 0.15;
+         directionParam : constant := 0.35;
       begin
          if  direction + directionParam < angle_value'Last then
             direction := direction + directionParam;
@@ -158,6 +163,12 @@ package body Mars_Lander is
       begin
          return position;
       end getPosition;
+      
+      function getDirection return angle_value is
+      begin
+         return direction;
+      end getDirection;
+      
    end Lander;
    
    protected body inputFlags is

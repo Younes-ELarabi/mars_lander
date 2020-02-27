@@ -6,27 +6,65 @@ package body controller is
       -- the loop period
       Period : constant Time_Span := Milliseconds (10);
       --
-      currentPositionY :Float;
-      output :Float;
+      inputY :Float;
+      YController :pid_controller;
+      --
+      inputX :Float;
+      XController :pid_controller;
+      --
+      t :Path_Type;
+      indexX :Integer := 1;
+      indexY :Integer := 1;
    begin 
       Next := Clock + Period;
-      pid_controller.init(175.0,1.4,0.0001,100.0);
+      -- Trajectory 
+      trajectory_object.generate;
+      trajectory_object.get_trajectory(t);
+      -- PID setup
+      YController.init(t(indexY).Y,0.7,0.0001,100.0);
+      XController.init(t(indexX).X,1.0,0.0,2000.0);
+      -- main loop 
       while StepFlag.getFlag loop 
-         --
-         currentPositionY := Mars_Lander.Lander.getPosition.y;
-         output := currentPositionY;
-         --
-         Put_Line(Float'Image(output));
-         pid_controller.update(output);
-         if output > 0.0 then
+         -- Convergence to Y setPoint
+         inputY := Lander.getPosition.y;      
+         YController.update(inputY);
+         if inputY > 0.0 then
             Mars_Lander.inputFlags.setUp(true);
-         elsif output < 0.0 then
-            Mars_Lander.inputFlags.setUp(false);      
+         elsif inputY < 0.0 then
+            Mars_Lander.inputFlags.setUp(false);    
+         end if;
+         if  abs(t(indexY).Y - Lander.getPosition.y) < 1.0  then       
+            if indexY + 1 <= lengthOfTrajectory then
+               indexY := indexY + 1;
+               YController.reset(t(indexY).Y);
+            else
+               indexY := lengthOfTrajectory;
+            end if;
+         end if;
+         -- Convergence to X setPoint
+         inputX := Lander.getPosition.x;      
+         XController.update(inputX);
+         if inputX > 0.0 then  
+            Mars_Lander.inputFlags.setLeft(false);
+            Mars_Lander.inputFlags.setRight(true);     
+         elsif inputX < 0.0 then 
+            Mars_Lander.inputFlags.setLeft(true);
+            Mars_Lander.inputFlags.setRight(false);        
+         else 
+            Mars_Lander.inputFlags.setLeft(false);
+            Mars_Lander.inputFlags.setRight(false);   
+         end if; 
+         if abs(Lander.getPosition.x - t(indexX).X) < 3.0 then 
+            if indexX + 1 <= lengthOfTrajectory then
+               indexX := indexX + 1;
+               XController.reset(t(indexX).X);
+            else
+               indexX := lengthOfTrajectory;
+            end if;   
          end if;
          -- wait until Next
          delay until Next;
          Next := Next + Period;
       end loop;  
-   end AI_Task;
-   
+   end AI_Task;   
 end controller;

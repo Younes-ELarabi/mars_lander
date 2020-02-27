@@ -1,0 +1,35 @@
+inputX := Mars_Lander.Lander.getPosition.x;
+         --XController.update(inputX);
+         Put_Line(Float'Image(inputX));
+         if inputX > 0.0 then 
+            Mars_Lander.inputFlags.setRight(true);
+            Mars_Lander.inputFlags.setLeft(false);       
+         elsif inputX < 0.0 then
+            Mars_Lander.inputFlags.setLeft(true);
+            Mars_Lander.inputFlags.setRight(false);
+         else
+            -- Put_Line("on target");
+            Mars_Lander.inputFlags.setLeft(not inputFlags.getLeft);
+            Mars_Lander.inputFlags.setRight(not inputFlags.getRight);
+         end if;      
+
+
+
+
+if Lander.getPosition.y = setPointY then
+            
+            setPointY := traj.getNextTarget.Y;
+            YController.reset(setPointY);
+         end if;
+
+
+if Lander.getPosition.y - traj.getNextTarget.Y < 0.1 then
+            Put_Line("on target");
+            YController.reset(traj.getNextTarget.Y);
+         end if;
+
+
+Put_Line(Boolean'Image(Lander.getPosition.y - traj.getNextTarget.Y = 0.0));
+         -- for X
+         -- used variable inputX as an input for pid and it's output
+         -- feedback is the current position of the Lander

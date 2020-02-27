@@ -1,6 +1,6 @@
 package PIDController is
    
-   protected pid_controller is 
+   protected type pid_controller is 
       
       procedure init(target,kp,ki,kd :Float);
       
@@ -13,6 +13,8 @@ package PIDController is
       procedure setIntegral(error :Float);
       
       procedure setError(currentErr :Float);
+      
+      function getLastError return Float;
       
    private 
       

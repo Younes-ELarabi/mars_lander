@@ -1,0 +1,1 @@
+controller.adb:15:07: warning: variable "inputTeta" is never read and never assigned

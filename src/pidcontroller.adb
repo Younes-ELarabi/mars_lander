@@ -1,5 +1,5 @@
 package body PIDController is
-
+      
    protected body pid_controller is
       
       procedure init(target,kp,ki,kd :Float) is 
@@ -34,13 +34,7 @@ package body PIDController is
          setError(error);
          -- update the currentValue
          currentValue := (pGain * error) + (iGain * integral) + (dGain * deriv);
-         
-         if currentValue > 800.0 then
-            currentValue := 800.0;
-         elsif currentValue < -800.0 then
-            currentValue := -800.0;
-         end if;
-       
+              
       end update;
       
       procedure reset(set :Float) is 
@@ -54,6 +48,11 @@ package body PIDController is
       begin
          targetPoint := target;
       end setNewTarget;
+      
+      function getLastError return Float is
+      begin
+         return lastError;
+      end GetLastError;
       
    end pid_controller;
       
