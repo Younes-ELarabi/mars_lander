@@ -1,13 +1,23 @@
 <?xml version="1.0"?>
 <Clipboard>
-  <clipboard last="true" >trajectory(I)</clipboard>
-  <clipboard>abs(Lander.getPosition.x - t(indexX).X) &lt; 3.0</clipboard>
-  <clipboard>Mars_Lander.inputFlags.setUp(false);   </clipboard>
-  <clipboard>not Mars_Lander.inputFlags.getLeft</clipboard>
-  <clipboard>and not Mars_Lander.inputFlags.getRight</clipboard>
-  <clipboard>not Mars_Lander.inputFlags.getRight</clipboard>
-  <clipboard>not Mars_Lander.inputFlags.getLeft</clipboard>
-  <clipboard>not Mars_Lander.inputFlags.getRight</clipboard>
-  <clipboard>Mars_Lander.inputFlags.getRight</clipboard>
-  <clipboard>Mars_Lander.inputFlags</clipboard>
+  <clipboard last="true" >terrain_package</clipboard>
+  <clipboard>terrain</clipboard>
+  <clipboard>find_Horizental</clipboard>
+  <clipboard>pointA.Y = pointB.Y</clipboard>
+  <clipboard>(pointA.Y = pointB.Y) </clipboard>
+  <clipboard>pointA := (surface(I).X,surface(I).Y,0.0);
+               pointB := (surface(I+1).X,surface(I+1).Y,0.0);</clipboard>
+  <clipboard>pointA</clipboard>
+  <clipboard>for I in 1..terrain.size-1 loop
+            if Line_Rectangle(
+                              bounds.A,bounds.B,
+                              bounds.C,bounds.D,
+                              ( (surface(I).X,surface(I).Y,0.0)),
+                              (surface(I+1).X,surface(I+1).Y,0.0)) then                             
+               pointA := (surface(I).X,surface(I).Y,0.0);
+               pointB := (surface(I+1).X,surface(I+1).Y,0.0);
+            end if;
+         end loop;</clipboard>
+  <clipboard>(0.0,0.0,0.0);</clipboard>
+  <clipboard>(Lander.getPosition.x,Lander.getPosition.y,0.0);</clipboard>
 </Clipboard>

@@ -18,13 +18,13 @@ RV NO_ELABORATION_CODE
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U ada_main%b		b__main.adb		504daafb OO PK IL
+U ada_main%b		b__main.adb		15ae09b9 OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W system%s		system.ads		system.ali
 W system.restrictions%s	s-restri.adb		s-restri.ali
 
-U ada_main%s		b__main.ads		5b6ea4f3 EE NE OO PK IL
+U ada_main%s		b__main.ads		53fc1475 EE NE OO PK IL
 W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
@@ -32,8 +32,8 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 D ada.ads		20190518041256 76789da1 ada%s
 D a-except.ads		20190518041256 291912d5 ada.exceptions%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
-D b__main.ads		20200227161358 019997d6 ada_main%s
-D b__main.adb		20200227161358 6350298a ada_main%b
+D b__main.ads		20200227205216 090b2750 ada_main%s
+D b__main.adb		20200227205216 2e213a4e ada_main%b
 D system.ads		20190518041258 32a08138 system%s
 D s-parame.ads		20190518041258 48ec542b system.parameters%s
 D s-restri.ads		20190518041256 1b9d0672 system.restrictions%s
@@ -395,7 +395,7 @@ X 5 b__main.adb
 68U14 finalize_library 68b14 125l8 125t24 250r35
 72U20*F1 73b<ada,mars_lander__finalize_spec>30 75s10
 79U20*F2 80b<ada,path__finalize_spec>30 82s10
-86U20*F3 87b<ada,terrain__finalize_spec>30 89s10
+86U20*F3 87b<ada,terrain_package__finalize_spec>30 89s10
 93U20*F4 94b<ada,flag__finalize_spec>30 96s10
 100U20*F5 101b<ada,system__tasking__protected_objects__entries__finalize_spec>30
 . 103s10

@@ -28,11 +28,6 @@ package body Mars_Lander is
                     ship_height, -- height
                     Float (direction), -- direction goes here
                     spaceShip);
-         -- target 
-         Draw_Circle(Canvas,
-                     (100.0,0.0,0.0),
-                     2.0,
-                     Green);
       end Draw;
       
       procedure updateBounds(previousBounds : in out mars_rectangle) is
@@ -71,7 +66,7 @@ package body Mars_Lander is
          surface :Terrain_Type; 
       begin
          Terrain_Object.get_terrain(surface);         
-         for I in 1..terrain.size-1 loop
+         for I in 1..terrain_package.size-1 loop
             if Line_Rectangle(
                               bounds.A,bounds.B,
                               bounds.C,bounds.D,
@@ -88,7 +83,7 @@ package body Mars_Lander is
          pointA,pointB :Point_3d;
       begin         
          Terrain_Object.get_terrain(surface);  
-         for I in 1..terrain.size-1 loop
+         for I in 1..terrain_package.size-1 loop
             if Line_Rectangle(
                               bounds.A,bounds.B,
                               bounds.C,bounds.D,

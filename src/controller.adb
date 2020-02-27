@@ -12,14 +12,19 @@ package body controller is
       inputX :Float;
       XController :pid_controller;
       --
-      t :Path_Type;
+      t :curveType;
+      s :Terrain_Type;
+      --
       indexX :Integer := 1;
       indexY :Integer := 1;
    begin 
       Next := Clock + Period;
       -- Trajectory 
-      trajectory_object.generate;
-      trajectory_object.get_trajectory(t);
+      Terrain_Object.get_terrain(s); -- surface
+      trajectory_object.setTerrain(s);
+      trajectory_object.init;
+      trajectory_object.compute;
+      trajectory_object.get_curvePoints(t);
       -- PID setup
       YController.init(t(indexY).Y,0.7,0.0001,100.0);
       XController.init(t(indexX).X,1.0,0.0,2000.0);

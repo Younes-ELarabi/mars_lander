@@ -51,7 +51,7 @@ package body ada_main is
    E208 : Short_Integer; pragma Import (Ada, E208, "display__basic__utils_E");
    E205 : Short_Integer; pragma Import (Ada, E205, "display__basic__fonts_E");
    E190 : Short_Integer; pragma Import (Ada, E190, "collision_E");
-   E225 : Short_Integer; pragma Import (Ada, E225, "terrain_E");
+   E225 : Short_Integer; pragma Import (Ada, E225, "terrain_package_E");
    E239 : Short_Integer; pragma Import (Ada, E239, "path_E");
    E237 : Short_Integer; pragma Import (Ada, E237, "vector_E");
    E170 : Short_Integer; pragma Import (Ada, E170, "mars_lander_E");
@@ -84,7 +84,7 @@ package body ada_main is
       E225 := E225 - 1;
       declare
          procedure F3;
-         pragma Import (Ada, F3, "terrain__finalize_spec");
+         pragma Import (Ada, F3, "terrain_package__finalize_spec");
       begin
          F3;
       end;
@@ -334,7 +334,7 @@ package body ada_main is
       Display.Basic.Glfonts'Elab_Body;
       E210 := E210 + 1;
       E190 := E190 + 1;
-      terrain'elab_spec;
+      terrain_package'elab_spec;
       E225 := E225 + 1;
       path'elab_spec;
       E239 := E239 + 1;
@@ -413,7 +413,7 @@ package body ada_main is
    --   C:\Users\desca\dev\mars_lander_lab_withTask\game_support\obj\display-basic.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\game_support\obj\display-basic-glfonts.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\collision.o
-   --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\terrain.o
+   --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\terrain_package.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\path.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\vector.o
    --   C:\Users\desca\dev\mars_lander_lab_withTask\obj\mars_lander.o

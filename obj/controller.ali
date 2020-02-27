@@ -19,7 +19,7 @@ RV SPARK_05
 RV MAX_TASKS=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U controller%b		controller.adb		26b703c1 OO PK IL
+U controller%b		controller.adb		5e0f614a OO PK IL
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -33,8 +33,9 @@ Z system.tasking%s	s-taskin.adb		s-taskin.ali
 Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 Z system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+Z terrain_package%s	terrain_package.adb	terrain_package.ali  AD
 
-U controller%s		controller.ads		3a3eacf3 EE OO PK IL
+U controller%s		controller.ads		0caf6b3b EE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -51,6 +52,7 @@ Z system.soft_links%s	s-soflin.adb		s-soflin.ali
 Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
 Z system.tasking%s	s-taskin.adb		s-taskin.ali
 Z system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+W terrain_package%s	terrain_package.adb	terrain_package.ali
 
 D ada.ads		20190518041256 76789da1 ada%s
 D a-except.ads		20190518041256 291912d5 ada.exceptions%s
@@ -65,8 +67,8 @@ D a-tags.ads		20190518041258 491b781d ada.tags%s
 D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D collision.ads		20200205212254 032bb627 collision%s
-D controller.ads	20200225145128 f4f329ca controller%s
-D controller.adb	20200227161338 d2442a0b controller%b
+D controller.ads	20200227202100 270a440c controller%s
+D controller.adb	20200227205208 79052546 controller%b
 D display.ads		20200124114604 3a88167c display%s
 D display-basic.ads	20200124114604 66d43323 display.basic%s
 D display-image.ads	20200124114604 86429f23 display.image%s
@@ -76,8 +78,8 @@ D i-c.ads		20190518041256 5421119b interfaces.c%s
 D i-cexten.ads		20190518041256 38d7e116 interfaces.c.extensions%s
 D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D mars_lander.ads	20200225195812 0231357d mars_lander%s
-D path.ads		20200225203304 01799a8d path%s
+D mars_lander.ads	20200227202100 d54d2e21 mars_lander%s
+D path.ads		20200227205128 4aca8f13 path%s
 D perlin.ads		20200205212254 65fe9455 perlin%s
 D pidcontroller.ads	20200225174648 1e98f3c8 pidcontroller%s
 D sdl_blendmode_h.ads	20200124114612 e308a3b6 sdl_blendmode_h%s
@@ -117,15 +119,18 @@ D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
 D s-win32.ads		20190518041256 90ecf4e6 system.win32%s
-D terrain.ads		20200211230808 f8357dfb terrain%s
+D terrain_package.ads	20200227202100 79a7a4cc terrain_package%s
 D vector.ads		20200129154356 c670e60e vector%s
 G a e
 G c b b b [b controller 1 1 none]
-G c Z s b [ai_taskTK controller 11 9 none]
-G c Z s s [ai_taskTKVIP controller 11 4 none]
+G c Z s b [ai_taskTK controller 12 9 none]
+G c Z s s [ai_taskTKVIP controller 12 4 none]
 G r s pid_controller [b controller 1 1 none] [pid_controllerVIP pidcontroller 3 4 none]
-G r p none [b controller 1 1 none] [generate path__trajectory_object 12 17 none]
-G r o none [b controller 1 1 none] [get_trajectory path__trajectory_object 14 13 none]
+G r o none [b controller 1 1 none] [get_terrain terrain_package__terrain_object 27 13 none]
+G r p none [b controller 1 1 none] [setterrain path__trajectory_object 25 17 none]
+G r p none [b controller 1 1 none] [init path__trajectory_object 27 17 none]
+G r p none [b controller 1 1 none] [compute path__trajectory_object 17 17 none]
+G r o none [b controller 1 1 none] [get_curvepoints path__trajectory_object 21 13 none]
 G r p none [b controller 1 1 none] [init pidcontroller__pid_controller 5 17 none]
 G r p none [b controller 1 1 none] [getflag flag__stepflag 5 16 none]
 G r p none [b controller 1 1 none] [getposition mars_lander__lander 45 16 none]
@@ -134,80 +139,88 @@ G r p none [b controller 1 1 none] [setup mars_lander__inputflags 72 17 none]
 G r p none [b controller 1 1 none] [reset pidcontroller__pid_controller 9 17 none]
 G r p none [b controller 1 1 none] [setleft mars_lander__inputflags 75 17 none]
 G r p none [b controller 1 1 none] [setright mars_lander__inputflags 78 17 none]
-G r s pid_controller [ai_taskTK controller 11 9 none] [pid_controllerVIP pidcontroller 3 4 none]
-G r p none [ai_taskTK controller 11 9 none] [generate path__trajectory_object 12 17 none]
-G r o none [ai_taskTK controller 11 9 none] [get_trajectory path__trajectory_object 14 13 none]
-G r p none [ai_taskTK controller 11 9 none] [init pidcontroller__pid_controller 5 17 none]
-G r p none [ai_taskTK controller 11 9 none] [getflag flag__stepflag 5 16 none]
-G r p none [ai_taskTK controller 11 9 none] [getposition mars_lander__lander 45 16 none]
-G r p none [ai_taskTK controller 11 9 none] [update pidcontroller__pid_controller 7 17 none]
-G r p none [ai_taskTK controller 11 9 none] [setup mars_lander__inputflags 72 17 none]
-G r p none [ai_taskTK controller 11 9 none] [reset pidcontroller__pid_controller 9 17 none]
-G r p none [ai_taskTK controller 11 9 none] [setleft mars_lander__inputflags 75 17 none]
-G r p none [ai_taskTK controller 11 9 none] [setright mars_lander__inputflags 78 17 none]
+G r s pid_controller [ai_taskTK controller 12 9 none] [pid_controllerVIP pidcontroller 3 4 none]
+G r o none [ai_taskTK controller 12 9 none] [get_terrain terrain_package__terrain_object 27 13 none]
+G r p none [ai_taskTK controller 12 9 none] [setterrain path__trajectory_object 25 17 none]
+G r p none [ai_taskTK controller 12 9 none] [init path__trajectory_object 27 17 none]
+G r p none [ai_taskTK controller 12 9 none] [compute path__trajectory_object 17 17 none]
+G r o none [ai_taskTK controller 12 9 none] [get_curvepoints path__trajectory_object 21 13 none]
+G r p none [ai_taskTK controller 12 9 none] [init pidcontroller__pid_controller 5 17 none]
+G r p none [ai_taskTK controller 12 9 none] [getflag flag__stepflag 5 16 none]
+G r p none [ai_taskTK controller 12 9 none] [getposition mars_lander__lander 45 16 none]
+G r p none [ai_taskTK controller 12 9 none] [update pidcontroller__pid_controller 7 17 none]
+G r p none [ai_taskTK controller 12 9 none] [setup mars_lander__inputflags 72 17 none]
+G r p none [ai_taskTK controller 12 9 none] [reset pidcontroller__pid_controller 9 17 none]
+G r p none [ai_taskTK controller 12 9 none] [setleft mars_lander__inputflags 75 17 none]
+G r p none [ai_taskTK controller 12 9 none] [setright mars_lander__inputflags 78 17 none]
 X 1 ada.ads
-16K9*Ada 20e8 14|2r6 2r25 7r6 7r25
+16K9*Ada 20e8 14|2r6 2r25 8r6 8r25
 X 7 a-reatim.ads
 39K13*Real_Time 185e18 14|2w10 2r29
 49O9*Time<duration> 15|4r14
 54O9*Time_Span<duration> 15|7r25
-61V13*Clock{49O9} 15|22s15
-65V14*"+"{49O9} 15|22s21 70s23
+61V13*Clock{49O9} 15|21s15
+65V14*"+"{49O9} 15|21s21 72s23
 119V13*Milliseconds{54O9} 15|7s38
 X 11 a-textio.ads
-57K13*Text_IO 727e16 14|7w10 7r29
+57K13*Text_IO 727e16 14|8w10 8r29
 X 14 controller.ads
-9K9*controller 13l5 13e15 15|1b14 73l5 73t15
-11t9*AI_Task 15|3b14 72l8 72t15
+10K9*controller 14l5 14e15 15|1b14 75l5 75t15
+12t9*AI_Task 15|3b14 74l8 74t15
 X 15 controller.adb
-4o7 Next{7|49O9} 22m7 69r22 70m10 70r18
-7o7 Period{7|54O9} 22r23 70r25
-9f7 inputY{float} 32m10 33m29 33r29 34r13 36r16
-10w7 YController{28|3W19} 27r7 33r10 42r16
-12f7 inputX{float} 48m10 49m29 49r29 50r13 53r16
-13w7 XController{28|3W19} 28r7 49r10 63r16
-15f7 inputTeta{float}
-16w7 TetaController{28|3W19}
-18a7 t{26|8A9} 25m40 27r24 28r24 39r18 42r34 60r40 63r34
-19i7 indexX{integer} 28r26 60r42 61r16 62m16 62r26 63r36 65m16
-20i7 indexY{integer} 27r26 39r20 40r16 41m16 41r26 42r36 44m16
+4o7 Next{7|49O9} 21m7 71r22 72m10 72r18
+7o7 Period{7|54O9} 21r23 72r25
+9f7 inputY{float} 34m10 35m29 35r29 36r13 38r16
+10w7 YController{28|3W19} 29r7 35r10 44r16
+12f7 inputX{float} 50m10 51m29 51r29 52r13 55r16
+13w7 XController{28|3W19} 30r7 51r10 65r16
+15a7 t{26|13A9} 27m41 29r24 30r24 41r18 44r34 62r40 65r34
+16a7 s{66|16A9} 23m34 24r36
+18i7 indexX{integer} 30r26 62r42 63r16 64m16 64r26 65r36 67m16
+19i7 indexY{integer} 29r26 41r20 42r16 43m16 43r26 44r36 46m16
 X 16 display.ads
 23K9*Display 14|3r6 3r25 16|59e12
 X 17 display-basic.ads
 20K17*Basic 14|3w14 3r33 17|363e18
 X 19 flag.ads
 1K9*flag 14|1w6 1r16 19|11e9
-3w14*StepFlag 15|30r13
-5V16 getFlag{boolean} 15|30s22
+3w14*StepFlag 15|32r13
+5V16 getFlag{boolean} 15|32s22
 X 25 mars_lander.ads
-10K9*Mars_Lander 14|4w6 4r25 15|35r13 37r13 51r13 52r13 54r13 55r13 57r13
-. 58r13 25|86e16
-28w14*Lander 15|32r20 39r32 48r20 60r17
-45V16 getPosition{67|3R9} 15|32s27 39s39 48s27 60s24
-69w14*inputFlags 15|35r25 37r25 51r25 52r25 54r25 55r25 57r25 58r25
-72U17 setUp 15|35s36 37s36
-75U17 setLeft 15|51s36 54s36 57s36
-78U17 setRight 15|52s36 55s36 58s36
+10K9*Mars_Lander 14|4w6 4r25 15|37r13 39r13 53r13 54r13 56r13 57r13 59r13
+. 60r13 25|86e16
+28w14*Lander 15|34r20 41r32 50r20 62r17
+45V16 getPosition{67|3R9} 15|34s27 41s39 50s27 62s24
+69w14*inputFlags 15|37r25 39r25 53r25 54r25 56r25 57r25 59r25 60r25
+72U17 setUp 15|37s36 39s36
+75U17 setLeft 15|53s36 56s36 59s36
+78U17 setRight 15|54s36 57s36 60s36
 X 26 path.ads
-4K9*path 14|6w6 6r25 26|23e9
-6N4*lengthOfTrajectory 15|40r30 44r26 61r30 65r26
-8A9*Path_Type(66|11R9)<integer> 15|18r10
-10w14*trajectory_object 15|24r7 25r7
-12U17 generate 15|24s25
-14Y13 get_trajectory 15|25s25
+7K9*path 14|7w6 7r25 26|42e9
+9N4*lengthOfTrajectory 15|42r30 46r26 63r30 67r26
+13A9*curveType(66|11R9)<integer> 15|15r10
+15w14*trajectory_object 15|24r7 25r7 26r7 27r7
+17U17 compute 15|26s25
+21Y13 get_curvePoints 15|27s25
+25U17 setTerrain 15|24s25
+27U17 init 15|25s25
 X 28 pidcontroller.ads
 1K9*PIDController 14|5w6 5r25 28|31e18
-3W19*pid_controller 15|10r20 13r20 16r23 28|29e22
-5U17 init 15|27s19 28s19
-7U17 update 15|33s22 49s22
-9U17 reset 15|42s28 63s28
+3W19*pid_controller 15|10r20 13r20 28|29e22
+5U17 init 15|29s19 30s19
+7U17 update 15|35s22 51s22
+9U17 reset 15|44s28 65s28
 X 51 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
-X 66 terrain.ads
-12f7*X{float} 15|28m34 60r50 63m44
-13f7*Y{float} 15|27m34 39r28 42m44
+X 66 terrain_package.ads
+7K9*terrain_package 14|6w6 6r33 66|40e20
+12f7*X{float} 15|30m34 62r50 65m44
+13f7*Y{float} 15|29m34 41r28 44m44
+16A9*Terrain_Type(11R9)<integer> 15|16r10
+23w14*Terrain_Object 15|23r7
+27Y13 get_terrain 15|23s22
 X 67 vector.ads
-4f7*x{float} 15|48r39 60r36
-4f10*y{float} 15|32r39 39r51
+4f7*x{float} 15|50r39 62r36
+4f10*y{float} 15|34r39 41r51
 
