@@ -1,2 +1,2 @@
-mars_lander.adb:78:24: warning: potentially blocking operation in protected operation
-mars_lander.adb:95:24: warning: potentially blocking operation in protected operation
+mars_lander.adb:73:24: warning: potentially blocking operation in protected operation
+mars_lander.adb:90:24: warning: potentially blocking operation in protected operation

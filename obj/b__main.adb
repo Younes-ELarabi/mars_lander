@@ -40,10 +40,10 @@ package body ada_main is
    E164 : Short_Integer; pragma Import (Ada, E164, "system__tasking__protected_objects_E");
    E182 : Short_Integer; pragma Import (Ada, E182, "system__tasking__protected_objects__entries_E");
    E184 : Short_Integer; pragma Import (Ada, E184, "system__tasking__queuing_E");
-   E254 : Short_Integer; pragma Import (Ada, E254, "system__tasking__stages_E");
+   E243 : Short_Integer; pragma Import (Ada, E243, "system__tasking__stages_E");
    E162 : Short_Integer; pragma Import (Ada, E162, "flag_E");
    E235 : Short_Integer; pragma Import (Ada, E235, "perlin_E");
-   E252 : Short_Integer; pragma Import (Ada, E252, "pidcontroller_E");
+   E241 : Short_Integer; pragma Import (Ada, E241, "pidcontroller_E");
    E191 : Short_Integer; pragma Import (Ada, E191, "display_E");
    E223 : Short_Integer; pragma Import (Ada, E223, "display__image_E");
    E203 : Short_Integer; pragma Import (Ada, E203, "display__basic_E");
@@ -56,7 +56,7 @@ package body ada_main is
    E237 : Short_Integer; pragma Import (Ada, E237, "vector_E");
    E170 : Short_Integer; pragma Import (Ada, E170, "mars_lander_E");
    E160 : Short_Integer; pragma Import (Ada, E160, "controller_E");
-   E256 : Short_Integer; pragma Import (Ada, E256, "simulation_E");
+   E245 : Short_Integer; pragma Import (Ada, E245, "simulation_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -316,11 +316,11 @@ package body ada_main is
       System.Tasking.Queuing'Elab_Body;
       E184 := E184 + 1;
       System.Tasking.Stages'Elab_Body;
-      E254 := E254 + 1;
+      E243 := E243 + 1;
       flag'elab_spec;
       E162 := E162 + 1;
       E235 := E235 + 1;
-      E252 := E252 + 1;
+      E241 := E241 + 1;
       Display'Elab_Spec;
       E191 := E191 + 1;
       Display.Image'Elab_Body;
@@ -346,7 +346,7 @@ package body ada_main is
       E160 := E160 + 1;
       simulation'elab_spec;
       simulation'elab_body;
-      E256 := E256 + 1;
+      E245 := E245 + 1;
    end adainit;
 
    procedure Ada_Main_Program;

@@ -21,8 +21,8 @@ package body controller is
       trajectory_object.generate;
       trajectory_object.get_trajectory(t);
       -- PID setup
-      YController.init(t(indexX).Y,0.7,0.0001,100.0);
-      XController.init(t(indexX).X,10.0,0.0,3000.0);
+      YController.init(t(indexY).Y,0.7,0.0001,100.0);
+      XController.init(t(indexX).X,1.0,0.0,2000.0);
       -- main loop 
       while StepFlag.getFlag loop 
          -- Convergence to Y setPoint
@@ -33,50 +33,35 @@ package body controller is
          elsif inputY < 0.0 then
             Mars_Lander.inputFlags.setUp(false);    
          end if;
-         if  abs(t(indexY).Y - Lander.getPosition.y) < 1.0  then
-            --Put_Line("<-----------On target Y------------>");
-            indexY := indexY + 1;
-            if indexY <= lengthOfTrajectory then              
+         if  abs(t(indexY).Y - Lander.getPosition.y) < 1.0  then       
+            if indexY + 1 <= lengthOfTrajectory then
+               indexY := indexY + 1;
                YController.reset(t(indexY).Y);
             else
                indexY := lengthOfTrajectory;
             end if;
-         else
-            --Put_Line("Moving to target Y " & Float'Image(t(indexX).Y));
-            Put_Line("");
          end if;
          -- Convergence to X setPoint
          inputX := Lander.getPosition.x;      
          XController.update(inputX);
-         if inputX > 2.5 then
+         if inputX > 0.0 then  
             Mars_Lander.inputFlags.setLeft(false);
-            Mars_Lander.inputFlags.setRight(true);
-         elsif inputX < -2.5 then
+            Mars_Lander.inputFlags.setRight(true);     
+         elsif inputX < 0.0 then 
             Mars_Lander.inputFlags.setLeft(true);
-            Mars_Lander.inputFlags.setRight(false);
-         else         
-            if Lander.getDirection > 0.0 then
-               while not (Lander.getDirection = 0.0) loop
-                  Mars_Lander.inputFlags.setLeft(true);
-               end loop;
-               Mars_Lander.inputFlags.setLeft(false);
-            elsif Lander.getDirection < 0.0 then
-               while not (Lander.getDirection = 0.0) loop
-                  Mars_Lander.inputFlags.setRight(true);
-               end loop;
-               Mars_Lander.inputFlags.setRight(false);
-            else
-               Mars_Lander.inputFlags.setLeft(false);
-               Mars_Lander.inputFlags.setRight(false);
-            end if;
-            indexX := indexX + 1;
-            if indexX <= lengthOfTrajectory then              
+            Mars_Lander.inputFlags.setRight(false);        
+         else 
+            Mars_Lander.inputFlags.setLeft(false);
+            Mars_Lander.inputFlags.setRight(false);   
+         end if; 
+         if abs(Lander.getPosition.x - t(indexX).X) < 3.0 then 
+            if indexX + 1 <= lengthOfTrajectory then
+               indexX := indexX + 1;
                XController.reset(t(indexX).X);
-               Put_Line("Moving to target X " & Float'Image(t(indexX).Y));
             else
                indexX := lengthOfTrajectory;
-            end if;
-         end if;       
+            end if;   
+         end if;
          -- wait until Next
          delay until Next;
          Next := Next + Period;

@@ -30,14 +30,9 @@ package body Mars_Lander is
                     spaceShip);
          -- target 
          Draw_Circle(Canvas,
-                     (200.0,0.0,0.0),
+                     (100.0,0.0,0.0),
                      2.0,
                      Green);
-         -- start point
-         Draw_Circle(Canvas,
-                     (0.0,0.0,0.0),
-                     2.0,
-                     White);
       end Draw;
       
       procedure updateBounds(previousBounds : in out mars_rectangle) is

@@ -6,11 +6,7 @@ package body path is
       begin
          if not is_generated then
             for I in 1..lengthOfTrajectory loop
-               trajectory(I) := (10.0*Float(I),400.0-20.0*Float(I));
-               Put_Line("For I = " 
-                        & Float'Image(Float(I)) 
-                        & " : " & Float'Image(trajectory(I).X) 
-                        & " " & Float'Image(trajectory(I).Y));
+               trajectory(I) := (50.0,250.0); -- array of coordinates to follow
             end loop;
             -- set barrier to true
             is_generated := true;

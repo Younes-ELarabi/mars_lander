@@ -1,37 +1,13 @@
 <?xml version="1.0"?>
 <Clipboard>
-  <clipboard last="true" >Mars_Lander.inputFlags.setLeft(false);
-            Mars_Lander.inputFlags.setRight(false);</clipboard>
-  <clipboard>Mars_Lander.inputFlags.setRight(true);</clipboard>
-  <clipboard>while not Lander.getDirection 0.0 loop
-                  Mars_Lander.inputFlags.setLeft(true);
-               end while;</clipboard>
-  <clipboard>Lander.getDirection &gt; 0</clipboard>
-  <clipboard>if  abs(t(indexX).X - Lander.getPosition.x) = 0.0  then
-            Put_Line(&quot;&lt;-----------On target X------------&gt;&quot;);
-            Mars_Lander.inputFlags.setLeft(false);
-            Mars_Lander.inputFlags.setRight(false);
-            indexX := indexX + 1;
-            if indexX &lt;= lengthOfTrajectory then              
-               XController.reset(t(indexX).X);
-            else
-               indexX := lengthOfTrajectory;
-            end if;
-         else
-            Put_Line(&quot;Moving to target X &quot; &amp; Float&apos;Image(t(indexX).Y));
-         end if;</clipboard>
-  <clipboard>Put_Line(&quot;Moving to target X &quot; &amp; Float&apos;Image(t(indexX).Y));</clipboard>
-  <clipboard>Mars_Lander.inputFlags.setLeft(false);
-            Mars_Lander.inputFlags.setRight(false);
-            indexX := indexX + 1;
-            if indexX &lt;= lengthOfTrajectory then              
-               XController.reset(t(indexX).X);
-            else
-               indexX := lengthOfTrajectory;
-            end if;</clipboard>
-  <clipboard>Mars_Lander.inputFlags.setLeft(true);
-            Mars_Lander.inputFlags.setRight(false);</clipboard>
-  <clipboard>indexY</clipboard>
-  <clipboard>inputY := Lander.getPosition.y;      
-         YController.update(inputY);</clipboard>
+  <clipboard last="true" >trajectory(I)</clipboard>
+  <clipboard>abs(Lander.getPosition.x - t(indexX).X) &lt; 3.0</clipboard>
+  <clipboard>Mars_Lander.inputFlags.setUp(false);   </clipboard>
+  <clipboard>not Mars_Lander.inputFlags.getLeft</clipboard>
+  <clipboard>and not Mars_Lander.inputFlags.getRight</clipboard>
+  <clipboard>not Mars_Lander.inputFlags.getRight</clipboard>
+  <clipboard>not Mars_Lander.inputFlags.getLeft</clipboard>
+  <clipboard>not Mars_Lander.inputFlags.getRight</clipboard>
+  <clipboard>Mars_Lander.inputFlags.getRight</clipboard>
+  <clipboard>Mars_Lander.inputFlags</clipboard>
 </Clipboard>
