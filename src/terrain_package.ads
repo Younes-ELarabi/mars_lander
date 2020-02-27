@@ -25,11 +25,12 @@ package terrain_package is
       procedure generate;
       procedure generateHorizentalSurface(terrain : in out Terrain_Type;length :Integer);
       entry get_terrain(value : out Terrain_Type);
+      function getLength return Float;
       
    private
       terrain :Terrain_Type;
       is_generated :Boolean := false;
-
+      sizeOfSurface :Float; -- length of horizental surface
    end Terrain_Object;
    
 private

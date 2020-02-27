@@ -12,18 +12,21 @@ package body path is
       
       procedure init is
          pA,pB :Point_3d;
+         xStart,yStart :Float;
       begin
-         p1 := (0.0,0.0,0.0); -- initial position of the lander
+         xStart := Lander.getPosition.x;
+         yStart := Lander.getPosition.y;
+         p1 := (xStart,yStart,0.0); -- initial position of the lander
          find_Horizental :
          for I in 1..terrain_package.size-1 loop
             pA := (terrain(I).X,terrain(I).Y,0.0);
             pB := (terrain(I+1).X,terrain(I+1).Y,0.0);
             exit find_Horizental when pA.Y = pB.Y;
          end loop find_Horizental;
-         p2 := ((pB.x+pA.x)/2.0,0.0,0.0);
-         p3 := (pA.x,-pA.y/2.0,0.0);
-         p4 := ((pB.x+pA.x)/2.0,pA.y,0.0);
-         --Put_Line(Float'Image(pA.x) & " : " & Float'Image(pA.y));
+         pB.X := pA.X + Terrain_Object.getLength;
+         p2 := (xStart+pA.x,yStart,0.0); 
+         p3 := (xStart+pA.x,ystart+pA.y/2.0,0.0); 
+         p4 := (xstart+(pB.x+pA.x)/2.0,ystart+pA.y,0.0);
          controlPoints(1):=(p1.x,p1.y);
          controlPoints(2):=(p2.x,p2.y);
          controlPoints(3):=(p3.x,p3.y);
@@ -74,10 +77,16 @@ package body path is
             pointA := (curvePoints(I).X,curvePoints(I).Y,0.0);
             pointB := (curvePoints(I+1).X,curvePoints(I+1).Y,0.0);     
             Draw_Line(Canvas,
-                      pointa,
-                      pointb,
+                      pointA,
+                      pointB,
                       Yellow
-                     );     
+                     );
+            -- Draw control points
+            Draw_Circle(Canvas,(p1.x,p1.y,0.0),2.0,Green);
+            Draw_Circle(Canvas,(p2.x,p2.y,0.0),2.0,Red);
+            Draw_Circle(Canvas,(p3.x,p3.y,0.0),2.0,Yellow);
+            Draw_Circle(Canvas,(p4.x,p4.y,0.0),2.0,White);
+            --
          end loop;
       end drawTrajectory;
       

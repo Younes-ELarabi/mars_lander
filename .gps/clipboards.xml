@@ -1,23 +1,13 @@
 <?xml version="1.0"?>
 <Clipboard>
-  <clipboard last="true" >terrain_package</clipboard>
-  <clipboard>terrain</clipboard>
-  <clipboard>find_Horizental</clipboard>
-  <clipboard>pointA.Y = pointB.Y</clipboard>
-  <clipboard>(pointA.Y = pointB.Y) </clipboard>
-  <clipboard>pointA := (surface(I).X,surface(I).Y,0.0);
-               pointB := (surface(I+1).X,surface(I+1).Y,0.0);</clipboard>
-  <clipboard>pointA</clipboard>
-  <clipboard>for I in 1..terrain.size-1 loop
-            if Line_Rectangle(
-                              bounds.A,bounds.B,
-                              bounds.C,bounds.D,
-                              ( (surface(I).X,surface(I).Y,0.0)),
-                              (surface(I+1).X,surface(I+1).Y,0.0)) then                             
-               pointA := (surface(I).X,surface(I).Y,0.0);
-               pointB := (surface(I+1).X,surface(I+1).Y,0.0);
-            end if;
-         end loop;</clipboard>
-  <clipboard>(0.0,0.0,0.0);</clipboard>
-  <clipboard>(Lander.getPosition.x,Lander.getPosition.y,0.0);</clipboard>
+  <clipboard last="true" >function getLength return Float;</clipboard>
+  <clipboard>(pB.x+pA.x)/2.0</clipboard>
+  <clipboard>Float&apos;Image(pa.X)</clipboard>
+  <clipboard>pA.y</clipboard>
+  <clipboard>xStart</clipboard>
+  <clipboard>pA.x</clipboard>
+  <clipboard>xStart-pA.x</clipboard>
+  <clipboard>(xStart-pA.x,yStart,0.0);</clipboard>
+  <clipboard>xStart-pA.x</clipboard>
+  <clipboard>(pA.x,-pA.y/2.0,0.0);</clipboard>
 </Clipboard>

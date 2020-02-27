@@ -27,7 +27,7 @@ package body controller is
       trajectory_object.get_curvePoints(t);
       -- PID setup
       YController.init(t(indexY).Y,0.7,0.0001,100.0);
-      XController.init(t(indexX).X,1.0,0.0,2000.0);
+      XController.init(t(indexX).X,0.001,0.0,100.0);
       -- main loop 
       while StepFlag.getFlag loop 
          -- Convergence to Y setPoint
