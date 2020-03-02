@@ -19,7 +19,7 @@ RV SPARK_05
 RV MAX_PROTECTED_ENTRIES=1
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U path%b		path.adb		2c13e599 NE OO PK IL
+U path%b		path.adb		94402aec NE OO PK IL
 Z ada.tags%s		a-tags.adb		a-tags.ali
 Z system%s		system.ads		system.ali
 Z system.soft_links%s	s-soflin.adb		s-soflin.ali
@@ -27,7 +27,7 @@ Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
 Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
 Z system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
 
-U path%s		path.ads		79b64a81 EE OO PF PK IL
+U path%s		path.ads		a9b26603 EE OO PF PK IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -65,9 +65,9 @@ D i-c.ads		20190518041256 5421119b interfaces.c%s
 D i-cexten.ads		20190518041256 38d7e116 interfaces.c.extensions%s
 D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D mars_lander.ads	20200227202100 d54d2e21 mars_lander%s
-D path.ads		20200227223248 0cfa8f25 path%s
-D path.adb		20200227232136 20e96abc path%b
+D mars_lander.ads	20200302185600 d54d2e21 mars_lander%s
+D path.ads		20200302190206 dcfea3a7 path%s
+D path.adb		20200302190330 48be894b path%b
 D perlin.ads		20200205212254 65fe9455 perlin%s
 D sdl_blendmode_h.ads	20200124114612 e308a3b6 sdl_blendmode_h%s
 D sdl_pixels_h.ads	20200124114610 89492fa8 sdl_pixels_h%s
@@ -116,6 +116,9 @@ G c Z s b [get_curvepoints path__trajectory_object 22 13 none]
 G c Z s b [drawtrajectory path__trajectory_object 24 17 none]
 G c Z s b [setterrain path__trajectory_object 26 17 none]
 G c Z s b [init path__trajectory_object 28 17 none]
+G c Z s b [enabledrawing path__trajectory_object 30 17 none]
+G c Z s b [disabledrawing path__trajectory_object 32 17 none]
+G c Z s b [getdrawflag path__trajectory_object 34 16 none]
 G c Z s b [trajectory_object__computeN path 18 7 none]
 G c Z s b [trajectory_object__computeP path 18 7 none]
 G c Z s b [trajectory_object__subdivideN path 20 7 none]
@@ -126,6 +129,12 @@ G c Z s b [trajectory_object__setterrainN path 26 7 none]
 G c Z s b [trajectory_object__setterrainP path 26 7 none]
 G c Z s b [trajectory_object__initN path 28 7 none]
 G c Z s b [trajectory_object__initP path 28 7 none]
+G c Z s b [trajectory_object__enabledrawingN path 30 7 none]
+G c Z s b [trajectory_object__enabledrawingP path 30 7 none]
+G c Z s b [trajectory_object__disabledrawingN path 32 7 none]
+G c Z s b [trajectory_object__disabledrawingP path 32 7 none]
+G c Z s b [trajectory_object__getdrawflagN path 34 7 none]
+G c Z s b [trajectory_object__getdrawflagP path 34 7 none]
 G c Z s s [TcontroltypeBIP path 12 4 none]
 G c Z s s [TcurvetypeBIP path 14 4 none]
 G c Z s s [trajectory_objectTVDI path 16 4 none]
@@ -133,7 +142,6 @@ G c Z s s [trajectory_objectTVDF path 16 4 none]
 G c Z s s [trajectory_objectTVIP path 16 4 none]
 G c Z s s [P6sIP path 22 7 none]
 G r c none [drawtrajectory path__trajectory_object 24 17 none] [draw_line display__basic 306 14 none]
-G r c none [drawtrajectory path__trajectory_object 24 17 none] [draw_circle display__basic 304 14 none]
 G r p none [init path__trajectory_object 28 17 none] [getposition mars_lander__lander 45 16 none]
 G r p none [init path__trajectory_object 28 17 none] [getlength terrain_package__terrain_object 28 16 none]
 X 1 ada.ads
@@ -142,33 +150,27 @@ X 10 a-textio.ads
 57K13*Text_IO 727e16 23|2w10 2r29
 X 13 display.ads
 23K9*Display 59e12 23|3w6 3r25 4r6 4r25 5r6 5r25
-36r4*White{27R9} 24|88r52
-38r4*Green{27R9} 24|85r52
-39r4*Red{27R9} 24|86r52
-42r4*Yellow{27R9} 24|82r23 87r52
+42r4*Yellow{27R9} 24|83r26
 X 14 display-basic.ads
 20K17*Basic 363e18 23|4w14 4r33
 31I9*Canvas_ID<359I9> 23|24r41 24|72r41
-40R9*Point_3d 44e14 23|38r20 24|14r17 73r19 74r19
+40R9*Point_3d 44e14 23|45r20 24|14r17 73r19 74r19
 41f7*X{float} 24|26m13 26r21 27r27 28r27 29r28 29r33 30r32 31r32 32r32 33r32
-. 85r36 86r36 87r36 88r36
-42f7*Y{float} 24|24r42 24r49 28r39 29r50 30r37 31r37 32r37 33r37 85r41 86r41
-. 87r41 88r41
-304U14*Draw_Circle 24|85s13 86s13 87s13 88s13
-306U14*Draw_Line 24|79s13
+42f7*Y{float} 24|24r42 24r49 28r39 29r50 30r37 31r37 32r37 33r37
+306U14*Draw_Line 24|80s16
 359I9 Canvas_ID_Range<short_integer>
 X 15 display-image.ads
 1K17*Image 7e18 23|5w14 5r33
 X 22 mars_lander.ads
-10K9*Mars_Lander 86e16 23|6w6 6r25
+10K9*Mars_Lander 87e16 23|6w6 6r25
 28w14*Lander 24|17r20 18r20
 45V16 getPosition{65|3R9} 24|17s27 18s27
 X 23 path.ads
-8K9*path 43l5 43e9 24|1b14 101l5 101t9
-10N4*lengthOfTrajectory 14r31 24|40r22 41r32 76r22
-12A9*controlType(64|11R9)<integer> 35r23 24|37r15
-14A9*curveType(64|11R9)<integer> 22r40 36r22 24|5r41
-16w14*trajectory_object 24|3b19 99l8 99t25
+8K9*path 50l5 50e9 24|1b14 118l5 118t9
+10N4*lengthOfTrajectory 14r31 24|40r22 41r32 77r25
+12A9*controlType(64|11R9)<integer> 42r23 24|37r15
+14A9*curveType(64|11R9)<integer> 22r40 43r22 24|5r41
+16w14*trajectory_object 24|3b19 116l8 116t25
 18U17 compute 24|36b17 55l11 55t18
 20U17 subDivide 20=27 20=30 20>53 24|48s19 57b17 69l11 69t20
 20r27 p1{64|11R9} 24|57b27 59r13 60m13 60r20 60r31 62m13 62r20 62r31 64r14
@@ -177,19 +179,23 @@ X 23 path.ads
 20f53 t{float} 24|57b53 60r42 62r42 65r42 67r42
 22Y13 get_curvePoints 22<29 24|5b13 11l11 11t26
 22a29 value{14A9} 24|10m10
-24U17 drawTrajectory 24>32 24|72b17 91l11 91t25
-24i32 Canvas{14|31I9} 24|72b32 79r23 85r25 86r25 87r25 88r25
-26U17 setTerrain 26>28 24|93b17 96l11 96t21
-26a28 t{64|16A9} 24|93b28 95r21
+24U17 drawTrajectory 24>32 24|72b17 94l11 94t25
+24i32 Canvas{14|31I9} 24|72b32 80r26
+26U17 setTerrain 26>28 24|96b17 99l11 99t21
+26a28 t{64|16A9} 24|96b28 98r21
 28U17 init 24|13b17 34l11 34t15
-32a7 terrain{64|16A9} 24|22r20 22r33 23r20 23r35 95r10
-33b7 is_ready{boolean} 24|6r14 54r10
-35a7 controlPoints{12A9} 24|30r10 31r10 32r10 33r10 43r25 43r44
-36a7 curvePoints{14A9} 24|10r19 52r13 77r24 77r41 78r24 78r43
-38r7 p1{14|40R9} 24|19r10 30r29 30r34 85r33 85r38
-38r10 p2{14|40R9} 24|27r10 31r29 31r34 86r33 86r38
-38r13 p3{14|40R9} 24|28r10 32r29 32r34 87r33 87r38
-38r16 p4{14|40R9} 24|29r10 33r29 33r34 88r33 88r38
+30U17 enableDrawing 24|101b17 104l11 104t24
+32U17 disableDrawing 24|106b17 109l11 109t25
+34V16 getDrawFlag{boolean} 24|111b16 114l11 114t22
+38a7 terrain{64|16A9} 24|22r20 22r33 23r20 23r35 98r10
+39b7 is_ready{boolean} 24|6r14 54r10
+40b7 draw{boolean} 24|76r13 103r10 108r10 113r17
+42a7 controlPoints{12A9} 24|30r10 31r10 32r10 33r10 43r25 43r44
+43a7 curvePoints{14A9} 24|10r19 52r13 78r27 78r44 79r27 79r46
+45r7 p1{14|40R9} 24|19r10 30r29 30r34
+45r10 p2{14|40R9} 24|27r10 31r29 31r34
+45r13 p3{14|40R9} 24|28r10 32r29 32r34
+45r16 p4{14|40R9} 24|29r10 33r29 33r34
 X 24 path.adb
 5a29 value{23|14A9}
 14r10 pA{14|40R9} 22m13 24r39 26r18 27r24 28r24 28r36 29r30 29r47
@@ -204,9 +210,9 @@ X 24 path.adb
 40i14 I{integer} 41r23 52r25
 42i17 J{integer} 43r20 43r39 43r58
 47i20 k{integer} 48r33 48r40
-73r10 pointA{14|40R9} 77m13 80r23
-74r10 pointB{14|40R9} 78m13 81r23
-76i14 I{integer} 77r36 77r53 78r36 78r55
+73r10 pointA{14|40R9} 78m16 81r26
+74r10 pointB{14|40R9} 79m16 82r26
+77i17 I{integer} 78r39 78r56 79r39 79r58
 X 35 system.ads
 67M9*Address
 X 41 s-memory.ads
@@ -223,10 +229,10 @@ X 64 terrain_package.ads
 9N4*size 24|21r38
 11R9*cordinates 23|12r39 14r54 20r41 24|57r41 64|14e14
 12f7*X{float} 24|22r31 23r33 43r42 52r39 59r16 59r21 60m16 60r23 60r34 60r39
-. 62m16 62r23 62r34 62r39 77r39 78r41
+. 62m16 62r23 62r34 62r39 78r42 79r44
 13f7*Y{float} 24|22r44 23r48 43r61 52r48 64r17 64r22 65m16 65r23 65r34 65r39
-. 67m16 67r23 67r34 67r39 77r56 78r60
-16A9*Terrain_Type(11R9)<integer> 23|26r31 32r16 24|93r31
+. 67m16 67r23 67r34 67r39 78r59 79r63
+16A9*Terrain_Type(11R9)<integer> 23|26r31 38r16 24|96r31
 23w14*Terrain_Object 24|26r25
 28V16 getLength{float} 24|26s40
 X 65 vector.ads

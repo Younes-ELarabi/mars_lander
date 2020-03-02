@@ -164,6 +164,8 @@ package body Mars_Lander is
          return direction;
       end getDirection;
       
+
+      
    end Lander;
    
    protected body inputFlags is

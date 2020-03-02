@@ -58,7 +58,7 @@ D i-c.ads		20190518041256 5421119b interfaces.c%s
 D i-cexten.ads		20190518041256 38d7e116 interfaces.c.extensions%s
 D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D mars_lander.ads	20200227202100 d54d2e21 mars_lander%s
+D mars_lander.ads	20200302185600 d54d2e21 mars_lander%s
 D perlin.ads		20200205212254 65fe9455 perlin%s
 D sdl_blendmode_h.ads	20200124114612 e308a3b6 sdl_blendmode_h%s
 D sdl_pixels_h.ads	20200124114610 89492fa8 sdl_pixels_h%s
@@ -122,7 +122,7 @@ X 17 flag.ads
 3w14*StepFlag 32|14r13
 5V16 getFlag{boolean} 32|14s22
 X 23 mars_lander.ads
-10K9*Mars_Lander 86e16 31|1w6 1r23 32|1w6 1r23 15r10
+10K9*Mars_Lander 87e16 31|1w6 1r23 32|1w6 1r23 15r10
 28w14*Lander 32|15r22
 33U17 Step 32|15s29
 X 31 simulation.ads

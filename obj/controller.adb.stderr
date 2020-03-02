@@ -1,0 +1,3 @@
+controller.adb:1:14: missing body for "AI_Task" declared at controller.ads:12
+controller.adb:3:14: "AI_Task" conflicts with declaration at controller.ads:12
+controller.adb:7:04: warning: no accept for entry "start"

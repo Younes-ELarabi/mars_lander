@@ -79,6 +79,7 @@ begin
 
    Terrain_Object.generate;
    Terrain_Object.get_terrain(t);
+   trajectory_object.enableDrawing;
 
    while StepFlag.getFlag loop
       Swap_Buffers (Window);
@@ -103,7 +104,6 @@ begin
       else
          Draw_Text(Canvas, gameOver,"GAME OVER", Red);
       end if;
-
       Next := Next + Period;
    end loop;
 
