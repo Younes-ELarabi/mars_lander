@@ -1,8 +1,5 @@
 package body controller is
    
-   task type AI_Task is
-      entry start;
-   end AI_Task;
    
    task body AI_Task is
       Next : Time;
