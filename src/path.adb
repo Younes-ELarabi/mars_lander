@@ -73,21 +73,24 @@ package body path is
          pointA : Point_3d;
          pointB : Point_3d;
       begin
-         for I in 1..lengthOfTrajectory-1 loop
-            pointA := (curvePoints(I).X,curvePoints(I).Y,0.0);
-            pointB := (curvePoints(I+1).X,curvePoints(I+1).Y,0.0);     
-            Draw_Line(Canvas,
-                      pointA,
-                      pointB,
-                      Yellow
-                     );
-            -- Draw control points
-            Draw_Circle(Canvas,(p1.x,p1.y,0.0),2.0,Green);
-            Draw_Circle(Canvas,(p2.x,p2.y,0.0),2.0,Red);
-            Draw_Circle(Canvas,(p3.x,p3.y,0.0),2.0,Yellow);
-            Draw_Circle(Canvas,(p4.x,p4.y,0.0),2.0,White);
-            --
-         end loop;
+         if draw then
+            for I in 1..lengthOfTrajectory-1 loop
+               pointA := (curvePoints(I).X,curvePoints(I).Y,0.0);
+               pointB := (curvePoints(I+1).X,curvePoints(I+1).Y,0.0);     
+               Draw_Line(Canvas,
+                         pointA,
+                         pointB,
+                         Yellow
+                        );
+               -- Draw control points
+               --Draw_Circle(Canvas,(p1.x,p1.y,0.0),2.0,Green);
+               --Draw_Circle(Canvas,(p2.x,p2.y,0.0),2.0,Red);
+               --Draw_Circle(Canvas,(p3.x,p3.y,0.0),2.0,Yellow);
+               --Draw_Circle(Canvas,(p4.x,p4.y,0.0),2.0,White);
+               --
+            end loop;
+         end if;
+         
       end drawTrajectory;
       
       procedure setTerrain(t :Terrain_Type) is 
@@ -95,6 +98,20 @@ package body path is
          terrain := t;
       end setTerrain;
       
+      procedure enableDrawing is
+      begin
+         draw := true;
+      end enableDrawing;
+      
+      procedure disableDrawing is
+      begin
+         draw := false;
+      end disableDrawing;
+      
+      function getDrawFlag return Boolean is
+      begin
+         return draw;
+      end getDrawFlag;
       
    end trajectory_object;
      

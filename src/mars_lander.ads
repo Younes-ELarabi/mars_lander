@@ -45,6 +45,7 @@ package Mars_Lander is
       function getPosition return Vector_Type;
       
       function getDirection return angle_value;
+     
            
    private
       

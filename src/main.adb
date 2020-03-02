@@ -79,11 +79,17 @@ begin
 
    Terrain_Object.generate;
    Terrain_Object.get_terrain(t);
+   trajectory_object.enableDrawing;
 
    while StepFlag.getFlag loop
       Swap_Buffers (Window);
       Mars_Lander.Lander.Draw(Canvas,ship_width,ship_height,sky,spaceship);
       drawTerrain(Canvas,t);
+      if Get_Key_Status(SDLK_E) then
+         trajectory_object.enableDrawing;
+      elsif Get_Key_Status(SDLK_D) then
+        trajectory_object.disableDrawing;
+      end if;
       Trajectory_object.drawTrajectory(Canvas);
       -- wait until Next
       delay until Next;
@@ -103,7 +109,6 @@ begin
       else
          Draw_Text(Canvas, gameOver,"GAME OVER", Red);
       end if;
-
       Next := Next + Period;
    end loop;
 

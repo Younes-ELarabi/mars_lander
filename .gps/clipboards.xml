@@ -1,13 +1,15 @@
 <?xml version="1.0"?>
 <Clipboard>
-  <clipboard last="true" >function getLength return Float;</clipboard>
-  <clipboard>(pB.x+pA.x)/2.0</clipboard>
-  <clipboard>Float&apos;Image(pa.X)</clipboard>
-  <clipboard>pA.y</clipboard>
-  <clipboard>xStart</clipboard>
-  <clipboard>pA.x</clipboard>
-  <clipboard>xStart-pA.x</clipboard>
-  <clipboard>(xStart-pA.x,yStart,0.0);</clipboard>
-  <clipboard>xStart-pA.x</clipboard>
-  <clipboard>(pA.x,-pA.y/2.0,0.0);</clipboard>
+  <clipboard last="true" >Float(direction)</clipboard>
+  <clipboard>for I 1..direction / 0.35 loop
+                  turnRight;
+               end loop;</clipboard>
+  <clipboard>Mars_Lander.inputFlags.setUp(false);    </clipboard>
+  <clipboard>Mars_Lander.inputFlags.setUp(true);</clipboard>
+  <clipboard>t(index).X</clipboard>
+  <clipboard>Trajectory_object.drawTrajectory(Canvas);</clipboard>
+  <clipboard>expected an access type with designated type &quot;Interfaces.C.int&quot;</clipboard>
+  <clipboard>SDL_scancode_h</clipboard>
+  <clipboard>SDL_SCANCODE_O</clipboard>
+  <clipboard>SDL_keyboard_h</clipboard>
 </Clipboard>

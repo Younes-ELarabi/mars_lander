@@ -62,8 +62,8 @@ D i-c.ads		20190518041256 5421119b interfaces.c%s
 D i-cexten.ads		20190518041256 38d7e116 interfaces.c.extensions%s
 D i-cstrin.ads		20190518041256 341d0ddf interfaces.c.strings%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D mars_lander.ads	20200227202100 d54d2e21 mars_lander%s
-D mars_lander.adb	20200227205052 72e1b171 mars_lander%b
+D mars_lander.ads	20200302185600 d54d2e21 mars_lander%s
+D mars_lander.adb	20200302185600 72e1b171 mars_lander%b
 D perlin.ads		20200205212254 65fe9455 perlin%s
 D sdl_blendmode_h.ads	20200124114612 e308a3b6 sdl_blendmode_h%s
 D sdl_pixels_h.ads	20200124114610 89492fa8 sdl_pixels_h%s
@@ -113,12 +113,12 @@ G c Z s b [getidimage mars_lander__lander 41 16 none]
 G c Z s b [updatebounds mars_lander__lander 43 17 none]
 G c Z s b [getposition mars_lander__lander 45 16 none]
 G c Z s b [getdirection mars_lander__lander 47 16 none]
-G c Z s b [lander__accelerateN mars_lander 51 7 none]
-G c Z s b [lander__accelerateP mars_lander 51 7 none]
-G c Z s b [lander__turnrightN mars_lander 53 7 none]
-G c Z s b [lander__turnrightP mars_lander 53 7 none]
-G c Z s b [lander__turnleftN mars_lander 55 7 none]
-G c Z s b [lander__turnleftP mars_lander 55 7 none]
+G c Z s b [lander__accelerateN mars_lander 52 7 none]
+G c Z s b [lander__accelerateP mars_lander 52 7 none]
+G c Z s b [lander__turnrightN mars_lander 54 7 none]
+G c Z s b [lander__turnrightP mars_lander 54 7 none]
+G c Z s b [lander__turnleftN mars_lander 56 7 none]
+G c Z s b [lander__turnleftP mars_lander 56 7 none]
 G c Z s b [lander__drawN mars_lander 30 7 none]
 G c Z s b [lander__drawP mars_lander 30 7 none]
 G c Z s b [lander__stepN mars_lander 33 7 none]
@@ -139,25 +139,25 @@ G c Z s b [lander__getdirectionN mars_lander 47 7 none]
 G c Z s b [lander__getdirectionP mars_lander 47 7 none]
 G c Z s s [mars_rectangleIP mars_lander 20 9 none]
 G c Z s s [landerTVIP mars_lander 28 4 none]
-G c Z s b [getup mars_lander__inputflags 71 16 none]
-G c Z s b [setup mars_lander__inputflags 72 17 none]
-G c Z s b [getleft mars_lander__inputflags 74 16 none]
-G c Z s b [setleft mars_lander__inputflags 75 17 none]
-G c Z s b [getright mars_lander__inputflags 77 16 none]
-G c Z s b [setright mars_lander__inputflags 78 17 none]
-G c Z s b [inputflags__getupN mars_lander 71 7 none]
-G c Z s b [inputflags__getupP mars_lander 71 7 none]
-G c Z s b [inputflags__setupN mars_lander 72 7 none]
-G c Z s b [inputflags__setupP mars_lander 72 7 none]
-G c Z s b [inputflags__getleftN mars_lander 74 7 none]
-G c Z s b [inputflags__getleftP mars_lander 74 7 none]
-G c Z s b [inputflags__setleftN mars_lander 75 7 none]
-G c Z s b [inputflags__setleftP mars_lander 75 7 none]
-G c Z s b [inputflags__getrightN mars_lander 77 7 none]
-G c Z s b [inputflags__getrightP mars_lander 77 7 none]
-G c Z s b [inputflags__setrightN mars_lander 78 7 none]
-G c Z s b [inputflags__setrightP mars_lander 78 7 none]
-G c Z s s [inputflagsTVIP mars_lander 69 4 none]
+G c Z s b [getup mars_lander__inputflags 72 16 none]
+G c Z s b [setup mars_lander__inputflags 73 17 none]
+G c Z s b [getleft mars_lander__inputflags 75 16 none]
+G c Z s b [setleft mars_lander__inputflags 76 17 none]
+G c Z s b [getright mars_lander__inputflags 78 16 none]
+G c Z s b [setright mars_lander__inputflags 79 17 none]
+G c Z s b [inputflags__getupN mars_lander 72 7 none]
+G c Z s b [inputflags__getupP mars_lander 72 7 none]
+G c Z s b [inputflags__setupN mars_lander 73 7 none]
+G c Z s b [inputflags__setupP mars_lander 73 7 none]
+G c Z s b [inputflags__getleftN mars_lander 75 7 none]
+G c Z s b [inputflags__getleftP mars_lander 75 7 none]
+G c Z s b [inputflags__setleftN mars_lander 76 7 none]
+G c Z s b [inputflags__setleftP mars_lander 76 7 none]
+G c Z s b [inputflags__getrightN mars_lander 78 7 none]
+G c Z s b [inputflags__getrightP mars_lander 78 7 none]
+G c Z s b [inputflags__setrightN mars_lander 79 7 none]
+G c Z s b [inputflags__setrightP mars_lander 79 7 none]
+G c Z s s [inputflagsTVIP mars_lander 70 4 none]
 G c Z s s [collisiondataIP mars_lander 24 9 none]
 G r c none [draw mars_lander__lander 30 17 none] [draw_image display__basic 314 14 none]
 G r c none [draw mars_lander__lander 30 17 none] [draw_image display__basic 313 14 none]
@@ -192,14 +192,14 @@ X 15 display-image.ads
 X 16 flag.ads
 1K9*flag 11e9 22|6w6 6r25
 X 22 mars_lander.ads
-10K9*Mars_Lander 86l5 86e16 23|1b14 202l5 202t16
+10K9*Mars_Lander 87l5 87e16 23|1b14 204l5 204t16
 12N4*width
 13N4*height
 15N4*ship_width 23|27r21 35r44 36r44 37r44 38r44
 16N4*ship_height 23|28r21 35r72 36r72 37r72 38r72
-18F9*angle_value<long_float> 47r36 53r46 55r45 57r18 23|112r46 115r43 120r45
+18F9*angle_value<long_float> 47r36 54r46 56r45 58r18 23|112r46 115r43 120r45
 . 123r43 162r36
-20R9*mars_rectangle 22e14 43r54 65r15 23|33r54
+20R9*mars_rectangle 22e14 43r54 66r15 23|33r54
 21r7*A{14|40R9} 23|35m25 71r38 88r38
 21r9*B{14|40R9} 23|36m25 71r47 88r47
 21r11*C{14|40R9} 23|37m25 72r38 89r38
@@ -207,7 +207,7 @@ X 22 mars_lander.ads
 24R9*collisionData 26e14
 25r7*p1{14|40R9}
 25r10*p2{14|40R9}
-28w14*Lander 23|3b19 167l8 167t14
+28w14*Lander 23|3b19 169l8 169t14
 30U17 Draw 30>22 30>40 30>47 31>22 31>27 23|4b17 31l11 31t15
 30i22 Canvas{14|31I9} 23|4b23 9r21 20r21
 30f40 width{float} 23|4b42 16r21
@@ -225,33 +225,33 @@ X 22 mars_lander.ads
 43r30 previousBounds{20R9} 23|33b30 35m10 36m10 37m10 38m10
 45V16 getPosition{62|3R9} 23|157b16 160l11 160t22
 47V16 getDirection{18F9} 23|162b16 165l11 165t23
-51U17 accelerate 23|101b17 110l11 110t21 134s13
-53U17 turnRight 53=27 23|112b17 118l11 118t20 142s13
-53f27 direction{18F9} 23|112b27 115r14 116m13 116r26
-55U17 turnLeft 55=26 23|120b17 126l11 126t19 146s13
-55f26 direction{18F9} 23|120b26 123r14 124m13 124r26
-57f7 direction{18F9} 23|29r28 98r17 98r39 142r23 146r22 149r50 164r17
-58r7 position{62|3R9} 23|22r22 23r22 35r31 35r59 36r31 36r59 37r31 37r59
+52U17 accelerate 23|101b17 110l11 110t21 134s13
+54U17 turnRight 54=27 23|112b17 118l11 118t20 142s13
+54f27 direction{18F9} 23|112b27 115r14 116m13 116r26
+56U17 turnLeft 56=26 23|120b17 126l11 126t19 146s13
+56f26 direction{18F9} 23|120b26 123r14 124m13 124r26
+58f7 direction{18F9} 23|29r28 98r17 98r39 142r23 146r22 149r50 164r17
+59r7 position{62|3R9} 23|22r22 23r22 35r31 35r59 36r31 36r59 37r31 37r59
 . 38r31 38r59 152r10 152r22 159r17
-58r17 velocity{62|3R9} 23|97r24 97r35 97r48 97r59 149r10 149r22 152r33
-59f7 thrust{float} 23|44r13 104r10 138r13 150r12
-61f7 rayon{float}
-62i7 tick_number{integer} 23|103r10 103r25 105r13 137r13
-63b7 activeReactor{boolean} 23|46r20 106r13 108r13 136r13
-65r7 bounds{20R9} 23|71r31 71r40 72r31 72r40 88r31 88r40 89r31 89r40 154r23
-69w14*inputFlags 23|133r13 141r13 145r13 169b19 201l8 201t18
-71V16 getUp{boolean} 23|133s24 171b16 174l11 174t16
-72U17 setUp 72>23 23|176b17 179l11 179t16
-72b23 other{boolean} 23|176b23 178r16
-74V16 getLeft{boolean} 23|145s24 181b16 184l11 184t18
-75U17 setLeft 75>25 23|186b17 189l11 189t18
-75b25 other{boolean} 23|186b25 188r18
-77V16 getRight{boolean} 23|141s24 191b16 194l11 194t19
-78U17 setRight 78>26 23|196b17 199l11 199t19
-78b26 other{boolean} 23|196b26 198r19
-81b7 up{boolean} 23|173r17 178r10
-82b7 left{boolean} 23|183r17 188r10
-83b7 right{boolean} 23|193r17 198r10
+59r17 velocity{62|3R9} 23|97r24 97r35 97r48 97r59 149r10 149r22 152r33
+60f7 thrust{float} 23|44r13 104r10 138r13 150r12
+62f7 rayon{float}
+63i7 tick_number{integer} 23|103r10 103r25 105r13 137r13
+64b7 activeReactor{boolean} 23|46r20 106r13 108r13 136r13
+66r7 bounds{20R9} 23|71r31 71r40 72r31 72r40 88r31 88r40 89r31 89r40 154r23
+70w14*inputFlags 23|133r13 141r13 145r13 171b19 203l8 203t18
+72V16 getUp{boolean} 23|133s24 173b16 176l11 176t16
+73U17 setUp 73>23 23|178b17 181l11 181t16
+73b23 other{boolean} 23|178b23 180r16
+75V16 getLeft{boolean} 23|145s24 183b16 186l11 186t18
+76U17 setLeft 76>25 23|188b17 191l11 191t18
+76b25 other{boolean} 23|188b25 190r18
+78V16 getRight{boolean} 23|141s24 193b16 196l11 196t19
+79U17 setRight 79>26 23|198b17 201l11 201t19
+79b26 other{boolean} 23|198b26 200r19
+82b7 up{boolean} 23|175r17 180r10
+83b7 left{boolean} 23|185r17 190r10
+84b7 right{boolean} 23|195r17 200r10
 X 23 mars_lander.adb
 6p10 spaceShip{13|46P9} 30r21
 54p10 sub_Image{13|46P9} 58r16 61r17
@@ -280,7 +280,7 @@ X 61 terrain_package.ads
 27Y13 get_terrain 23|68s25 85s25
 X 62 vector.ads
 1K9*vector 22|5w6 5r25 62|11e11
-3R9*Vector_Type 22|45r35 58r27 23|130r20 157r35 62|5e14
+3R9*Vector_Type 22|45r35 59r27 23|130r20 157r35 62|5e14
 4f7*x{float} 23|22r31 35r40 36r40 37r40 38r40 97r57 97r68
 4f10*y{float} 23|23r31 35r68 36r68 37r68 38r68 97r33 97r44
 7V14*"+"{3R9} 23|149s31 150s19 152s31

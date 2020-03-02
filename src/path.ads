@@ -27,10 +27,17 @@ package path is
       
       procedure init;
       
+      procedure enableDrawing;
+      
+      procedure disableDrawing;
+      
+      function getDrawFlag return Boolean;
+      
    private
       
       terrain :Terrain_Type;
       is_ready :Boolean := false;
+      draw :Boolean := false;
       --
       controlPoints : controlType;
       curvePoints   :curveType;
