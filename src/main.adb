@@ -85,6 +85,11 @@ begin
       Swap_Buffers (Window);
       Mars_Lander.Lander.Draw(Canvas,ship_width,ship_height,sky,spaceship);
       drawTerrain(Canvas,t);
+      if Get_Key_Status(SDLK_E) then
+         trajectory_object.enableDrawing;
+      elsif Get_Key_Status(SDLK_D) then
+        trajectory_object.disableDrawing;
+      end if;
       Trajectory_object.drawTrajectory(Canvas);
       -- wait until Next
       delay until Next;

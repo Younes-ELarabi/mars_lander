@@ -69,7 +69,7 @@ D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D collision.ads		20200205212254 032bb627 collision%s
 D controller.ads	20200302191710 270a440c controller%s
-D controller.adb	20200302193304 c3715d7e controller%b
+D controller.adb	20200302200118 c3715d7e controller%b
 D display.ads		20200124114604 3a88167c display%s
 D display-basic.ads	20200124114604 66d43323 display.basic%s
 D display-image.ads	20200124114604 86429f23 display.image%s
@@ -158,70 +158,70 @@ X 1 ada.ads
 16K9*Ada 20e8 14|2r6 2r25 8r6 8r25
 X 7 a-reatim.ads
 39K13*Real_Time 185e18 14|2w10 2r29
-49O9*Time<duration> 15|5r14
-54O9*Time_Span<duration> 15|8r25
-61V13*Clock{49O9} 15|21s15
-65V14*"+"{49O9} 15|21s21 67s23
-119V13*Milliseconds{54O9} 15|8s38
+49O9*Time<duration> 15|3r14
+54O9*Time_Span<duration> 15|6r25
+61V13*Clock{49O9} 15|19s15
+65V14*"+"{49O9} 15|19s21 65s23
+119V13*Milliseconds{54O9} 15|6s38
 X 11 a-textio.ads
 57K13*Text_IO 727e16 14|8w10 8r29
 X 14 controller.ads
-10K9*controller 14l5 14e15 15|1b14 70l5 70t15
-12t9*AI_Task 15|4b14 69l8 69t15
+10K9*controller 14l5 14e15 15|1b14 68l5 68t15
+12t9*AI_Task 15|2b14 67l8 67t15
 X 15 controller.adb
-5o7 Next{7|49O9} 21m7 66r22 67m10 67r18
-8o7 Period{7|54O9} 21r23 67r25
-10f7 inputY{float} 34m10 35m29 35r29 36r13 38r16
-11w7 YController{28|3W19} 29r7 35r10 59r16
-13f7 inputX{float} 42m10 43m29 43r29 44r13 47r16
-14w7 XController{28|3W19} 30r7 43r10 60r16
-16a7 t{26|14A9} 27m41 29r24 30r24 55r18 56r37 59r34 60r34
-17a7 s{66|16A9} 23m34 24r36
-19i7 index{integer} 29r26 30r26 55r20 56r39 57r16 58m16 58r25 59r36 60r36
-. 62m16
+3o7 Next{7|49O9} 19m7 64r22 65m10 65r18
+6o7 Period{7|54O9} 19r23 65r25
+8f7 inputY{float} 32m10 33m29 33r29 34r13 36r16
+9w7 YController{28|3W19} 27r7 33r10 57r16
+11f7 inputX{float} 40m10 41m29 41r29 42r13 45r16
+12w7 XController{28|3W19} 28r7 41r10 58r16
+14a7 t{26|14A9} 25m41 27r24 28r24 53r18 54r37 57r34 58r34
+15a7 s{66|16A9} 21m34 22r36
+17i7 index{integer} 27r26 28r26 53r20 54r39 55r16 56m16 56r25 57r36 58r36
+. 60m16
 X 16 display.ads
 23K9*Display 14|3r6 3r25 16|59e12
 X 17 display-basic.ads
 20K17*Basic 14|3w14 3r33 17|363e18
 X 19 flag.ads
 1K9*flag 14|1w6 1r16 19|11e9
-3w14*StepFlag 15|32r13
-5V16 getFlag{boolean} 15|32s22
+3w14*StepFlag 15|30r13
+5V16 getFlag{boolean} 15|30s22
 X 25 mars_lander.ads
-10K9*Mars_Lander 14|4w6 4r25 15|37r13 39r13 45r13 46r13 48r13 49r13 51r13
-. 52r13 25|87e16
-28w14*Lander 15|34r20 42r20 55r31 56r14
-45V16 getPosition{67|3R9} 15|34s27 42s27 55s38 56s21
-70w14*inputFlags 15|37r25 39r25 45r25 46r25 48r25 49r25 51r25 52r25
-73U17 setUp 15|37s36 39s36
-76U17 setLeft 15|45s36 48s36 51s36
-79U17 setRight 15|46s36 49s36 52s36
+10K9*Mars_Lander 14|4w6 4r25 15|35r13 37r13 43r13 44r13 46r13 47r13 49r13
+. 50r13 25|87e16
+28w14*Lander 15|32r20 40r20 53r31 54r14
+45V16 getPosition{67|3R9} 15|32s27 40s27 53s38 54s21
+70w14*inputFlags 15|35r25 37r25 43r25 44r25 46r25 47r25 49r25 50r25
+73U17 setUp 15|35s36 37s36
+76U17 setLeft 15|43s36 46s36 49s36
+79U17 setRight 15|44s36 47s36 50s36
 X 26 path.ads
 8K9*path 14|7w6 7r25 26|50e9
-10N4*lengthOfTrajectory 15|57r29 62r25
-14A9*curveType(66|11R9)<integer> 15|16r10
-16w14*trajectory_object 15|24r7 25r7 26r7 27r7
-18U17 compute 15|26s25
-22Y13 get_curvePoints 15|27s25
-26U17 setTerrain 15|24s25
-28U17 init 15|25s25
+10N4*lengthOfTrajectory 15|55r29 60r25
+14A9*curveType(66|11R9)<integer> 15|14r10
+16w14*trajectory_object 15|22r7 23r7 24r7 25r7
+18U17 compute 15|24s25
+22Y13 get_curvePoints 15|25s25
+26U17 setTerrain 15|22s25
+28U17 init 15|23s25
 X 28 pidcontroller.ads
 1K9*PIDController 14|5w6 5r25 28|31e18
-3W19*pid_controller 15|11r20 14r20 28|29e22
-5U17 init 15|29s19 30s19
-7U17 update 15|35s22 43s22
-9U17 reset 15|59s28 60s28
+3W19*pid_controller 15|9r20 12r20 28|29e22
+5U17 init 15|27s19 28s19
+7U17 update 15|33s22 41s22
+9U17 reset 15|57s28 58s28
 X 51 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 X 66 terrain_package.ads
 7K9*terrain_package 14|6w6 6r33 66|41e20
-12f7*X{float} 15|30m33 56r46 60m43
-13f7*Y{float} 15|29m33 55r27 59m43
-16A9*Terrain_Type(11R9)<integer> 15|17r10
-23w14*Terrain_Object 15|23r7
-27Y13 get_terrain 15|23s22
+12f7*X{float} 15|28m33 54r46 58m43
+13f7*Y{float} 15|27m33 53r27 57m43
+16A9*Terrain_Type(11R9)<integer> 15|15r10
+23w14*Terrain_Object 15|21r7
+27Y13 get_terrain 15|21s22
 X 67 vector.ads
-4f7*x{float} 15|42r39 56r33
-4f10*y{float} 15|34r39 55r50
+4f7*x{float} 15|40r39 54r33
+4f10*y{float} 15|32r39 53r50
 

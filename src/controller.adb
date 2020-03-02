@@ -1,6 +1,4 @@
 package body controller is
-   
-   
    task body AI_Task is
       Next : Time;
       -- declare a constant Period of 40 milliseconds of type Time_Span defining
