@@ -7,7 +7,7 @@ with Mars_Lander;   use Mars_Lander;
 
 package path is
    
-   lengthOfTrajectory :constant := 20;
+   lengthOfTrajectory :constant := 25;
    
    type controlType is array(1..4) of cordinates;
    
